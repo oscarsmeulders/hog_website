@@ -141,6 +141,7 @@
 	@extend %button;
 	//background-color: $color-bg-menu;
 	//@include m-r('normal');
+	@include m-r('half');
 	float: right;
 	padding: 2px 8px 2px 10px;
 	margin-top: 10px;

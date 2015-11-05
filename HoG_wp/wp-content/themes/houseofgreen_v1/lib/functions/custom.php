@@ -2,10 +2,10 @@
 
 
 function get_responsive_title($title) {
-	$length_S = 5;
-	$length_M = 5;
-	$length_L = 5;
-	$length_XL = 5;
+	$length_S = 10;
+	$length_M = 15;
+	$length_L = 20;
+	$length_XL = 25;
 	$close = '&hellip;';
 
 	$title_S =		substr( $title, 0, $length_S);
@@ -13,8 +13,12 @@ function get_responsive_title($title) {
 	$title_L =		substr( $title, 0, $length_L);
 	$title_XL =		substr( $title, 0, $length_XL);
 
-	$title_XL .= $close;
-	$tmp = '<span class="hidden-xs">'. $title_XL .'</span>';
+	$tmp = '
+		<span class="hidden-xs hidden-sm hidden-md">'. $title_XL .'</span>
+		<span class="hidden-xs hidden-sm hidden-lg">'. $title_L .'</span>
+		<span class="hidden-xs hidden-md hidden-lg">'. $title_M .'</span>
+		<span class="hidden-sm hidden-md hidden-lg">'. $title_S .'</span>
+		';
 	return $tmp;
 }
 
@@ -59,6 +63,7 @@ function custom_taxonomies_overview_page(){
 	return $kinds;
 
 }
+
 
 
 ?>

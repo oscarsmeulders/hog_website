@@ -2187,6 +2187,28 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/acf-json\/group_563b7f1d82acb.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/group_563b7f1d82acb.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/group_563b7f1d82acb-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/acf-json\/group_563bae5aeb53a.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/group_563bae5aeb53a.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/group_563bae5aeb53a-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/acf-json\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2238,13 +2260,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/footer_vormentaal_1.jpg": {
+	"\/assets\/img\/footer\/footer_vormentaal_1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 30043,
-		"inputAbbreviatedPath": "\/assets\/img\/footer_vormentaal_1.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/footer_vormentaal_1.jpg",
+		"inputAbbreviatedPath": "\/assets\/img\/footer\/footer_vormentaal_1.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/footer\/footer_vormentaal_1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/footer\/footer_vormentaal_2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30043,
+		"inputAbbreviatedPath": "\/assets\/img\/footer\/footer_vormentaal_2.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/footer\/footer_vormentaal_2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4311,6 +4344,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/lib\/parts\/related_custom_posts.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/parts\/related_custom_posts.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/lib\/parts\/related_projects.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/parts\/related_projects.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/lib\/sos\/img\/hog_logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -4370,6 +4421,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/search.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/search.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/single-project_item.php": {
 		"fileType": 8192,

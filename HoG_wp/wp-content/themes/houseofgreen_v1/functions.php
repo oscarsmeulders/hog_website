@@ -215,6 +215,18 @@ function create_post_type_gallery() {
 }
 add_action( 'init', 'create_post_type_gallery' );
 
+/*-----------------------------------------------------------------------------------*/
+/*	add custom poststypes to search
+/*-----------------------------------------------------------------------------------*/
+function custom_posts_to_search($query) {
+
+	if ( $query->is_search ) {
+		$query->set( 'post_type', array( 'post', 'page', 'project_item' ) );
+    }
+
+    return $query;
+}
+add_action( 'pre_get_posts', 'custom_posts_to_search' );
 
 
 /*-----------------------------------------------------------------------------------*/

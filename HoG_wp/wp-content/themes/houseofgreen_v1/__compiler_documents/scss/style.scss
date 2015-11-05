@@ -293,10 +293,18 @@ body {
 //
 body, p {
 	@include MQ(S) {
-		font-size: 14px;
-		line-height: 24px;
+		font-size: 17px;
+		line-height: 27px;
+	}
+	@include MQ(M) {
+		font-size: 15px;
+		line-height: 23px;
 	}
 	@include MQ(L) {
+		font-size: 16px;
+		line-height: 25px;
+	}
+	@include MQ(XL) {
 		font-size: 17px;
 		line-height: 27px;
 	}
@@ -504,10 +512,10 @@ label.hog-label {
 			a {
 				color: $color-homepage-contact-text;
 			}
-			p {
+			div {
 				@extend %hide;
 			}
-			p.s {
+			div.s {
 				@include MQ(S) {
 					display: block;
 					visibility: visible;
@@ -517,7 +525,7 @@ label.hog-label {
 					visibility: hidden;
 				}
 			}
-			p.m {
+			div.m {
 				@include MQ(M) {
 					display: block;
 					visibility: visible;
@@ -527,7 +535,7 @@ label.hog-label {
 					visibility: hidden;
 				}
 			}
-			p.l {
+			div.l {
 				@include MQ(L) {
 					display: block;
 					visibility: visible;
@@ -537,7 +545,7 @@ label.hog-label {
 					visibility: hidden;
 				}
 			}
-			p.xl {
+			div.xl {
 				@include MQ(XL) {
 					display: block;
 					visibility: visible;

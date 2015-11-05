@@ -31,7 +31,7 @@ get_header(); ?>
 						<div class="proportions ratio1_2">
 							<div class="content background-image" style="background-image: url( <?php echo $img_url[0] ?> )">
 								<div class="title">
-									<?php echo $title ?>
+									<?php echo get_responsive_title( $title ); ?>
 								</div>
 							</div>
 						</div>
@@ -45,17 +45,16 @@ get_header(); ?>
 					<div class="proportions">
 						<div class="content">
 							<div class="text">
-								<p class="xl">XL Wilt u het maximale uit de ruimte van uw tuin of terras halen? Of bent u op zoek naar passende beplanting of een inrichting voor uw terras of balkon?<br/>070 1234568<br/><br/>
-								<a href="">info@houseofgreen.nl</a></p>
-
-								<p class="l">L Wilt u het maximale uit de ruimte van uw tuin of terras halen? Of bent u op zoek naar passende beplanting of een inrichting voor uw terras of balkon?<br/>070 1234568<br/><br/>
-								<a href="">info@houseofgreen.nl</a></p>
-
-								<p class="m">M Wilt u het maximale uit de ruimte van uw tuin of terras halen? Of bent u op zoek naar passende beplanting of een inrichting voor uw terras of balkon?<br/>070 1234568<br/><br/>
-								<a href="">info@houseofgreen.nl</a></p>
-
-								<p class="s">S Wilt u het maximale uit de ruimte van uw tuin of terras halen? Of bent u op zoek naar passende beplanting of een inrichting voor uw terras of balkon?<br/>070 1234568<br/><br/>
-								<a href="">info@houseofgreen.nl</a></p>
+								<?php
+									$intro_text_xl = get_field('intro_text_xl');
+									$intro_text_l = get_field('intro_text_l');
+									$intro_text_m = get_field('intro_text_m');
+									$intro_text_s = get_field('intro_text_s');
+								?>
+								<div class="xl"><?php echo $intro_text_xl; ?></div>
+								<div class="l"><?php echo $intro_text_l; ?></div>
+								<div class="m"><?php echo $intro_text_m; ?></div>
+								<div class="s"><?php echo $intro_text_s; ?></div>
 							</div>
 						</div>
 					</div>
@@ -76,7 +75,7 @@ get_header(); ?>
 						<div class="proportions ratio2_1">
 							<div class="content background-image" style="background-image: url(' <?php echo $img_url[0] ?> ')">
 								<div class="title">
-									<?php echo $title ?>
+									<?php echo get_responsive_title( $title ); ?>
 								</div>
 							</div>
 						</div>
@@ -100,7 +99,7 @@ get_header(); ?>
 						<div class="proportions">
 							<div class="content background-image" style="background-image: url(' <?php echo $img_url[0] ?> ')">
 								<div class="title">
-									<?php echo $title ?>
+									<?php echo get_responsive_title( $title ); ?>
 								</div>
 							</div>
 						</div>
@@ -124,7 +123,7 @@ get_header(); ?>
 						<div class="proportions">
 							<div class="content background-image" style="background-image: url(' <?php echo $img_url[0] ?> ')">
 								<div class="title">
-									<?php echo $title ?>
+									<?php echo get_responsive_title( $title ); ?>
 								</div>
 							</div>
 						</div>
@@ -148,7 +147,7 @@ get_header(); ?>
 						<div class="proportions">
 							<div class="content background-image" style="background-image: url(' <?php echo $img_url[0] ?> ')">
 								<div class="title">
-									<?php echo $title ?>
+									<?php echo get_responsive_title( $title ); ?>
 								</div>
 							</div>
 						</div>
@@ -186,7 +185,7 @@ get_header(); ?>
 									<div class="proportions">
 										<div class="content background-image" style="background-image: url(' <?php echo $img_url[0] ?> ')">
 											<div class="title">
-												<?php echo $title ?>
+												<?php echo get_responsive_title( $title ); ?>
 											</div>
 										</div>
 									</div>
@@ -211,7 +210,7 @@ get_header(); ?>
 									<div class="proportions">
 										<div class="content background-image" style="background-image: url(' <?php echo $img_url[0] ?> ')">
 											<div class="title">
-												<?php echo $title ?>
+												<?php echo get_responsive_title( $title ); ?>
 											</div>
 										</div>
 									</div>
@@ -240,7 +239,7 @@ get_header(); ?>
 									<div class="proportions">
 										<div class="content background-image" style="background-image: url(' <?php echo $img_url[0] ?> ')">
 											<div class="title">
-												<?php echo $title ?>
+												<?php echo get_responsive_title( $title ); ?>
 											</div>
 										</div>
 									</div>
@@ -264,7 +263,7 @@ get_header(); ?>
 									<div class="proportions">
 										<div class="content background-image" style="background-image: url(' <?php echo $img_url[0] ?> ')">
 											<div class="title">
-												<?php echo $title ?>
+												<?php echo get_responsive_title( $title ); ?>
 											</div>
 										</div>
 									</div>

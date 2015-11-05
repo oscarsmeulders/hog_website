@@ -18,9 +18,11 @@
 <div class="container-fluid" id="searchbar">
 	<div class="row">
 		<div class="col-xs-10 col-sm-10">
-			<form action="">
-				<input class="input input-search" type="text" name="search" placeholder="<?php _e( 'header_search_placeholder', 'hog_lang' ); ?>">
+
+			<form action="/">
+				<input class="input input-search" id="search" type="text" name="s" value="<?php the_search_query(); ?>" placeholder="<?php _e( 'header_search_placeholder', 'hog_lang' ); ?>">
 			</form>
+
 		</div>
 		<div class="col-xs-2 col-sm-2">
 			<div class="button button-search-action"><?php _e( 'header_search', 'hog_lang' ); ?></div>

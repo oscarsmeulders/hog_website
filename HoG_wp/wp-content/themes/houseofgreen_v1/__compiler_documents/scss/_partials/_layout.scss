@@ -4,6 +4,9 @@
 
 // media queries
 @mixin MQ($canvas) {
+	@if $canvas == XS {
+		@media only screen and (min-width: $XS) { @content; }
+	}
 	@if $canvas == S {
 		@media only screen and (min-width: $S) { @content; }
 	}
@@ -35,6 +38,9 @@
 // margin-top queries
 @mixin m-t($divider) {
 	@if	$divider == half {
+		@include MQ(XS) {
+			margin-top: $marge-XS / 2;
+		}
 		@include MQ(S) {
 			margin-top: $marge-S / 2;
 		}
@@ -48,6 +54,9 @@
 			margin-top: $marge-XL / 2;
 		}
 	} @else if	$divider == double {
+		@include MQ(XS) {
+			margin-top: $marge-XS * 2;
+		}
 		@include MQ(S) {
 			margin-top: $marge-S * 2;
 		}
@@ -61,6 +70,9 @@
 			margin-top: $marge-XL * 2;
 		}
 	} @else if	$divider == none {
+		@include MQ(XS) {
+			margin-top: 0;
+		}
 		@include MQ(S) {
 			margin-top: 0;
 		}
@@ -74,6 +86,9 @@
 			margin-top: 0;
 		}
 	} @else {
+		@include MQ(XS) {
+			margin-top: $marge-XS;
+		}
 		@include MQ(S) {
 			margin-top: $marge-S;
 		}
@@ -92,6 +107,9 @@
 // margin-right queries
 @mixin m-r($divider) {
 	@if	$divider == half {
+		@include MQ(XS) {
+			margin-right: $marge-XS / 2;
+		}
 		@include MQ(S) {
 			margin-right: $marge-S / 2;
 		}
@@ -105,6 +123,9 @@
 			margin-right: $marge-XL / 2;
 		}
 	} @else if	$divider == double {
+		@include MQ(XS) {
+			margin-right: $marge-XS * 2;
+		}
 		@include MQ(S) {
 			margin-right: $marge-S * 2;
 		}
@@ -118,6 +139,9 @@
 			margin-right: $marge-XL * 2;
 		}
 	} @else if	$divider == none {
+		@include MQ(XS) {
+			margin-right: 0;
+		}
 		@include MQ(S) {
 			margin-right: 0;
 		}
@@ -131,6 +155,9 @@
 			margin-right: 0;
 		}
 	} @else {
+		@include MQ(XS) {
+			margin-right: $marge-XS;
+		}
 		@include MQ(S) {
 			margin-right: $marge-S;
 		}
@@ -149,6 +176,9 @@
 // margin-bottom queries
 @mixin m-b($divider) {
 	@if	$divider == half {
+		@include MQ(XS) {
+			margin-bottom: $marge-XS / 2;
+		}
 		@include MQ(S) {
 			margin-bottom: $marge-S / 2;
 		}
@@ -162,6 +192,9 @@
 			margin-bottom: $marge-XL / 2;
 		}
 	} @else if	$divider == double {
+		@include MQ(XS) {
+			margin-bottom: $marge-XS * 2;
+		}
 		@include MQ(S) {
 			margin-bottom: $marge-S * 2;
 		}
@@ -175,6 +208,9 @@
 			margin-bottom: $marge-XL * 2;
 		}
 	} @else if	$divider == none {
+		@include MQ(XS) {
+			margin-bottom: 0;
+		}
 		@include MQ(S) {
 			margin-bottom: 0;
 		}
@@ -188,6 +224,9 @@
 			margin-bottom: 0;
 		}
 	} @else {
+		@include MQ(XS) {
+			margin-bottom: $marge-XS;
+		}
 		@include MQ(S) {
 			margin-bottom: $marge-S;
 		}
@@ -206,6 +245,9 @@
 // margin-left queries
 @mixin m-l($divider) {
 	@if	$divider == half {
+		@include MQ(XS) {
+			margin-left: $marge-XS / 2;
+		}
 		@include MQ(S) {
 			margin-left: $marge-S / 2;
 		}
@@ -219,6 +261,9 @@
 			margin-left: $marge-XL / 2;
 		}
 	} @else if	$divider == double {
+		@include MQ(XS) {
+			margin-left: $marge-XS * 2;
+		}
 		@include MQ(S) {
 			margin-left: $marge-S * 2;
 		}
@@ -232,6 +277,9 @@
 			margin-left: $marge-XL * 2;
 		}
 	} @else if	$divider == none {
+		@include MQ(XS) {
+			margin-left: 0;
+		}
 		@include MQ(S) {
 			margin-left: 0;
 		}
@@ -245,6 +293,9 @@
 			margin-left: 0;
 		}
 	} @else {
+		@include MQ(XS) {
+			margin-left: $marge-XS;
+		}
 		@include MQ(S) {
 			margin-left: $marge-S;
 		}
@@ -263,6 +314,9 @@
 // padding-top queries
 @mixin p-t($divider) {
 	@if	$divider == half {
+		@include MQ(XS) {
+			padding-top: $marge-XS /2;
+		}
 		@include MQ(S) {
 			padding-top: $marge-S / 2;
 		}
@@ -276,6 +330,9 @@
 			padding-top: $marge-XL / 2;
 		}
 	} @else if	$divider == double {
+		@include MQ(XS) {
+			padding-top: $marge-XS * 2;
+		}
 		@include MQ(S) {
 			padding-top: $marge-S * 2;
 		}
@@ -289,6 +346,9 @@
 			padding-top: $marge-XL * 2;
 		}
 	} @else if	$divider == none {
+		@include MQ(XS) {
+			padding-top: 0;
+		}
 		@include MQ(S) {
 			padding-top: 0;
 		}
@@ -302,6 +362,9 @@
 			padding-top: 0;
 		}
 	} @else {
+		@include MQ(XS) {
+			padding-top: $marge-XS;
+		}
 		@include MQ(S) {
 			padding-top: $marge-S;
 		}
@@ -320,6 +383,9 @@
 // padding-right queries
 @mixin p-r($divider) {
 	@if	$divider == half {
+		@include MQ(XS) {
+			padding-right: $marge-XS / 2;
+		}
 		@include MQ(S) {
 			padding-right: $marge-S / 2;
 		}
@@ -333,6 +399,9 @@
 			padding-right: $marge-XL / 2;
 		}
 	} @else if	$divider == double {
+		@include MQ(XS) {
+			padding-right: $marge-XS * 2;
+		}
 		@include MQ(S) {
 			padding-right: $marge-S * 2;
 		}
@@ -346,6 +415,9 @@
 			padding-right: $marge-XL * 2;
 		}
 	} @else if	$divider == none {
+		@include MQ(XS) {
+			padding-right: 0;
+		}
 		@include MQ(S) {
 			padding-right: 0;
 		}
@@ -359,6 +431,9 @@
 			padding-right: 0;
 		}
 	} @else {
+		@include MQ(XS) {
+			padding-right: $marge-XS;
+		}
 		@include MQ(S) {
 			padding-right: $marge-S;
 		}
@@ -377,6 +452,9 @@
 // padding-bottom queries
 @mixin p-b($divider) {
 	@if	$divider == half {
+		@include MQ(XS) {
+			padding-bottom: $marge-XS / 2;
+		}
 		@include MQ(S) {
 			padding-bottom: $marge-S / 2;
 		}
@@ -390,6 +468,9 @@
 			padding-bottom: $marge-XL / 2;
 		}
 	} @else if	$divider == double {
+		@include MQ(XS) {
+			padding-bottom: $marge-XS * 2;
+		}
 		@include MQ(S) {
 			padding-bottom: $marge-S * 2;
 		}
@@ -403,6 +484,9 @@
 			padding-bottom: $marge-XL * 2;
 		}
 	} @else if	$divider == none {
+		@include MQ(XS) {
+			padding-bottom: 0;
+		}
 		@include MQ(S) {
 			padding-bottom: 0;
 		}
@@ -416,6 +500,9 @@
 			padding-bottom: 0;
 		}
 	} @else {
+		@include MQ(XS) {
+			padding-bottom: $marge-XS;
+		}
 		@include MQ(S) {
 			padding-bottom: $marge-S;
 		}
@@ -434,6 +521,9 @@
 // padding-left queries
 @mixin p-l($divider) {
 	@if	$divider == half {
+		@include MQ(XS) {
+			padding-left: $marge-XS / 2;
+		}
 		@include MQ(S) {
 			padding-left: $marge-S / 2;
 		}
@@ -447,6 +537,9 @@
 			padding-left: $marge-XL / 2;
 		}
 	} @else if	$divider == double {
+		@include MQ(XS) {
+			padding-left: $marge-XS * 2;
+		}
 		@include MQ(S) {
 			padding-left: $marge-S * 2;
 		}
@@ -460,6 +553,9 @@
 			padding-left: $marge-XL * 2;
 		}
 	} @else if	$divider == none {
+		@include MQ(XS) {
+			padding-left: 0;
+		}
 		@include MQ(S) {
 			padding-left: 0;
 		}
@@ -473,6 +569,9 @@
 			padding-left: 0;
 		}
 	} @else {
+		@include MQ(XS) {
+			padding-left: $marge-XS;
+		}
 		@include MQ(S) {
 			padding-left: $marge-S;
 		}

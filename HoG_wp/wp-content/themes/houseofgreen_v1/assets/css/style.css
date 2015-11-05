@@ -3455,6 +3455,9 @@ input[type="button"].btn-block {
 .button.topper {
   float: right;
   background-color: #fff; }
+  @media only screen and (min-width: 300px) {
+    .button.topper {
+      margin-right: 12px; } }
   @media only screen and (min-width: 480px) {
     .button.topper {
       margin-right: 12px; } }
@@ -3472,6 +3475,9 @@ input[type="button"].btn-block {
 
 .button-language {
   margin-left: 2px; }
+  @media only screen and (min-width: 300px) {
+    .button-language {
+      margin-right: 12px; } }
   @media only screen and (min-width: 480px) {
     .button-language {
       margin-right: 12px; } }
@@ -3497,6 +3503,21 @@ input[type="button"].btn-block {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
+  @media only screen and (min-width: 300px) {
+    .button-search-action {
+      margin-right: 3px; } }
+  @media only screen and (min-width: 480px) {
+    .button-search-action {
+      margin-right: 3px; } }
+  @media only screen and (min-width: 768px) {
+    .button-search-action {
+      margin-right: 3px; } }
+  @media only screen and (min-width: 992px) {
+    .button-search-action {
+      margin-right: 6px; } }
+  @media only screen and (min-width: 1600px) {
+    .button-search-action {
+      margin-right: 10px; } }
   .button-search-action:hover {
     background-color: #7ea446;
     color: #fff; }
@@ -3542,6 +3563,9 @@ input[type="button"].btn-block {
   background-position: right center;
   background-repeat: no-repeat;
   width: 100%; }
+  @media only screen and (min-width: 300px) {
+    .button-filters {
+      margin-left: 12px; } }
   @media only screen and (min-width: 480px) {
     .button-filters {
       margin-left: 12px; } }
@@ -3554,6 +3578,9 @@ input[type="button"].btn-block {
   @media only screen and (min-width: 1600px) {
     .button-filters {
       margin-left: 40px; } }
+  @media only screen and (min-width: 300px) {
+    .button-filters {
+      margin-right: 12px; } }
   @media only screen and (min-width: 480px) {
     .button-filters {
       margin-right: 12px; } }
@@ -3766,6 +3793,9 @@ body {
     background-color: #dae7c8;
     padding-top: 15px;
     padding-bottom: 15px; }
+    @media only screen and (min-width: 300px) {
+      .footer .tekst {
+        padding-left: 12px; } }
     @media only screen and (min-width: 480px) {
       .footer .tekst {
         padding-left: 12px; } }
@@ -3805,6 +3835,9 @@ body {
   background-color: white;
   width: 100%;
   height: 80px; }
+  @media only screen and (min-width: 300px) {
+    #header {
+      padding-left: 12px; } }
   @media only screen and (min-width: 480px) {
     #header {
       padding-left: 12px; } }
@@ -3826,6 +3859,9 @@ body {
     background-size: auto 70%;
     background-repeat: no-repeat;
     height: 80px; }
+    @media only screen and (min-width: 300px) {
+      #header .logo {
+        margin-right: 12px; } }
     @media only screen and (min-width: 480px) {
       #header .logo {
         margin-right: 12px; } }
@@ -3857,6 +3893,9 @@ body {
   -webkit-transition: top 0.2s ease-in-out;
   -o-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out; }
+  @media only screen and (min-width: 300px) {
+    #searchbar {
+      padding-left: 12px; } }
   @media only screen and (min-width: 480px) {
     #searchbar {
       padding-left: 12px; } }
@@ -3869,6 +3908,9 @@ body {
   @media only screen and (min-width: 1600px) {
     #searchbar {
       padding-left: 40px; } }
+  @media only screen and (min-width: 300px) {
+    #searchbar {
+      padding-right: 12px; } }
   @media only screen and (min-width: 480px) {
     #searchbar {
       padding-right: 12px; } }
@@ -3907,6 +3949,9 @@ body {
   transition: transform 0.9s, padding-top 0.9s;
   -webkit-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99); }
+  @media only screen and (min-width: 300px) {
+    .main {
+      margin-top: 6px; } }
   @media only screen and (min-width: 480px) {
     .main {
       margin-top: 6px; } }
@@ -3919,6 +3964,9 @@ body {
   @media only screen and (min-width: 1600px) {
     .main {
       margin-top: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .main {
+      margin-right: 6px; } }
   @media only screen and (min-width: 480px) {
     .main {
       margin-right: 6px; } }
@@ -3931,6 +3979,9 @@ body {
   @media only screen and (min-width: 1600px) {
     .main {
       margin-right: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .main {
+      margin-bottom: 6px; } }
   @media only screen and (min-width: 480px) {
     .main {
       margin-bottom: 6px; } }
@@ -3943,6 +3994,9 @@ body {
   @media only screen and (min-width: 1600px) {
     .main {
       margin-bottom: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .main {
+      margin-left: 6px; } }
   @media only screen and (min-width: 480px) {
     .main {
       margin-left: 6px; } }
@@ -3975,7 +4029,7 @@ body {
         -webkit-transform: translateX(50%);
         transform: translateX(50%); } }
 
-.homepage .case .content .text p {
+.homepage .case .content .text div {
   display: none;
   visibility: hidden; }
 
@@ -3991,9 +4045,17 @@ body {
 
 @media only screen and (min-width: 480px) {
   body, p {
-    font-size: 14px;
-    line-height: 24px; } }
+    font-size: 17px;
+    line-height: 27px; } }
+@media only screen and (min-width: 768px) {
+  body, p {
+    font-size: 15px;
+    line-height: 23px; } }
 @media only screen and (min-width: 992px) {
+  body, p {
+    font-size: 16px;
+    line-height: 25px; } }
+@media only screen and (min-width: 1600px) {
   body, p {
     font-size: 17px;
     line-height: 27px; } }
@@ -4015,6 +4077,9 @@ a, a:visited, a:link, a:hover, a:active {
   a:active .h1, a:active .h2, a:active .h3, a:active .h4, a:active .h5, a:active .h6 {
     text-decoration: none !important; }
 
+@media only screen and (min-width: 300px) {
+  .container-content {
+    margin-top: 6px; } }
 @media only screen and (min-width: 480px) {
   .container-content {
     margin-top: 6px; } }
@@ -4027,6 +4092,9 @@ a, a:visited, a:link, a:hover, a:active {
 @media only screen and (min-width: 1600px) {
   .container-content {
     margin-top: 20px; } }
+@media only screen and (min-width: 300px) {
+  .container-content {
+    margin-right: 6px; } }
 @media only screen and (min-width: 480px) {
   .container-content {
     margin-right: 6px; } }
@@ -4039,6 +4107,9 @@ a, a:visited, a:link, a:hover, a:active {
 @media only screen and (min-width: 1600px) {
   .container-content {
     margin-right: 20px; } }
+@media only screen and (min-width: 300px) {
+  .container-content {
+    margin-bottom: 6px; } }
 @media only screen and (min-width: 480px) {
   .container-content {
     margin-bottom: 6px; } }
@@ -4051,6 +4122,9 @@ a, a:visited, a:link, a:hover, a:active {
 @media only screen and (min-width: 1600px) {
   .container-content {
     margin-bottom: 20px; } }
+@media only screen and (min-width: 300px) {
+  .container-content {
+    margin-left: 3px; } }
 @media only screen and (min-width: 480px) {
   .container-content {
     margin-left: 3px; } }
@@ -4063,6 +4137,9 @@ a, a:visited, a:link, a:hover, a:active {
 @media only screen and (min-width: 1600px) {
   .container-content {
     margin-left: 10px; } }
+@media only screen and (min-width: 300px) {
+  .container-content .content {
+    padding-left: 3px; } }
 @media only screen and (min-width: 480px) {
   .container-content .content {
     padding-left: 3px; } }
@@ -4168,6 +4245,9 @@ label.hog-label {
 .homepage .container-content {
   padding: 0;
   margin: 0; }
+  @media only screen and (min-width: 300px) {
+    .homepage .container-content .content {
+      margin-left: 3px; } }
   @media only screen and (min-width: 480px) {
     .homepage .container-content .content {
       margin-left: 3px; } }
@@ -4180,6 +4260,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .container-content .content {
       margin-left: 10px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .container-content .content {
+      margin-right: 3px; } }
   @media only screen and (min-width: 480px) {
     .homepage .container-content .content {
       margin-right: 3px; } }
@@ -4216,6 +4299,9 @@ label.hog-label {
   			background-repeat: no-repeat;
   		}
   */ }
+  @media only screen and (min-width: 300px) {
+    .homepage .case .content {
+      margin-top: 6px; } }
   @media only screen and (min-width: 480px) {
     .homepage .case .content {
       margin-top: 6px; } }
@@ -4228,6 +4314,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .case .content {
       margin-top: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .case .content {
+      margin-right: 6px; } }
   @media only screen and (min-width: 480px) {
     .homepage .case .content {
       margin-right: 6px; } }
@@ -4240,6 +4329,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .case .content {
       margin-right: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .case .content {
+      margin-bottom: 6px; } }
   @media only screen and (min-width: 480px) {
     .homepage .case .content {
       margin-bottom: 6px; } }
@@ -4252,6 +4344,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .case .content {
       margin-bottom: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .case .content {
+      margin-left: 6px; } }
   @media only screen and (min-width: 480px) {
     .homepage .case .content {
       margin-left: 6px; } }
@@ -4278,6 +4373,9 @@ label.hog-label {
     padding-left: 10px; }
   .homepage .case .content .text {
     color: #324300; }
+    @media only screen and (min-width: 300px) {
+      .homepage .case .content .text {
+        padding-top: 6px; } }
     @media only screen and (min-width: 480px) {
       .homepage .case .content .text {
         padding-top: 6px; } }
@@ -4290,6 +4388,9 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .homepage .case .content .text {
         padding-top: 20px; } }
+    @media only screen and (min-width: 300px) {
+      .homepage .case .content .text {
+        padding-right: 6px; } }
     @media only screen and (min-width: 480px) {
       .homepage .case .content .text {
         padding-right: 6px; } }
@@ -4302,6 +4403,9 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .homepage .case .content .text {
         padding-right: 20px; } }
+    @media only screen and (min-width: 300px) {
+      .homepage .case .content .text {
+        padding-bottom: 6px; } }
     @media only screen and (min-width: 480px) {
       .homepage .case .content .text {
         padding-bottom: 6px; } }
@@ -4314,6 +4418,9 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .homepage .case .content .text {
         padding-bottom: 20px; } }
+    @media only screen and (min-width: 300px) {
+      .homepage .case .content .text {
+        padding-left: 6px; } }
     @media only screen and (min-width: 480px) {
       .homepage .case .content .text {
         padding-left: 6px; } }
@@ -4329,35 +4436,38 @@ label.hog-label {
     .homepage .case .content .text a {
       color: #324300; }
     @media only screen and (min-width: 480px) {
-      .homepage .case .content .text p.s {
+      .homepage .case .content .text div.s {
         display: block;
         visibility: visible; } }
     @media only screen and (min-width: 768px) {
-      .homepage .case .content .text p.s {
+      .homepage .case .content .text div.s {
         display: none;
         visibility: hidden; } }
     @media only screen and (min-width: 768px) {
-      .homepage .case .content .text p.m {
+      .homepage .case .content .text div.m {
         display: block;
         visibility: visible; } }
     @media only screen and (min-width: 992px) {
-      .homepage .case .content .text p.m {
+      .homepage .case .content .text div.m {
         display: none;
         visibility: hidden; } }
     @media only screen and (min-width: 992px) {
-      .homepage .case .content .text p.l {
+      .homepage .case .content .text div.l {
         display: block;
         visibility: visible; } }
     @media only screen and (min-width: 1600px) {
-      .homepage .case .content .text p.l {
+      .homepage .case .content .text div.l {
         display: none;
         visibility: hidden; } }
     @media only screen and (min-width: 1600px) {
-      .homepage .case .content .text p.xl {
+      .homepage .case .content .text div.xl {
         display: block;
         visibility: visible; } }
 .homepage .newsletter {
   background-color: #dae7c8; }
+  @media only screen and (min-width: 300px) {
+    .homepage .newsletter {
+      padding-top: 6px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
       padding-top: 6px; } }
@@ -4370,6 +4480,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       padding-top: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .newsletter {
+      padding-right: 6px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
       padding-right: 6px; } }
@@ -4382,6 +4495,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       padding-right: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .newsletter {
+      padding-bottom: 12px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
       padding-bottom: 12px; } }
@@ -4394,6 +4510,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       padding-bottom: 40px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .newsletter {
+      padding-left: 12px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
       padding-left: 12px; } }
@@ -4406,6 +4525,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       padding-left: 40px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .newsletter {
+      margin-top: 6px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
       margin-top: 6px; } }
@@ -4418,6 +4540,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       margin-top: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .newsletter {
+      margin-right: 6px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
       margin-right: 6px; } }
@@ -4430,6 +4555,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       margin-right: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .newsletter {
+      margin-bottom: 6px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
       margin-bottom: 6px; } }
@@ -4442,6 +4570,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       margin-bottom: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .homepage .newsletter {
+      margin-left: 6px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
       margin-left: 6px; } }
@@ -4458,6 +4589,9 @@ label.hog-label {
 .overview .container-title {
   margin-bottom: 0px;
   padding-bottom: 0px; }
+  @media only screen and (min-width: 300px) {
+    .overview .container-title .title {
+      padding-left: 6px; } }
   @media only screen and (min-width: 480px) {
     .overview .container-title .title {
       padding-left: 6px; } }
@@ -4476,6 +4610,9 @@ label.hog-label {
   z-index: 15;
   width: 100%;
   position: absolute; }
+  @media only screen and (min-width: 300px) {
+    .overview .container-filters {
+      margin-left: 6px; } }
   @media only screen and (min-width: 480px) {
     .overview .container-filters {
       margin-left: 6px; } }
@@ -4488,6 +4625,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .overview .container-filters {
       margin-left: 20px; } }
+  @media only screen and (min-width: 300px) {
+    .overview .container-filters {
+      margin-right: 3px; } }
   @media only screen and (min-width: 480px) {
     .overview .container-filters {
       margin-right: 3px; } }
@@ -4503,6 +4643,9 @@ label.hog-label {
   .overview .container-filters .buttons-gallery {
     position: relative;
     padding-bottom: 0px; }
+    @media only screen and (min-width: 300px) {
+      .overview .container-filters .buttons-gallery {
+        padding-left: 12px; } }
     @media only screen and (min-width: 480px) {
       .overview .container-filters .buttons-gallery {
         padding-left: 12px; } }
@@ -4529,6 +4672,9 @@ label.hog-label {
     visibility: hidden; }
   .overview .filters-menu .filters-list {
     display: block; }
+    @media only screen and (min-width: 300px) {
+      .overview .filters-menu .filters-list {
+        padding-right: 12px; } }
     @media only screen and (min-width: 480px) {
       .overview .filters-menu .filters-list {
         padding-right: 12px; } }
@@ -4554,6 +4700,9 @@ label.hog-label {
       height: auto;
       display: table;
       background-color: #dae7c8; }
+      @media only screen and (min-width: 300px) {
+        .overview .filters-menu .filters-list > div {
+          padding-top: 6px; } }
       @media only screen and (min-width: 480px) {
         .overview .filters-menu .filters-list > div {
           padding-top: 6px; } }
@@ -4566,6 +4715,9 @@ label.hog-label {
       @media only screen and (min-width: 1600px) {
         .overview .filters-menu .filters-list > div {
           padding-top: 20px; } }
+      @media only screen and (min-width: 300px) {
+        .overview .filters-menu .filters-list > div {
+          padding-left: 6px; } }
       @media only screen and (min-width: 480px) {
         .overview .filters-menu .filters-list > div {
           padding-left: 6px; } }
@@ -4578,6 +4730,9 @@ label.hog-label {
       @media only screen and (min-width: 1600px) {
         .overview .filters-menu .filters-list > div {
           padding-left: 20px; } }
+      @media only screen and (min-width: 300px) {
+        .overview .filters-menu .filters-list > div {
+          padding-bottom: 6px; } }
       @media only screen and (min-width: 480px) {
         .overview .filters-menu .filters-list > div {
           padding-bottom: 6px; } }
@@ -4590,6 +4745,9 @@ label.hog-label {
       @media only screen and (min-width: 1600px) {
         .overview .filters-menu .filters-list > div {
           padding-bottom: 20px; } }
+      @media only screen and (min-width: 300px) {
+        .overview .filters-menu .filters-list > div {
+          padding-right: 6px; } }
       @media only screen and (min-width: 480px) {
         .overview .filters-menu .filters-list > div {
           padding-right: 6px; } }
@@ -4605,6 +4763,9 @@ label.hog-label {
       .overview .filters-menu .filters-list > div > div {
         float: left;
         width: 50%; }
+        @media only screen and (min-width: 300px) {
+          .overview .filters-menu .filters-list > div > div {
+            padding-left: 6px; } }
         @media only screen and (min-width: 480px) {
           .overview .filters-menu .filters-list > div > div {
             padding-left: 6px; } }
@@ -4619,6 +4780,9 @@ label.hog-label {
             padding-left: 20px; } }
         .overview .filters-menu .filters-list > div > div:nth-child(2) {
           float: right; }
+          @media only screen and (min-width: 300px) {
+            .overview .filters-menu .filters-list > div > div:nth-child(2) {
+              padding-left: 12px; } }
           @media only screen and (min-width: 480px) {
             .overview .filters-menu .filters-list > div > div:nth-child(2) {
               padding-left: 12px; } }
@@ -4640,6 +4804,9 @@ label.hog-label {
     -webkit-transition: opacity 0.2s ease-in-out;
     -o-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out; }
+    @media only screen and (min-width: 300px) {
+      .overview .listing div.item {
+        margin-bottom: 12px; } }
     @media only screen and (min-width: 480px) {
       .overview .listing div.item {
         margin-bottom: 12px; } }
@@ -4665,6 +4832,9 @@ label.hog-label {
       background-repeat: no-repeat;
       background-size: auto;
       background-image: url("../img/ajax-loader.gif"); }
+      @media only screen and (min-width: 300px) {
+        .overview .listing div.item > div {
+          margin-top: 6px; } }
       @media only screen and (min-width: 480px) {
         .overview .listing div.item > div {
           margin-top: 6px; } }
@@ -4677,6 +4847,9 @@ label.hog-label {
       @media only screen and (min-width: 1600px) {
         .overview .listing div.item > div {
           margin-top: 20px; } }
+      @media only screen and (min-width: 300px) {
+        .overview .listing div.item > div {
+          margin-right: 6px; } }
       @media only screen and (min-width: 480px) {
         .overview .listing div.item > div {
           margin-right: 6px; } }
@@ -4689,6 +4862,9 @@ label.hog-label {
       @media only screen and (min-width: 1600px) {
         .overview .listing div.item > div {
           margin-right: 20px; } }
+      @media only screen and (min-width: 300px) {
+        .overview .listing div.item > div {
+          margin-left: 6px; } }
       @media only screen and (min-width: 480px) {
         .overview .listing div.item > div {
           margin-left: 6px; } }
@@ -4716,6 +4892,9 @@ label.hog-label {
 
 .detail {
   /* inherit size from gallery */ }
+  @media only screen and (min-width: 300px) {
+    .detail .container-title .title {
+      padding-left: 3px; } }
   @media only screen and (min-width: 480px) {
     .detail .container-title .title {
       padding-left: 3px; } }
@@ -4728,6 +4907,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .detail .container-title .title {
       padding-left: 10px; } }
+  @media only screen and (min-width: 300px) {
+    .detail .container-title .title {
+      padding-right: 3px; } }
   @media only screen and (min-width: 480px) {
     .detail .container-title .title {
       padding-right: 3px; } }
@@ -4745,6 +4927,9 @@ label.hog-label {
   .detail .container-title .buttons-gallery {
     position: relative;
     padding-bottom: 10px; }
+    @media only screen and (min-width: 300px) {
+      .detail .container-title .buttons-gallery {
+        padding-left: 3px; } }
     @media only screen and (min-width: 480px) {
       .detail .container-title .buttons-gallery {
         padding-left: 3px; } }
@@ -4757,6 +4942,9 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .detail .container-title .buttons-gallery {
         padding-left: 10px; } }
+    @media only screen and (min-width: 300px) {
+      .detail .container-title .buttons-gallery {
+        padding-right: 6px; } }
     @media only screen and (min-width: 480px) {
       .detail .container-title .buttons-gallery {
         padding-right: 6px; } }
@@ -4774,6 +4962,9 @@ label.hog-label {
         position: absolute;
         bottom: 0;
         right: 0; } }
+  @media only screen and (min-width: 300px) {
+    .detail .container-gallery {
+      padding-top: 3px; } }
   @media only screen and (min-width: 480px) {
     .detail .container-gallery {
       padding-top: 3px; } }
@@ -4786,6 +4977,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .detail .container-gallery {
       padding-top: 10px; } }
+  @media only screen and (min-width: 300px) {
+    .detail .container-gallery {
+      padding-left: 3px; } }
   @media only screen and (min-width: 480px) {
     .detail .container-gallery {
       padding-left: 3px; } }
@@ -4798,6 +4992,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .detail .container-gallery {
       padding-left: 10px; } }
+  @media only screen and (min-width: 300px) {
+    .detail .container-gallery {
+      padding-right: 6px; } }
   @media only screen and (min-width: 480px) {
     .detail .container-gallery {
       padding-right: 6px; } }
@@ -4813,6 +5010,9 @@ label.hog-label {
   .detail .container-gallery .title {
     font-size: 19px;
     float: left; }
+    @media only screen and (min-width: 300px) {
+      .detail .container-gallery .title {
+        padding-left: 3px; } }
     @media only screen and (min-width: 480px) {
       .detail .container-gallery .title {
         padding-left: 3px; } }
@@ -4837,6 +5037,9 @@ label.hog-label {
   .detail .gallery {
     padding-bottom: 33%;
     /* gallery height has percentage of width */ }
+    @media only screen and (min-width: 300px) {
+      .detail .gallery {
+        margin-left: 6px; } }
     @media only screen and (min-width: 480px) {
       .detail .gallery {
         margin-left: 6px; } }
@@ -4849,6 +5052,9 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .detail .gallery {
         margin-left: 20px; } }
+    @media only screen and (min-width: 300px) {
+      .detail .gallery {
+        margin-right: 6px; } }
     @media only screen and (min-width: 480px) {
       .detail .gallery {
         margin-right: 6px; } }
@@ -4933,6 +5139,9 @@ label.hog-label {
   width: 100%;
   height: auto; }
 
+@media only screen and (min-width: 300px) {
+  .container-related {
+    padding-top: 3px; } }
 @media only screen and (min-width: 480px) {
   .container-related {
     padding-top: 3px; } }
@@ -4945,6 +5154,9 @@ label.hog-label {
 @media only screen and (min-width: 1600px) {
   .container-related {
     padding-top: 10px; } }
+@media only screen and (min-width: 300px) {
+  .container-related {
+    padding-left: 3px; } }
 @media only screen and (min-width: 480px) {
   .container-related {
     padding-left: 3px; } }
@@ -4957,6 +5169,9 @@ label.hog-label {
 @media only screen and (min-width: 1600px) {
   .container-related {
     padding-left: 10px; } }
+@media only screen and (min-width: 300px) {
+  .container-related {
+    padding-right: 6px; } }
 @media only screen and (min-width: 480px) {
   .container-related {
     padding-right: 6px; } }
@@ -4971,6 +5186,9 @@ label.hog-label {
     padding-right: 20px; } }
 .container-related h4 {
   border-top: 2px solid #fff; }
+  @media only screen and (min-width: 300px) {
+    .container-related h4 {
+      padding-top: 3px; } }
   @media only screen and (min-width: 480px) {
     .container-related h4 {
       padding-top: 3px; } }
@@ -4983,6 +5201,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .container-related h4 {
       padding-top: 10px; } }
+  @media only screen and (min-width: 300px) {
+    .container-related h4 {
+      margin-left: 3px; } }
   @media only screen and (min-width: 480px) {
     .container-related h4 {
       margin-left: 3px; } }
@@ -4995,6 +5216,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .container-related h4 {
       margin-left: 10px; } }
+  @media only screen and (min-width: 300px) {
+    .container-related h4 {
+      margin-right: 3px; } }
   @media only screen and (min-width: 480px) {
     .container-related h4 {
       margin-right: 3px; } }
@@ -5007,6 +5231,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .container-related h4 {
       margin-right: 10px; } }
+  @media only screen and (min-width: 300px) {
+    .container-related h4 {
+      margin-bottom: 3px; } }
   @media only screen and (min-width: 480px) {
     .container-related h4 {
       margin-bottom: 3px; } }
@@ -5019,6 +5246,9 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .container-related h4 {
       margin-bottom: 10px; } }
+@media only screen and (min-width: 300px) {
+  .container-related .item {
+    padding-left: 3px; } }
 @media only screen and (min-width: 480px) {
   .container-related .item {
     padding-left: 3px; } }
@@ -5031,6 +5261,9 @@ label.hog-label {
 @media only screen and (min-width: 1600px) {
   .container-related .item {
     padding-left: 10px; } }
+@media only screen and (min-width: 300px) {
+  .container-related .item {
+    padding-right: 3px; } }
 @media only screen and (min-width: 480px) {
   .container-related .item {
     padding-right: 3px; } }
@@ -5129,6 +5362,9 @@ label.hog-label {
     transition: transform 0.9s;
     -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
     transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78); }
+    @media only screen and (min-width: 300px) {
+      .hog-nav .hog-navigation-wrapper {
+        padding-top: 6px; } }
     @media only screen and (min-width: 480px) {
       .hog-nav .hog-navigation-wrapper {
         padding-top: 6px; } }
@@ -5141,6 +5377,9 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .hog-nav .hog-navigation-wrapper {
         padding-top: 20px; } }
+    @media only screen and (min-width: 300px) {
+      .hog-nav .hog-navigation-wrapper {
+        padding-right: 6px; } }
     @media only screen and (min-width: 480px) {
       .hog-nav .hog-navigation-wrapper {
         padding-right: 6px; } }
@@ -5153,6 +5392,9 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .hog-nav .hog-navigation-wrapper {
         padding-right: 20px; } }
+    @media only screen and (min-width: 300px) {
+      .hog-nav .hog-navigation-wrapper {
+        padding-bottom: 6px; } }
     @media only screen and (min-width: 480px) {
       .hog-nav .hog-navigation-wrapper {
         padding-bottom: 6px; } }
@@ -5165,6 +5407,9 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .hog-nav .hog-navigation-wrapper {
         padding-bottom: 20px; } }
+    @media only screen and (min-width: 300px) {
+      .hog-nav .hog-navigation-wrapper {
+        padding-left: 6px; } }
     @media only screen and (min-width: 480px) {
       .hog-nav .hog-navigation-wrapper {
         padding-left: 6px; } }

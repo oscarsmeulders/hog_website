@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: hog_trans\n"
-"POT-Creation-Date: 2015-10-29 14:15+0100\n"
-"PO-Revision-Date: 2015-10-29 14:15+0100\n"
+"POT-Creation-Date: 2015-11-05 20:23+0100\n"
+"PO-Revision-Date: 2015-11-05 20:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -20,35 +20,35 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-3: __compiler_documents\n"
 "X-Poedit-SearchPathExcluded-4: __libs\n"
 
-#: functions.php:121
+#: functions.php:175
 msgid "wp_menu_label_project_kind_category"
 msgstr "Kind category"
 
-#: functions.php:133 functions.php:134
+#: functions.php:187 functions.php:188
 msgid "wp_menu_project"
 msgstr "Project"
 
-#: functions.php:135
+#: functions.php:189
 msgid "wp_menu_project_new"
 msgstr "New project"
 
-#: functions.php:140
+#: functions.php:194
 msgid "wp_menu_project_slug"
 msgstr "project"
 
-#: functions.php:151 functions.php:152
+#: functions.php:205 functions.php:206
 msgid "wp_menu_gallery"
 msgstr "Gallery"
 
-#: functions.php:153
+#: functions.php:207
 msgid "wp_menu_gallery_new"
 msgstr "New gallery"
 
-#: functions.php:157
+#: functions.php:211
 msgid "wp_menu_gallery_slug"
 msgstr "gallery"
 
-#: functions.php:182
+#: functions.php:248
 msgid "Primary Menu"
 msgstr "Hoofdmenu"
 
@@ -64,6 +64,14 @@ msgstr "1 Reactie"
 msgid "% Comments"
 msgstr "% Reacties"
 
+#: lib/parts/footer.php:31
+msgid "footer_general_conditions"
+msgstr "Algemeen Voorwaarden"
+
+#: lib/parts/footer.php:34
+msgid "footer_disclaimer"
+msgstr "Disclaimer"
+
 #: lib/parts/header.php:10
 msgid "header_menu"
 msgstr "MENU"
@@ -72,11 +80,11 @@ msgstr "MENU"
 msgid "header_language"
 msgstr "NL"
 
-#: lib/parts/header.php:22
+#: lib/parts/header.php:23
 msgid "header_search_placeholder"
 msgstr "Please provide a search term"
 
-#: lib/parts/header.php:26
+#: lib/parts/header.php:28
 msgid "header_search"
 msgstr "Search"
 
@@ -108,17 +116,28 @@ msgstr "Email"
 msgid "newsLetter_email_placeholder"
 msgstr "Your email address"
 
-#: page-overview.php:27
+#: lib/parts/related_custom_posts.php:41
+msgid "title_gerelateerd_custom"
+msgstr "Related pages"
+
+#: lib/parts/related_projects.php:46
+msgid "title_gerelateerd_projecten"
+msgstr "Related projects"
+
+#: page-overview.php:28
 msgid "filter_project_kind_category"
 msgstr "Kind of project"
 
-#: single-project_item.php:41
+#: page-overview.php:71 single-project_item.php:67
 msgid "title_projecten"
 msgstr "Projects"
 
-#: single-project_item.php:172
-msgid "title_projecten_gerelateerd"
-msgstr "Related projects"
+#: search.php:19
+msgid "title_search"
+msgstr "Search results"
+
+#~ msgid "title_projecten_gerelateerd"
+#~ msgstr "Related projects"
 
 #~ msgid "Archives"
 #~ msgstr "Archieven"
