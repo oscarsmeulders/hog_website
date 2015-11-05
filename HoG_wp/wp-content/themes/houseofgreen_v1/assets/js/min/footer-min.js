@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){$(".footer .topper").on("click",function(){$("html, body").animate({scrollTop:0},1e3),event.preventDefault()})}),$(window).resize(function(){});

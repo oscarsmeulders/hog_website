@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){$(".to_top").on("click","button",function(){$("html, body").animate({scrollTop:0},"fast")})}),$(window).resize(function(){});

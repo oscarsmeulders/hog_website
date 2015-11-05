@@ -1,0 +1,196 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hog_trans\n"
+"POT-Creation-Date: 2015-10-29 14:15+0100\n"
+"PO-Revision-Date: 2015-10-29 14:15+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+"X-Poedit-SearchPathExcluded-1: _scss\n"
+"X-Poedit-SearchPathExcluded-2: lib/acf\n"
+"X-Poedit-SearchPathExcluded-3: __compiler_documents\n"
+"X-Poedit-SearchPathExcluded-4: __libs\n"
+
+#: functions.php:121
+msgid "wp_menu_label_project_kind_category"
+msgstr "Kind category"
+
+#: functions.php:133 functions.php:134
+msgid "wp_menu_project"
+msgstr "Project"
+
+#: functions.php:135
+msgid "wp_menu_project_new"
+msgstr "New project"
+
+#: functions.php:140
+msgid "wp_menu_project_slug"
+msgstr "project"
+
+#: functions.php:151 functions.php:152
+msgid "wp_menu_gallery"
+msgstr "Gallery"
+
+#: functions.php:153
+msgid "wp_menu_gallery_new"
+msgstr "New gallery"
+
+#: functions.php:157
+msgid "wp_menu_gallery_slug"
+msgstr "gallery"
+
+#: functions.php:182
+msgid "Primary Menu"
+msgstr "Hoofdmenu"
+
+#: index copy.php:32
+msgid "Comment"
+msgstr "Reactie"
+
+#: index copy.php:32
+msgid "1 Comment"
+msgstr "1 Reactie"
+
+#: index copy.php:32
+msgid "% Comments"
+msgstr "% Reacties"
+
+#: lib/parts/header.php:10
+msgid "header_menu"
+msgstr "MENU"
+
+#: lib/parts/header.php:13
+msgid "header_language"
+msgstr "NL"
+
+#: lib/parts/header.php:22
+msgid "header_search_placeholder"
+msgstr "Please provide a search term"
+
+#: lib/parts/header.php:26
+msgid "header_search"
+msgstr "Search"
+
+#: lib/parts/newsletter.php:5
+msgid "newsletter_title"
+msgstr "Get our newsletter"
+
+#: lib/parts/newsletter.php:13
+msgid "newsLetter_firstname"
+msgstr "First name"
+
+#: lib/parts/newsletter.php:16
+msgid "newsLetter_firstname_placeholder"
+msgstr "Your first name"
+
+#: lib/parts/newsletter.php:23
+msgid "newsLetter_lastname"
+msgstr "Last name"
+
+#: lib/parts/newsletter.php:26
+msgid "newsLetter_lastname_placeholder"
+msgstr "Your last name"
+
+#: lib/parts/newsletter.php:33
+msgid "newsLetter_email"
+msgstr "Email"
+
+#: lib/parts/newsletter.php:36
+msgid "newsLetter_email_placeholder"
+msgstr "Your email address"
+
+#: page-overview.php:27
+msgid "filter_project_kind_category"
+msgstr "Kind of project"
+
+#: single-project_item.php:41
+msgid "title_projecten"
+msgstr "Projects"
+
+#: single-project_item.php:172
+msgid "title_projecten_gerelateerd"
+msgstr "Related projects"
+
+#~ msgid "Archives"
+#~ msgstr "Archieven"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "menu_project"
+#~ msgstr "Projects"
+
+#~ msgid "menu_project_new"
+#~ msgstr "Create new project"
+
+#~ msgid "menu_project_slug"
+#~ msgstr "projects"
+
+#~ msgid "menu_project_all"
+#~ msgstr "All projects"
+
+#~ msgid "header_inputSearch_placeholder"
+#~ msgstr "Provide search keyword"
+
+#~ msgid "GetOurNewsletter_title"
+#~ msgstr "Receive our newsletter"
+
+#~ msgid "Not Found"
+#~ msgstr "Niet gevonden"
+
+#~ msgid "Category photography"
+#~ msgstr "Categorie fotografie"
+
+#~ msgid "Category film"
+#~ msgstr "Categorie film"
+
+#~ msgid "Photography"
+#~ msgstr "Fotografie"
+
+#~ msgid "New photography"
+#~ msgstr "Nieuwe fotografie"
+
+#~ msgid "Film"
+#~ msgstr "Film"
+
+#~ msgid "New film"
+#~ msgstr "Nieuwe film"
+
+#~ msgid "Slideshow"
+#~ msgstr "Slideshow"
+
+#~ msgid "New slideshow"
+#~ msgstr "Nieuwe slideshow"
+
+#~ msgid "Filter"
+#~ msgstr "Filter"
+
+#~ msgid "Show all"
+#~ msgstr "Toon alles"
+
+#~ msgid "Gerrit Schreurs - Photography & Film"
+#~ msgstr "Gerrit Schreurs - Fotografie & Film"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "Error"
+#~ msgstr "Fout"
+
+#~ msgid "photography"
+#~ msgstr "fotografie"
+
+#~ msgid "film"
+#~ msgstr "film"
+
+#~ msgid "menu"
+#~ msgstr "nav"

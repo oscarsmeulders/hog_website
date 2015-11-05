@@ -1,0 +1,49 @@
+{
+    "key": "group_5634946000ae5",
+    "title": "Navigation address",
+    "fields": [
+        {
+            "key": "field_56349469a32b4",
+            "label": "NAW info",
+            "name": "naw_info",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<h5>House of Green - Den Haag<\/h5>\r\nNoordeinde 102<br\/>\r\n2514 GM\tDen Haag<br\/>\r\n<table>\r\n\t<tr>\r\n\t\t<td>Telefoon<\/td><td><a href=\"tel:0031707370747\">+31 (0) 70 73 70 747<\/a><\/td>\r\n\t<tr>\r\n\t\t<td>Email<\/td><td><a href=\"mailto:tuinwinkel@houseofgreen.nl\">tuinwinkel@houseofgreen.nl<\/a><\/td>\r\n\t<\/tr>\r\n<table>\r\n\r\n\r\n\r\n<h5>Openingstijden<\/h5>\r\n<table>\r\n\t<tr>\r\n\t\t<td>Maandag t\/m vrijdag<\/td><td>10:00 tot 18:00<\/td>\r\n\t<\/tr>\r\n\t<tr>\r\n\t\t<td>Donderdag<\/td><td>tot 21:00<\/td>\r\n\t<\/tr>\r\n\t<tr>\r\n\t\t<td>Maandag t\/m vrijdag<\/td><td>10:00 tot 18:00<\/td>\r\n\t<\/tr>\r\n<\/table>",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-navigation"
+            }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1446286530
+}

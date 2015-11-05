@@ -1,0 +1,489 @@
+@mixin box-shadow($color, $x:0, $y:0, $size:0, $spread:0) {
+
+}
+
+// media queries
+@mixin MQ($canvas) {
+	@if $canvas == S {
+		@media only screen and (min-width: $S) { @content; }
+	}
+	@else if $canvas == M {
+		@media only screen and (min-width: $M) { @content; }
+	}
+	@else if $canvas == L {
+		@media only screen and (min-width: $L) { @content; }
+	}
+	@else if $canvas == XL {
+		@media only screen and (min-width: $XL) { @content; }
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin trans($all) {
+	@if	$all == all {
+		@include transition(all 0.2s ease-in-out);
+	} @else if	$all == opacity {
+		@include transition(opacity 0.2s ease-in-out);
+	} @else if	$all == background-size {
+		@include transition(background-size 0.2s ease-in-out);
+	} @else if	$all == top {
+		@include transition(top 0.2s ease-in-out);
+	} @else if	$all == padding-top {
+		@include transition(padding-top 0.2s ease-in-out);
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+// margin-top queries
+@mixin m-t($divider) {
+	@if	$divider == half {
+		@include MQ(S) {
+			margin-top: $marge-S / 2;
+		}
+		@include MQ(M) {
+			margin-top: $marge-M / 2;
+		}
+		@include MQ(L) {
+			margin-top: $marge-L / 2;
+		}
+		@include MQ(XL) {
+			margin-top: $marge-XL / 2;
+		}
+	} @else if	$divider == double {
+		@include MQ(S) {
+			margin-top: $marge-S * 2;
+		}
+		@include MQ(M) {
+			margin-top: $marge-M * 2;
+		}
+		@include MQ(L) {
+			margin-top: $marge-L * 2;
+		}
+		@include MQ(XL) {
+			margin-top: $marge-XL * 2;
+		}
+	} @else if	$divider == none {
+		@include MQ(S) {
+			margin-top: 0;
+		}
+		@include MQ(M) {
+			margin-top: 0;
+		}
+		@include MQ(L) {
+			margin-top: 0;
+		}
+		@include MQ(XL) {
+			margin-top: 0;
+		}
+	} @else {
+		@include MQ(S) {
+			margin-top: $marge-S;
+		}
+		@include MQ(M) {
+			margin-top: $marge-M;
+		}
+		@include MQ(L) {
+			margin-top: $marge-L;
+		}
+		@include MQ(XL) {
+			margin-top: $marge-XL;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+// margin-right queries
+@mixin m-r($divider) {
+	@if	$divider == half {
+		@include MQ(S) {
+			margin-right: $marge-S / 2;
+		}
+		@include MQ(M) {
+			margin-right: $marge-M / 2;
+		}
+		@include MQ(L) {
+			margin-right: $marge-L / 2;
+		}
+		@include MQ(XL) {
+			margin-right: $marge-XL / 2;
+		}
+	} @else if	$divider == double {
+		@include MQ(S) {
+			margin-right: $marge-S * 2;
+		}
+		@include MQ(M) {
+			margin-right: $marge-M * 2;
+		}
+		@include MQ(L) {
+			margin-right: $marge-L * 2;
+		}
+		@include MQ(XL) {
+			margin-right: $marge-XL * 2;
+		}
+	} @else if	$divider == none {
+		@include MQ(S) {
+			margin-right: 0;
+		}
+		@include MQ(M) {
+			margin-right: 0;
+		}
+		@include MQ(L) {
+			margin-right: 0;
+		}
+		@include MQ(XL) {
+			margin-right: 0;
+		}
+	} @else {
+		@include MQ(S) {
+			margin-right: $marge-S;
+		}
+		@include MQ(M) {
+			margin-right: $marge-M;
+		}
+		@include MQ(L) {
+			margin-right: $marge-L;
+		}
+		@include MQ(XL) {
+			margin-right: $marge-XL;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+// margin-bottom queries
+@mixin m-b($divider) {
+	@if	$divider == half {
+		@include MQ(S) {
+			margin-bottom: $marge-S / 2;
+		}
+		@include MQ(M) {
+			margin-bottom: $marge-M / 2;
+		}
+		@include MQ(L) {
+			margin-bottom: $marge-L / 2;
+		}
+		@include MQ(XL) {
+			margin-bottom: $marge-XL / 2;
+		}
+	} @else if	$divider == double {
+		@include MQ(S) {
+			margin-bottom: $marge-S * 2;
+		}
+		@include MQ(M) {
+			margin-bottom: $marge-M * 2;
+		}
+		@include MQ(L) {
+			margin-bottom: $marge-L * 2;
+		}
+		@include MQ(XL) {
+			margin-bottom: $marge-XL * 2;
+		}
+	} @else if	$divider == none {
+		@include MQ(S) {
+			margin-bottom: 0;
+		}
+		@include MQ(M) {
+			margin-bottom: 0;
+		}
+		@include MQ(L) {
+			margin-bottom: 0;
+		}
+		@include MQ(XL) {
+			margin-bottom: 0;
+		}
+	} @else {
+		@include MQ(S) {
+			margin-bottom: $marge-S;
+		}
+		@include MQ(M) {
+			margin-bottom: $marge-M;
+		}
+		@include MQ(L) {
+			margin-bottom: $marge-L;
+		}
+		@include MQ(XL) {
+			margin-bottom: $marge-XL;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+// margin-left queries
+@mixin m-l($divider) {
+	@if	$divider == half {
+		@include MQ(S) {
+			margin-left: $marge-S / 2;
+		}
+		@include MQ(M) {
+			margin-left: $marge-M / 2;
+		}
+		@include MQ(L) {
+			margin-left: $marge-L / 2;
+		}
+		@include MQ(XL) {
+			margin-left: $marge-XL / 2;
+		}
+	} @else if	$divider == double {
+		@include MQ(S) {
+			margin-left: $marge-S * 2;
+		}
+		@include MQ(M) {
+			margin-left: $marge-M * 2;
+		}
+		@include MQ(L) {
+			margin-left: $marge-L * 2;
+		}
+		@include MQ(XL) {
+			margin-left: $marge-XL * 2;
+		}
+	} @else if	$divider == none {
+		@include MQ(S) {
+			margin-left: 0;
+		}
+		@include MQ(M) {
+			margin-left: 0;
+		}
+		@include MQ(L) {
+			margin-left: 0;
+		}
+		@include MQ(XL) {
+			margin-left: 0;
+		}
+	} @else {
+		@include MQ(S) {
+			margin-left: $marge-S;
+		}
+		@include MQ(M) {
+			margin-left: $marge-M;
+		}
+		@include MQ(L) {
+			margin-left: $marge-L;
+		}
+		@include MQ(XL) {
+			margin-left: $marge-XL;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+// padding-top queries
+@mixin p-t($divider) {
+	@if	$divider == half {
+		@include MQ(S) {
+			padding-top: $marge-S / 2;
+		}
+		@include MQ(M) {
+			padding-top: $marge-M / 2;
+		}
+		@include MQ(L) {
+			padding-top: $marge-L / 2;
+		}
+		@include MQ(XL) {
+			padding-top: $marge-XL / 2;
+		}
+	} @else if	$divider == double {
+		@include MQ(S) {
+			padding-top: $marge-S * 2;
+		}
+		@include MQ(M) {
+			padding-top: $marge-M * 2;
+		}
+		@include MQ(L) {
+			padding-top: $marge-L * 2;
+		}
+		@include MQ(XL) {
+			padding-top: $marge-XL * 2;
+		}
+	} @else if	$divider == none {
+		@include MQ(S) {
+			padding-top: 0;
+		}
+		@include MQ(M) {
+			padding-top: 0;
+		}
+		@include MQ(L) {
+			padding-top: 0;
+		}
+		@include MQ(XL) {
+			padding-top: 0;
+		}
+	} @else {
+		@include MQ(S) {
+			padding-top: $marge-S;
+		}
+		@include MQ(M) {
+			padding-top: $marge-M;
+		}
+		@include MQ(L) {
+			padding-top: $marge-L;
+		}
+		@include MQ(XL) {
+			padding-top: $marge-XL;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+// padding-right queries
+@mixin p-r($divider) {
+	@if	$divider == half {
+		@include MQ(S) {
+			padding-right: $marge-S / 2;
+		}
+		@include MQ(M) {
+			padding-right: $marge-M / 2;
+		}
+		@include MQ(L) {
+			padding-right: $marge-L / 2;
+		}
+		@include MQ(XL) {
+			padding-right: $marge-XL / 2;
+		}
+	} @else if	$divider == double {
+		@include MQ(S) {
+			padding-right: $marge-S * 2;
+		}
+		@include MQ(M) {
+			padding-right: $marge-M * 2;
+		}
+		@include MQ(L) {
+			padding-right: $marge-L * 2;
+		}
+		@include MQ(XL) {
+			padding-right: $marge-XL * 2;
+		}
+	} @else if	$divider == none {
+		@include MQ(S) {
+			padding-right: 0;
+		}
+		@include MQ(M) {
+			padding-right: 0;
+		}
+		@include MQ(L) {
+			padding-right: 0;
+		}
+		@include MQ(XL) {
+			padding-right: 0;
+		}
+	} @else {
+		@include MQ(S) {
+			padding-right: $marge-S;
+		}
+		@include MQ(M) {
+			padding-right: $marge-M;
+		}
+		@include MQ(L) {
+			padding-right: $marge-L;
+		}
+		@include MQ(XL) {
+			padding-right: $marge-XL;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+// padding-bottom queries
+@mixin p-b($divider) {
+	@if	$divider == half {
+		@include MQ(S) {
+			padding-bottom: $marge-S / 2;
+		}
+		@include MQ(M) {
+			padding-bottom: $marge-M / 2;
+		}
+		@include MQ(L) {
+			padding-bottom: $marge-L / 2;
+		}
+		@include MQ(XL) {
+			padding-bottom: $marge-XL / 2;
+		}
+	} @else if	$divider == double {
+		@include MQ(S) {
+			padding-bottom: $marge-S * 2;
+		}
+		@include MQ(M) {
+			padding-bottom: $marge-M * 2;
+		}
+		@include MQ(L) {
+			padding-bottom: $marge-L * 2;
+		}
+		@include MQ(XL) {
+			padding-bottom: $marge-XL * 2;
+		}
+	} @else if	$divider == none {
+		@include MQ(S) {
+			padding-bottom: 0;
+		}
+		@include MQ(M) {
+			padding-bottom: 0;
+		}
+		@include MQ(L) {
+			padding-bottom: 0;
+		}
+		@include MQ(XL) {
+			padding-bottom: 0;
+		}
+	} @else {
+		@include MQ(S) {
+			padding-bottom: $marge-S;
+		}
+		@include MQ(M) {
+			padding-bottom: $marge-M;
+		}
+		@include MQ(L) {
+			padding-bottom: $marge-L;
+		}
+		@include MQ(XL) {
+			padding-bottom: $marge-XL;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
+// padding-left queries
+@mixin p-l($divider) {
+	@if	$divider == half {
+		@include MQ(S) {
+			padding-left: $marge-S / 2;
+		}
+		@include MQ(M) {
+			padding-left: $marge-M / 2;
+		}
+		@include MQ(L) {
+			padding-left: $marge-L / 2;
+		}
+		@include MQ(XL) {
+			padding-left: $marge-XL / 2;
+		}
+	} @else if	$divider == double {
+		@include MQ(S) {
+			padding-left: $marge-S * 2;
+		}
+		@include MQ(M) {
+			padding-left: $marge-M * 2;
+		}
+		@include MQ(L) {
+			padding-left: $marge-L * 2;
+		}
+		@include MQ(XL) {
+			padding-left: $marge-XL * 2;
+		}
+	} @else if	$divider == none {
+		@include MQ(S) {
+			padding-left: 0;
+		}
+		@include MQ(M) {
+			padding-left: 0;
+		}
+		@include MQ(L) {
+			padding-left: 0;
+		}
+		@include MQ(XL) {
+			padding-left: 0;
+		}
+	} @else {
+		@include MQ(S) {
+			padding-left: $marge-S;
+		}
+		@include MQ(M) {
+			padding-left: $marge-M;
+		}
+		@include MQ(L) {
+			padding-left: $marge-L;
+		}
+		@include MQ(XL) {
+			padding-left: $marge-XL;
+		}
+	}
+}
