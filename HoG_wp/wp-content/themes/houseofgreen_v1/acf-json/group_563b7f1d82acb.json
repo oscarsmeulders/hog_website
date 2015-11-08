@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "min": 1,
+            "min": 0,
             "max": 4,
             "layout": "row",
             "button_label": "Add",
@@ -26,7 +26,7 @@
                     "name": "related_page",
                     "type": "post_object",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -75,5 +75,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Related items on a page",
-    "modified": 1446752476
+    "modified": 1446834891
 }

@@ -21,14 +21,12 @@ get_header(); ?>
 			<div class="col-xs-12 col-sm-10 col-sm-offset-2">
 				<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 title">
 					<?php
-						$projectCookie = get_field('projects_overview', 'option');
-						if( $projectCookie ) :
-							$post = $projectCookie;	// override $post
-							setup_postdata( $post );
-							//echo '<a href="'. get_the_permalink() .'"><h2>'. __( 'title_projecten', 'hog_lang' ) .'</h2></a>';
-							echo '<a href="'. get_the_permalink() .'"><h2>check the parent page</h2></a>';
+						if ( $post->post_parent ):
+							$parent_url = get_permalink( $post->post_parent );
+							$parent_title = get_the_title( $post->post_parent );
+							$output = '<a href="'. $parent_url .'"><h2>'. $parent_title .'</h2></a>';
+							echo $output;
 						endif;
-						wp_reset_postdata();
 					?>
 					<h1><?php echo the_title(); ?></h1>
 				</div>
@@ -43,7 +41,7 @@ get_header(); ?>
 	<?php // content ?>
 	<div class="container-fluid container-content">
 		<div class="row">
-			<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+			<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
 				<div class="content">
 					<?php the_content(); ?>
 				</div>

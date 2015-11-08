@@ -86,9 +86,9 @@ $width-nav-XL: 50%;
 
 
 // breakpoints && marges
-$marge-XS: 6px;
-$marge-S: 6px;
-$marge-M: 6px;
+$marge-XS: 8px;
+$marge-S: 8px;
+$marge-M: 12px;
 $marge-L: 12px; // always even numbers!
 $marge-XL: 20px;
 
@@ -151,7 +151,7 @@ $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $font-size-h1:            25px;				//floor(($font-size-base * 2.6)) !default; // ~36px
 $font-size-h2:            $font-size-h1;	//floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h3:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5:            17px;				//$font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px

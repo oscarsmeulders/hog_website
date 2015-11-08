@@ -13,6 +13,7 @@
 
 // Core variables and mixins
 @import "_variables";
+
 @import "_bootstrap/mixins";
 
 // Reset and dependencies
@@ -78,6 +79,8 @@
 
 @import '_partials/buttons';
 @import '_libs/flickity'; // responsive grid and media queries
+
+@import "scrollbar";
 
 html, body {
 	text-rendering: optimizeLegibility;
@@ -147,6 +150,9 @@ body {
 			&:hover {
 				color: $color-roze;
 			}
+		}
+		span {
+			padding-right: 10px;
 		}
 	}
 	.no-break {
@@ -311,7 +317,7 @@ body, p {
 }
 
 
-h2, .h2 {
+h2, .h2, h4, .h4 {
 	color: $color-heading-alt;
 }
 h1, h2, h3, h4, h5, h6,
@@ -329,7 +335,7 @@ a, a:visited, a:link, a:hover, a:active {
 	@include m-t('normal');
 	@include m-r('normal');
 	@include m-b('normal');
-	@include m-l('half');
+	// @include m-l('half');
 	.content {
 		@include p-l('half');
 		p {
@@ -476,7 +482,6 @@ label.hog-label {
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
-
 		.title {
 			bottom: 0;
 			width: 100%;
@@ -729,13 +734,13 @@ label.hog-label {
 	}
 	.container-gallery {
 		@include p-t('half');
-		@include p-l('half');
+		//@include p-l('half');
 		@include p-r('normal');
 		.title {
 			@include p-l('half');
 			font-size: 19px;
 			float:left;
-
+			height: 10px;
 		}
 		.metas {
 			.meta {
@@ -790,15 +795,23 @@ label.hog-label {
 	//position: relative;
 	.quote, .image, .contact-placeholder {
 		border-top: 1px #fff solid;
-		margin-left: -16.66667%; // two colums
-		margin-right: 40px;
 		top: -1px;
+		margin-right: 40px;
+		margin-left: 0; // two colums
+		@include MQ(L) {
+			margin-right: 40px;
+			margin-left: -16.66667%; // two colums
+		}
 		// background-color: rgba(#ff00ff, 0.2);
 		&.right {
 			float: right;
 			margin-left: 40px;
-			margin-right: -16.66667%; // two colums
+			margin-right: 0; // two colums
 			// background-color: rgba(#fff000, 0.2);
+			@include MQ(L) {
+				margin-left: 40px;
+				margin-right: -16.66667%; // two colums
+			}
 		}
 		&:after {
 			clear: both;
@@ -849,6 +862,13 @@ label.hog-label {
 	.image {
 		border-top: 0px #FFF solid;
 		margin-top: -10px;
+		&.right {
+			margin-left: 0px;
+			@include MQ(L) {
+				margin-left: 40px;
+				margin-right: -16.66667%; // two colums
+			}
+		}
 		img {
 			width: 100%;
 			height: auto;
@@ -863,7 +883,7 @@ label.hog-label {
 }
 .container-related {
 	@include p-t('half');
-	@include p-l('half');
+	// @include p-l('half');
 	@include p-r('normal');
 	h4 {
 		@include p-t('half');

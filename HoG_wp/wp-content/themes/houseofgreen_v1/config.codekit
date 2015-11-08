@@ -1307,6 +1307,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/__compiler_documents\/scss\/scrollbar.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/__compiler_documents\/scss\/scrollbar.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/scrollbar.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/__compiler_documents\/scss\/style.scss": {
 		"createSourceMap": 1,
 		"debugStyle": 0,
@@ -2218,6 +2234,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/css\/scrollbar.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/scrollbar.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/assets\/css\/style.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -2245,6 +2270,17 @@
 		"initialSize": 1237,
 		"inputAbbreviatedPath": "\/assets\/img\/arrow_prev.png",
 		"outputAbbreviatedPath": "\/assets\/img\/arrow_prev.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/arrow_top.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1237,
+		"inputAbbreviatedPath": "\/assets\/img\/arrow_top.png",
+		"outputAbbreviatedPath": "\/assets\/img\/arrow_top.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2502,6 +2538,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/js\/plugins\/min\/responsive-img.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/plugins\/min\/responsive-img.min-min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/plugins\/min\/min\/responsive-img.min-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/assets\/js\/plugins\/modernizr.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -2523,6 +2570,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/plugins\/responsive-img.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/plugins\/responsive-img.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/plugins\/min\/responsive-img.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 2,
+		"syntaxCheckerStyle": 0
 		},
 	"\/config.rb": {
 		"fileType": 131072,

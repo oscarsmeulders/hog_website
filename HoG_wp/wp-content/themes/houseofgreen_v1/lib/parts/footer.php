@@ -8,7 +8,7 @@
 		</div>
 		<div class="row tekst">
 			<div class="col-xs-12 col-sm-6 col-md-8">
-				<p><strong><a href="#">House of Green</a></strong></p>
+				<p><strong><a href="<?php get_home_url(); ?>">House of Green</a></strong></p>
 				<?php
 					$footer_adres = get_field( 'footer_adres', 'option' );
 					if( $footer_adres ) {

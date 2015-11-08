@@ -2,7 +2,7 @@
 <div class="container-fluid" id="header">
 	<div class="row">
 		<div class="col-xs-5 col-sm-3">
-			<a href="/">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<div class="logo"></div>
 			</a>
 		</div>
@@ -19,7 +19,7 @@
 	<div class="row">
 		<div class="col-xs-10 col-sm-10">
 
-			<form action="/">
+			<form action="<?php echo site_url(); ?>">
 				<input class="input input-search" id="search" type="text" name="s" value="<?php the_search_query(); ?>" placeholder="<?php _e( 'header_search_placeholder', 'hog_lang' ); ?>">
 			</form>
 

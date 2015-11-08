@@ -34,7 +34,7 @@
 			'description' => '',
 		), $atts );
 
-		$image = wp_get_attachment_image( $a['id' ], 'ratio4-3' );
+		$image = wp_get_attachment_image( $a['id' ], 'ratio4-3-half' );
 		$tmpVar = '';
 		$tmpVar .= '<div class="col-sm-3 quote image '. $a['align'] .'">'. $image .'<div class="who">'. $a['description'] .'</div></div>';
 

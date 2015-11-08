@@ -26,9 +26,6 @@ get_header(); ?>
 	<meta property="og:description" content="<?php echo $description; ?>" />
 	<meta property="fb:app_id" content="1513250345654273" />
 
-<!--
-https://www.facebook.com/dialog/feed?app_id=1513250345654273&display=popup&caption=<?php echo $title; ?>&description=<?php echo $description; ?>&picture=<?php echo $img_url[0]; ?>&link=<?php echo $link; ?>&redirect_uri=<?php echo $link; ?>
--->
 
 </head>
 <body <?php body_class('detail'); ?> >
@@ -76,7 +73,7 @@ https://www.facebook.com/dialog/feed?app_id=1513250345654273&display=popup&capti
 					<a href="#"><div class="button button-previous-gallery"></div></a>
 					<a href="#"><div class="button email diap"></div></a>
 					<a href="#"><div class="button instagram diap"></div></a>
-					<a href="#"><div class="button facebook diap"></div></a>
+					<a href="https://www.facebook.com/dialog/feed?app_id=1513250345654273&display=popup&caption=<?php echo $title; ?>&description=<?php echo $description; ?>&picture=<?php echo $img_url[0]; ?>&link=<?php echo $link; ?>&redirect_uri=<?php echo $link; ?>"><div class="button facebook diap"></div></a>
 					<a href="#"><div class="button pintrest diap"></div></a>
 				</div>
 			</div>
@@ -99,9 +96,17 @@ https://www.facebook.com/dialog/feed?app_id=1513250345654273&display=popup&capti
 					$img = 				get_sub_field('gallery_image');
 					$size = 			get_sub_field('ratio');
 					$img_url =		 	wp_get_attachment_image_src( $img, $size );
+
+					$size_small = 			get_sub_field('ratio').'-half';
+					$img_url_small =		 	wp_get_attachment_image_src( $img, $size_small );
+
+					$output_img = 		'
+						<img data-src="<960:'. $img_url_small[0] .', >960:'. $img_url[0] .'" />
+					';
+
 					$output .=	'
-						<div class="gallery-cell '. $size .'" data-text="'. $description .'">
-							<img src="'. $img_url[0] .'">
+						<div class="gallery-cell '. $size .'" data-text="'. $description .' ">
+							'. $output_img .'
 						</div>';
 
 				endwhile;
@@ -127,7 +132,7 @@ https://www.facebook.com/dialog/feed?app_id=1513250345654273&display=popup&capti
 		<div class="container-fluid container-gallery">
 			<div class="row">
 				<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-					<div class="title col-xs-12 col-sm-6"></div>
+					<div class="title col-xs-12 col-sm-6">&nbsp;</div>
 					<div class="metas col-xs-12 col-sm-6">
 						<?php echo custom_taxonomies_detail_page(); ?>
 					</div>
@@ -159,6 +164,7 @@ https://www.facebook.com/dialog/feed?app_id=1513250345654273&display=popup&capti
 <?php get_template_part( '/lib/parts/footer', '' ); ?>
 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/plugins/flickity.pkgd.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/plugins/responsive-img.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/min/detail-min.js"></script>
 <?php endWhile; ?>
 <?php get_footer(); ?>

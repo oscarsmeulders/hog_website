@@ -1235,7 +1235,7 @@ h2, .h2 {
   font-size: 25px; }
 
 h3, .h3 {
-  font-size: 29px; }
+  font-size: 22px; }
 
 h4, .h4 {
   font-size: 22px; }
@@ -3385,9 +3385,9 @@ input[type="button"].btn-block {
     background-image: url("../img/icon_search.png"); }
 
 .topper {
-  background-image: url("../img/icon_top.svg"); }
+  background-image: url("../img/arrow_top.svg"); }
   .no-svg .topper {
-    background-image: url("../img/icon_top.png"); }
+    background-image: url("../img/arrow_top.png"); }
 
 .button-contact, .container-content .contact-placeholder > div .contact {
   background-image: url("../img/contact.svg"); }
@@ -3457,13 +3457,13 @@ input[type="button"].btn-block {
   background-color: #fff; }
   @media only screen and (min-width: 300px) {
     .button.topper {
-      margin-right: 12px; } }
+      margin-right: 16px; } }
   @media only screen and (min-width: 480px) {
     .button.topper {
-      margin-right: 12px; } }
+      margin-right: 16px; } }
   @media only screen and (min-width: 768px) {
     .button.topper {
-      margin-right: 12px; } }
+      margin-right: 24px; } }
   @media only screen and (min-width: 992px) {
     .button.topper {
       margin-right: 24px; } }
@@ -3477,13 +3477,13 @@ input[type="button"].btn-block {
   margin-left: 2px; }
   @media only screen and (min-width: 300px) {
     .button-language {
-      margin-right: 12px; } }
+      margin-right: 16px; } }
   @media only screen and (min-width: 480px) {
     .button-language {
-      margin-right: 12px; } }
+      margin-right: 16px; } }
   @media only screen and (min-width: 768px) {
     .button-language {
-      margin-right: 12px; } }
+      margin-right: 24px; } }
   @media only screen and (min-width: 992px) {
     .button-language {
       margin-right: 24px; } }
@@ -3505,13 +3505,13 @@ input[type="button"].btn-block {
   transition: all 0.2s ease-in-out; }
   @media only screen and (min-width: 300px) {
     .button-search-action {
-      margin-right: 3px; } }
+      margin-right: 4px; } }
   @media only screen and (min-width: 480px) {
     .button-search-action {
-      margin-right: 3px; } }
+      margin-right: 4px; } }
   @media only screen and (min-width: 768px) {
     .button-search-action {
-      margin-right: 3px; } }
+      margin-right: 6px; } }
   @media only screen and (min-width: 992px) {
     .button-search-action {
       margin-right: 6px; } }
@@ -3565,13 +3565,13 @@ input[type="button"].btn-block {
   width: 100%; }
   @media only screen and (min-width: 300px) {
     .button-filters {
-      margin-left: 12px; } }
+      margin-left: 16px; } }
   @media only screen and (min-width: 480px) {
     .button-filters {
-      margin-left: 12px; } }
+      margin-left: 16px; } }
   @media only screen and (min-width: 768px) {
     .button-filters {
-      margin-left: 12px; } }
+      margin-left: 24px; } }
   @media only screen and (min-width: 992px) {
     .button-filters {
       margin-left: 24px; } }
@@ -3580,13 +3580,13 @@ input[type="button"].btn-block {
       margin-left: 40px; } }
   @media only screen and (min-width: 300px) {
     .button-filters {
-      margin-right: 12px; } }
+      margin-right: 16px; } }
   @media only screen and (min-width: 480px) {
     .button-filters {
-      margin-right: 12px; } }
+      margin-right: 16px; } }
   @media only screen and (min-width: 768px) {
     .button-filters {
-      margin-right: 12px; } }
+      margin-right: 24px; } }
   @media only screen and (min-width: 992px) {
     .button-filters {
       margin-right: 24px; } }
@@ -3744,6 +3744,20 @@ http://flickity.metafizzy.co
   /* IE8 */
   opacity: 1; }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background: #7ea446; }
+
+::-webkit-scrollbar-track {
+  background: #dae7c8; }
+
+body {
+  scrollbar-face-color: #7ea446;
+  scrollbar-track-color: #dae7c8; }
+
 html, body {
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision;
@@ -3795,13 +3809,13 @@ body {
     padding-bottom: 15px; }
     @media only screen and (min-width: 300px) {
       .footer .tekst {
-        padding-left: 12px; } }
+        padding-left: 16px; } }
     @media only screen and (min-width: 480px) {
       .footer .tekst {
-        padding-left: 12px; } }
+        padding-left: 16px; } }
     @media only screen and (min-width: 768px) {
       .footer .tekst {
-        padding-left: 12px; } }
+        padding-left: 24px; } }
     @media only screen and (min-width: 992px) {
       .footer .tekst {
         padding-left: 24px; } }
@@ -3819,6 +3833,8 @@ body {
       transition: all 0.2s ease-in-out; }
       .footer .tekst a:hover {
         color: #dc4f93; }
+    .footer .tekst span {
+      padding-right: 10px; }
   .footer .no-break {
     white-space: nowrap; }
 
@@ -3837,13 +3853,13 @@ body {
   height: 80px; }
   @media only screen and (min-width: 300px) {
     #header {
-      padding-left: 12px; } }
+      padding-left: 16px; } }
   @media only screen and (min-width: 480px) {
     #header {
-      padding-left: 12px; } }
+      padding-left: 16px; } }
   @media only screen and (min-width: 768px) {
     #header {
-      padding-left: 12px; } }
+      padding-left: 24px; } }
   @media only screen and (min-width: 992px) {
     #header {
       padding-left: 24px; } }
@@ -3861,13 +3877,13 @@ body {
     height: 80px; }
     @media only screen and (min-width: 300px) {
       #header .logo {
-        margin-right: 12px; } }
+        margin-right: 16px; } }
     @media only screen and (min-width: 480px) {
       #header .logo {
-        margin-right: 12px; } }
+        margin-right: 16px; } }
     @media only screen and (min-width: 768px) {
       #header .logo {
-        margin-right: 12px; } }
+        margin-right: 24px; } }
     @media only screen and (min-width: 992px) {
       #header .logo {
         margin-right: 24px; } }
@@ -3895,13 +3911,13 @@ body {
   transition: top 0.2s ease-in-out; }
   @media only screen and (min-width: 300px) {
     #searchbar {
-      padding-left: 12px; } }
+      padding-left: 16px; } }
   @media only screen and (min-width: 480px) {
     #searchbar {
-      padding-left: 12px; } }
+      padding-left: 16px; } }
   @media only screen and (min-width: 768px) {
     #searchbar {
-      padding-left: 12px; } }
+      padding-left: 24px; } }
   @media only screen and (min-width: 992px) {
     #searchbar {
       padding-left: 24px; } }
@@ -3910,13 +3926,13 @@ body {
       padding-left: 40px; } }
   @media only screen and (min-width: 300px) {
     #searchbar {
-      padding-right: 12px; } }
+      padding-right: 16px; } }
   @media only screen and (min-width: 480px) {
     #searchbar {
-      padding-right: 12px; } }
+      padding-right: 16px; } }
   @media only screen and (min-width: 768px) {
     #searchbar {
-      padding-right: 12px; } }
+      padding-right: 24px; } }
   @media only screen and (min-width: 992px) {
     #searchbar {
       padding-right: 24px; } }
@@ -3951,13 +3967,13 @@ body {
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99); }
   @media only screen and (min-width: 300px) {
     .main {
-      margin-top: 6px; } }
+      margin-top: 8px; } }
   @media only screen and (min-width: 480px) {
     .main {
-      margin-top: 6px; } }
+      margin-top: 8px; } }
   @media only screen and (min-width: 768px) {
     .main {
-      margin-top: 6px; } }
+      margin-top: 12px; } }
   @media only screen and (min-width: 992px) {
     .main {
       margin-top: 12px; } }
@@ -3966,13 +3982,13 @@ body {
       margin-top: 20px; } }
   @media only screen and (min-width: 300px) {
     .main {
-      margin-right: 6px; } }
+      margin-right: 8px; } }
   @media only screen and (min-width: 480px) {
     .main {
-      margin-right: 6px; } }
+      margin-right: 8px; } }
   @media only screen and (min-width: 768px) {
     .main {
-      margin-right: 6px; } }
+      margin-right: 12px; } }
   @media only screen and (min-width: 992px) {
     .main {
       margin-right: 12px; } }
@@ -3981,13 +3997,13 @@ body {
       margin-right: 20px; } }
   @media only screen and (min-width: 300px) {
     .main {
-      margin-bottom: 6px; } }
+      margin-bottom: 8px; } }
   @media only screen and (min-width: 480px) {
     .main {
-      margin-bottom: 6px; } }
+      margin-bottom: 8px; } }
   @media only screen and (min-width: 768px) {
     .main {
-      margin-bottom: 6px; } }
+      margin-bottom: 12px; } }
   @media only screen and (min-width: 992px) {
     .main {
       margin-bottom: 12px; } }
@@ -3996,13 +4012,13 @@ body {
       margin-bottom: 20px; } }
   @media only screen and (min-width: 300px) {
     .main {
-      margin-left: 6px; } }
+      margin-left: 8px; } }
   @media only screen and (min-width: 480px) {
     .main {
-      margin-left: 6px; } }
+      margin-left: 8px; } }
   @media only screen and (min-width: 768px) {
     .main {
-      margin-left: 6px; } }
+      margin-left: 12px; } }
   @media only screen and (min-width: 992px) {
     .main {
       margin-left: 12px; } }
@@ -4060,7 +4076,7 @@ body {
     font-size: 17px;
     line-height: 27px; } }
 
-h2, .h2 {
+h2, .h2, h4, .h4 {
   color: #7ea446; }
 
 h1, h2, h3, h4, h5, .hog-nav ul.menu > li, .hog-nav ul.menu > li ul li, h6, .detail .container-gallery .metas .meta, .container-content .quote .who, .container-content .image .who, .container-content .contact-placeholder .who,
@@ -4079,13 +4095,13 @@ a, a:visited, a:link, a:hover, a:active {
 
 @media only screen and (min-width: 300px) {
   .container-content {
-    margin-top: 6px; } }
+    margin-top: 8px; } }
 @media only screen and (min-width: 480px) {
   .container-content {
-    margin-top: 6px; } }
+    margin-top: 8px; } }
 @media only screen and (min-width: 768px) {
   .container-content {
-    margin-top: 6px; } }
+    margin-top: 12px; } }
 @media only screen and (min-width: 992px) {
   .container-content {
     margin-top: 12px; } }
@@ -4094,13 +4110,13 @@ a, a:visited, a:link, a:hover, a:active {
     margin-top: 20px; } }
 @media only screen and (min-width: 300px) {
   .container-content {
-    margin-right: 6px; } }
+    margin-right: 8px; } }
 @media only screen and (min-width: 480px) {
   .container-content {
-    margin-right: 6px; } }
+    margin-right: 8px; } }
 @media only screen and (min-width: 768px) {
   .container-content {
-    margin-right: 6px; } }
+    margin-right: 12px; } }
 @media only screen and (min-width: 992px) {
   .container-content {
     margin-right: 12px; } }
@@ -4109,13 +4125,13 @@ a, a:visited, a:link, a:hover, a:active {
     margin-right: 20px; } }
 @media only screen and (min-width: 300px) {
   .container-content {
-    margin-bottom: 6px; } }
+    margin-bottom: 8px; } }
 @media only screen and (min-width: 480px) {
   .container-content {
-    margin-bottom: 6px; } }
+    margin-bottom: 8px; } }
 @media only screen and (min-width: 768px) {
   .container-content {
-    margin-bottom: 6px; } }
+    margin-bottom: 12px; } }
 @media only screen and (min-width: 992px) {
   .container-content {
     margin-bottom: 12px; } }
@@ -4123,29 +4139,14 @@ a, a:visited, a:link, a:hover, a:active {
   .container-content {
     margin-bottom: 20px; } }
 @media only screen and (min-width: 300px) {
-  .container-content {
-    margin-left: 3px; } }
-@media only screen and (min-width: 480px) {
-  .container-content {
-    margin-left: 3px; } }
-@media only screen and (min-width: 768px) {
-  .container-content {
-    margin-left: 3px; } }
-@media only screen and (min-width: 992px) {
-  .container-content {
-    margin-left: 6px; } }
-@media only screen and (min-width: 1600px) {
-  .container-content {
-    margin-left: 10px; } }
-@media only screen and (min-width: 300px) {
   .container-content .content {
-    padding-left: 3px; } }
+    padding-left: 4px; } }
 @media only screen and (min-width: 480px) {
   .container-content .content {
-    padding-left: 3px; } }
+    padding-left: 4px; } }
 @media only screen and (min-width: 768px) {
   .container-content .content {
-    padding-left: 3px; } }
+    padding-left: 6px; } }
 @media only screen and (min-width: 992px) {
   .container-content .content {
     padding-left: 6px; } }
@@ -4247,13 +4248,13 @@ label.hog-label {
   margin: 0; }
   @media only screen and (min-width: 300px) {
     .homepage .container-content .content {
-      margin-left: 3px; } }
+      margin-left: 4px; } }
   @media only screen and (min-width: 480px) {
     .homepage .container-content .content {
-      margin-left: 3px; } }
+      margin-left: 4px; } }
   @media only screen and (min-width: 768px) {
     .homepage .container-content .content {
-      margin-left: 3px; } }
+      margin-left: 6px; } }
   @media only screen and (min-width: 992px) {
     .homepage .container-content .content {
       margin-left: 6px; } }
@@ -4262,13 +4263,13 @@ label.hog-label {
       margin-left: 10px; } }
   @media only screen and (min-width: 300px) {
     .homepage .container-content .content {
-      margin-right: 3px; } }
+      margin-right: 4px; } }
   @media only screen and (min-width: 480px) {
     .homepage .container-content .content {
-      margin-right: 3px; } }
+      margin-right: 4px; } }
   @media only screen and (min-width: 768px) {
     .homepage .container-content .content {
-      margin-right: 3px; } }
+      margin-right: 6px; } }
   @media only screen and (min-width: 992px) {
     .homepage .container-content .content {
       margin-right: 6px; } }
@@ -4301,13 +4302,13 @@ label.hog-label {
   */ }
   @media only screen and (min-width: 300px) {
     .homepage .case .content {
-      margin-top: 6px; } }
+      margin-top: 8px; } }
   @media only screen and (min-width: 480px) {
     .homepage .case .content {
-      margin-top: 6px; } }
+      margin-top: 8px; } }
   @media only screen and (min-width: 768px) {
     .homepage .case .content {
-      margin-top: 6px; } }
+      margin-top: 12px; } }
   @media only screen and (min-width: 992px) {
     .homepage .case .content {
       margin-top: 12px; } }
@@ -4316,13 +4317,13 @@ label.hog-label {
       margin-top: 20px; } }
   @media only screen and (min-width: 300px) {
     .homepage .case .content {
-      margin-right: 6px; } }
+      margin-right: 8px; } }
   @media only screen and (min-width: 480px) {
     .homepage .case .content {
-      margin-right: 6px; } }
+      margin-right: 8px; } }
   @media only screen and (min-width: 768px) {
     .homepage .case .content {
-      margin-right: 6px; } }
+      margin-right: 12px; } }
   @media only screen and (min-width: 992px) {
     .homepage .case .content {
       margin-right: 12px; } }
@@ -4331,13 +4332,13 @@ label.hog-label {
       margin-right: 20px; } }
   @media only screen and (min-width: 300px) {
     .homepage .case .content {
-      margin-bottom: 6px; } }
+      margin-bottom: 8px; } }
   @media only screen and (min-width: 480px) {
     .homepage .case .content {
-      margin-bottom: 6px; } }
+      margin-bottom: 8px; } }
   @media only screen and (min-width: 768px) {
     .homepage .case .content {
-      margin-bottom: 6px; } }
+      margin-bottom: 12px; } }
   @media only screen and (min-width: 992px) {
     .homepage .case .content {
       margin-bottom: 12px; } }
@@ -4346,13 +4347,13 @@ label.hog-label {
       margin-bottom: 20px; } }
   @media only screen and (min-width: 300px) {
     .homepage .case .content {
-      margin-left: 6px; } }
+      margin-left: 8px; } }
   @media only screen and (min-width: 480px) {
     .homepage .case .content {
-      margin-left: 6px; } }
+      margin-left: 8px; } }
   @media only screen and (min-width: 768px) {
     .homepage .case .content {
-      margin-left: 6px; } }
+      margin-left: 12px; } }
   @media only screen and (min-width: 992px) {
     .homepage .case .content {
       margin-left: 12px; } }
@@ -4375,13 +4376,13 @@ label.hog-label {
     color: #324300; }
     @media only screen and (min-width: 300px) {
       .homepage .case .content .text {
-        padding-top: 6px; } }
+        padding-top: 8px; } }
     @media only screen and (min-width: 480px) {
       .homepage .case .content .text {
-        padding-top: 6px; } }
+        padding-top: 8px; } }
     @media only screen and (min-width: 768px) {
       .homepage .case .content .text {
-        padding-top: 6px; } }
+        padding-top: 12px; } }
     @media only screen and (min-width: 992px) {
       .homepage .case .content .text {
         padding-top: 12px; } }
@@ -4390,13 +4391,13 @@ label.hog-label {
         padding-top: 20px; } }
     @media only screen and (min-width: 300px) {
       .homepage .case .content .text {
-        padding-right: 6px; } }
+        padding-right: 8px; } }
     @media only screen and (min-width: 480px) {
       .homepage .case .content .text {
-        padding-right: 6px; } }
+        padding-right: 8px; } }
     @media only screen and (min-width: 768px) {
       .homepage .case .content .text {
-        padding-right: 6px; } }
+        padding-right: 12px; } }
     @media only screen and (min-width: 992px) {
       .homepage .case .content .text {
         padding-right: 12px; } }
@@ -4405,13 +4406,13 @@ label.hog-label {
         padding-right: 20px; } }
     @media only screen and (min-width: 300px) {
       .homepage .case .content .text {
-        padding-bottom: 6px; } }
+        padding-bottom: 8px; } }
     @media only screen and (min-width: 480px) {
       .homepage .case .content .text {
-        padding-bottom: 6px; } }
+        padding-bottom: 8px; } }
     @media only screen and (min-width: 768px) {
       .homepage .case .content .text {
-        padding-bottom: 6px; } }
+        padding-bottom: 12px; } }
     @media only screen and (min-width: 992px) {
       .homepage .case .content .text {
         padding-bottom: 12px; } }
@@ -4420,13 +4421,13 @@ label.hog-label {
         padding-bottom: 20px; } }
     @media only screen and (min-width: 300px) {
       .homepage .case .content .text {
-        padding-left: 6px; } }
+        padding-left: 8px; } }
     @media only screen and (min-width: 480px) {
       .homepage .case .content .text {
-        padding-left: 6px; } }
+        padding-left: 8px; } }
     @media only screen and (min-width: 768px) {
       .homepage .case .content .text {
-        padding-left: 6px; } }
+        padding-left: 12px; } }
     @media only screen and (min-width: 992px) {
       .homepage .case .content .text {
         padding-left: 12px; } }
@@ -4467,13 +4468,13 @@ label.hog-label {
   background-color: #dae7c8; }
   @media only screen and (min-width: 300px) {
     .homepage .newsletter {
-      padding-top: 6px; } }
+      padding-top: 8px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
-      padding-top: 6px; } }
+      padding-top: 8px; } }
   @media only screen and (min-width: 768px) {
     .homepage .newsletter {
-      padding-top: 6px; } }
+      padding-top: 12px; } }
   @media only screen and (min-width: 992px) {
     .homepage .newsletter {
       padding-top: 12px; } }
@@ -4482,13 +4483,13 @@ label.hog-label {
       padding-top: 20px; } }
   @media only screen and (min-width: 300px) {
     .homepage .newsletter {
-      padding-right: 6px; } }
+      padding-right: 8px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
-      padding-right: 6px; } }
+      padding-right: 8px; } }
   @media only screen and (min-width: 768px) {
     .homepage .newsletter {
-      padding-right: 6px; } }
+      padding-right: 12px; } }
   @media only screen and (min-width: 992px) {
     .homepage .newsletter {
       padding-right: 12px; } }
@@ -4497,13 +4498,13 @@ label.hog-label {
       padding-right: 20px; } }
   @media only screen and (min-width: 300px) {
     .homepage .newsletter {
-      padding-bottom: 12px; } }
+      padding-bottom: 16px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
-      padding-bottom: 12px; } }
+      padding-bottom: 16px; } }
   @media only screen and (min-width: 768px) {
     .homepage .newsletter {
-      padding-bottom: 12px; } }
+      padding-bottom: 24px; } }
   @media only screen and (min-width: 992px) {
     .homepage .newsletter {
       padding-bottom: 24px; } }
@@ -4512,13 +4513,13 @@ label.hog-label {
       padding-bottom: 40px; } }
   @media only screen and (min-width: 300px) {
     .homepage .newsletter {
-      padding-left: 12px; } }
+      padding-left: 16px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
-      padding-left: 12px; } }
+      padding-left: 16px; } }
   @media only screen and (min-width: 768px) {
     .homepage .newsletter {
-      padding-left: 12px; } }
+      padding-left: 24px; } }
   @media only screen and (min-width: 992px) {
     .homepage .newsletter {
       padding-left: 24px; } }
@@ -4527,13 +4528,13 @@ label.hog-label {
       padding-left: 40px; } }
   @media only screen and (min-width: 300px) {
     .homepage .newsletter {
-      margin-top: 6px; } }
+      margin-top: 8px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
-      margin-top: 6px; } }
+      margin-top: 8px; } }
   @media only screen and (min-width: 768px) {
     .homepage .newsletter {
-      margin-top: 6px; } }
+      margin-top: 12px; } }
   @media only screen and (min-width: 992px) {
     .homepage .newsletter {
       margin-top: 12px; } }
@@ -4542,13 +4543,13 @@ label.hog-label {
       margin-top: 20px; } }
   @media only screen and (min-width: 300px) {
     .homepage .newsletter {
-      margin-right: 6px; } }
+      margin-right: 8px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
-      margin-right: 6px; } }
+      margin-right: 8px; } }
   @media only screen and (min-width: 768px) {
     .homepage .newsletter {
-      margin-right: 6px; } }
+      margin-right: 12px; } }
   @media only screen and (min-width: 992px) {
     .homepage .newsletter {
       margin-right: 12px; } }
@@ -4557,13 +4558,13 @@ label.hog-label {
       margin-right: 20px; } }
   @media only screen and (min-width: 300px) {
     .homepage .newsletter {
-      margin-bottom: 6px; } }
+      margin-bottom: 8px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
-      margin-bottom: 6px; } }
+      margin-bottom: 8px; } }
   @media only screen and (min-width: 768px) {
     .homepage .newsletter {
-      margin-bottom: 6px; } }
+      margin-bottom: 12px; } }
   @media only screen and (min-width: 992px) {
     .homepage .newsletter {
       margin-bottom: 12px; } }
@@ -4572,13 +4573,13 @@ label.hog-label {
       margin-bottom: 20px; } }
   @media only screen and (min-width: 300px) {
     .homepage .newsletter {
-      margin-left: 6px; } }
+      margin-left: 8px; } }
   @media only screen and (min-width: 480px) {
     .homepage .newsletter {
-      margin-left: 6px; } }
+      margin-left: 8px; } }
   @media only screen and (min-width: 768px) {
     .homepage .newsletter {
-      margin-left: 6px; } }
+      margin-left: 12px; } }
   @media only screen and (min-width: 992px) {
     .homepage .newsletter {
       margin-left: 12px; } }
@@ -4591,13 +4592,13 @@ label.hog-label {
   padding-bottom: 0px; }
   @media only screen and (min-width: 300px) {
     .overview .container-title .title {
-      padding-left: 6px; } }
+      padding-left: 8px; } }
   @media only screen and (min-width: 480px) {
     .overview .container-title .title {
-      padding-left: 6px; } }
+      padding-left: 8px; } }
   @media only screen and (min-width: 768px) {
     .overview .container-title .title {
-      padding-left: 6px; } }
+      padding-left: 12px; } }
   @media only screen and (min-width: 992px) {
     .overview .container-title .title {
       padding-left: 12px; } }
@@ -4612,13 +4613,13 @@ label.hog-label {
   position: absolute; }
   @media only screen and (min-width: 300px) {
     .overview .container-filters {
-      margin-left: 6px; } }
+      margin-left: 8px; } }
   @media only screen and (min-width: 480px) {
     .overview .container-filters {
-      margin-left: 6px; } }
+      margin-left: 8px; } }
   @media only screen and (min-width: 768px) {
     .overview .container-filters {
-      margin-left: 6px; } }
+      margin-left: 12px; } }
   @media only screen and (min-width: 992px) {
     .overview .container-filters {
       margin-left: 12px; } }
@@ -4627,13 +4628,13 @@ label.hog-label {
       margin-left: 20px; } }
   @media only screen and (min-width: 300px) {
     .overview .container-filters {
-      margin-right: 3px; } }
+      margin-right: 4px; } }
   @media only screen and (min-width: 480px) {
     .overview .container-filters {
-      margin-right: 3px; } }
+      margin-right: 4px; } }
   @media only screen and (min-width: 768px) {
     .overview .container-filters {
-      margin-right: 3px; } }
+      margin-right: 6px; } }
   @media only screen and (min-width: 992px) {
     .overview .container-filters {
       margin-right: 6px; } }
@@ -4645,13 +4646,13 @@ label.hog-label {
     padding-bottom: 0px; }
     @media only screen and (min-width: 300px) {
       .overview .container-filters .buttons-gallery {
-        padding-left: 12px; } }
+        padding-left: 16px; } }
     @media only screen and (min-width: 480px) {
       .overview .container-filters .buttons-gallery {
-        padding-left: 12px; } }
+        padding-left: 16px; } }
     @media only screen and (min-width: 768px) {
       .overview .container-filters .buttons-gallery {
-        padding-left: 12px; } }
+        padding-left: 24px; } }
     @media only screen and (min-width: 992px) {
       .overview .container-filters .buttons-gallery {
         padding-left: 24px; } }
@@ -4674,13 +4675,13 @@ label.hog-label {
     display: block; }
     @media only screen and (min-width: 300px) {
       .overview .filters-menu .filters-list {
-        padding-right: 12px; } }
+        padding-right: 16px; } }
     @media only screen and (min-width: 480px) {
       .overview .filters-menu .filters-list {
-        padding-right: 12px; } }
+        padding-right: 16px; } }
     @media only screen and (min-width: 768px) {
       .overview .filters-menu .filters-list {
-        padding-right: 12px; } }
+        padding-right: 24px; } }
     @media only screen and (min-width: 992px) {
       .overview .filters-menu .filters-list {
         padding-right: 24px; } }
@@ -4702,13 +4703,13 @@ label.hog-label {
       background-color: #dae7c8; }
       @media only screen and (min-width: 300px) {
         .overview .filters-menu .filters-list > div {
-          padding-top: 6px; } }
+          padding-top: 8px; } }
       @media only screen and (min-width: 480px) {
         .overview .filters-menu .filters-list > div {
-          padding-top: 6px; } }
+          padding-top: 8px; } }
       @media only screen and (min-width: 768px) {
         .overview .filters-menu .filters-list > div {
-          padding-top: 6px; } }
+          padding-top: 12px; } }
       @media only screen and (min-width: 992px) {
         .overview .filters-menu .filters-list > div {
           padding-top: 12px; } }
@@ -4717,13 +4718,13 @@ label.hog-label {
           padding-top: 20px; } }
       @media only screen and (min-width: 300px) {
         .overview .filters-menu .filters-list > div {
-          padding-left: 6px; } }
+          padding-left: 8px; } }
       @media only screen and (min-width: 480px) {
         .overview .filters-menu .filters-list > div {
-          padding-left: 6px; } }
+          padding-left: 8px; } }
       @media only screen and (min-width: 768px) {
         .overview .filters-menu .filters-list > div {
-          padding-left: 6px; } }
+          padding-left: 12px; } }
       @media only screen and (min-width: 992px) {
         .overview .filters-menu .filters-list > div {
           padding-left: 12px; } }
@@ -4732,13 +4733,13 @@ label.hog-label {
           padding-left: 20px; } }
       @media only screen and (min-width: 300px) {
         .overview .filters-menu .filters-list > div {
-          padding-bottom: 6px; } }
+          padding-bottom: 8px; } }
       @media only screen and (min-width: 480px) {
         .overview .filters-menu .filters-list > div {
-          padding-bottom: 6px; } }
+          padding-bottom: 8px; } }
       @media only screen and (min-width: 768px) {
         .overview .filters-menu .filters-list > div {
-          padding-bottom: 6px; } }
+          padding-bottom: 12px; } }
       @media only screen and (min-width: 992px) {
         .overview .filters-menu .filters-list > div {
           padding-bottom: 12px; } }
@@ -4747,13 +4748,13 @@ label.hog-label {
           padding-bottom: 20px; } }
       @media only screen and (min-width: 300px) {
         .overview .filters-menu .filters-list > div {
-          padding-right: 6px; } }
+          padding-right: 8px; } }
       @media only screen and (min-width: 480px) {
         .overview .filters-menu .filters-list > div {
-          padding-right: 6px; } }
+          padding-right: 8px; } }
       @media only screen and (min-width: 768px) {
         .overview .filters-menu .filters-list > div {
-          padding-right: 6px; } }
+          padding-right: 12px; } }
       @media only screen and (min-width: 992px) {
         .overview .filters-menu .filters-list > div {
           padding-right: 12px; } }
@@ -4765,13 +4766,13 @@ label.hog-label {
         width: 50%; }
         @media only screen and (min-width: 300px) {
           .overview .filters-menu .filters-list > div > div {
-            padding-left: 6px; } }
+            padding-left: 8px; } }
         @media only screen and (min-width: 480px) {
           .overview .filters-menu .filters-list > div > div {
-            padding-left: 6px; } }
+            padding-left: 8px; } }
         @media only screen and (min-width: 768px) {
           .overview .filters-menu .filters-list > div > div {
-            padding-left: 6px; } }
+            padding-left: 12px; } }
         @media only screen and (min-width: 992px) {
           .overview .filters-menu .filters-list > div > div {
             padding-left: 12px; } }
@@ -4782,13 +4783,13 @@ label.hog-label {
           float: right; }
           @media only screen and (min-width: 300px) {
             .overview .filters-menu .filters-list > div > div:nth-child(2) {
-              padding-left: 12px; } }
+              padding-left: 16px; } }
           @media only screen and (min-width: 480px) {
             .overview .filters-menu .filters-list > div > div:nth-child(2) {
-              padding-left: 12px; } }
+              padding-left: 16px; } }
           @media only screen and (min-width: 768px) {
             .overview .filters-menu .filters-list > div > div:nth-child(2) {
-              padding-left: 12px; } }
+              padding-left: 24px; } }
           @media only screen and (min-width: 992px) {
             .overview .filters-menu .filters-list > div > div:nth-child(2) {
               padding-left: 24px; } }
@@ -4806,13 +4807,13 @@ label.hog-label {
     transition: opacity 0.2s ease-in-out; }
     @media only screen and (min-width: 300px) {
       .overview .listing div.item {
-        margin-bottom: 12px; } }
+        margin-bottom: 16px; } }
     @media only screen and (min-width: 480px) {
       .overview .listing div.item {
-        margin-bottom: 12px; } }
+        margin-bottom: 16px; } }
     @media only screen and (min-width: 768px) {
       .overview .listing div.item {
-        margin-bottom: 12px; } }
+        margin-bottom: 24px; } }
     @media only screen and (min-width: 992px) {
       .overview .listing div.item {
         margin-bottom: 24px; } }
@@ -4834,13 +4835,13 @@ label.hog-label {
       background-image: url("../img/ajax-loader.gif"); }
       @media only screen and (min-width: 300px) {
         .overview .listing div.item > div {
-          margin-top: 6px; } }
+          margin-top: 8px; } }
       @media only screen and (min-width: 480px) {
         .overview .listing div.item > div {
-          margin-top: 6px; } }
+          margin-top: 8px; } }
       @media only screen and (min-width: 768px) {
         .overview .listing div.item > div {
-          margin-top: 6px; } }
+          margin-top: 12px; } }
       @media only screen and (min-width: 992px) {
         .overview .listing div.item > div {
           margin-top: 12px; } }
@@ -4849,13 +4850,13 @@ label.hog-label {
           margin-top: 20px; } }
       @media only screen and (min-width: 300px) {
         .overview .listing div.item > div {
-          margin-right: 6px; } }
+          margin-right: 8px; } }
       @media only screen and (min-width: 480px) {
         .overview .listing div.item > div {
-          margin-right: 6px; } }
+          margin-right: 8px; } }
       @media only screen and (min-width: 768px) {
         .overview .listing div.item > div {
-          margin-right: 6px; } }
+          margin-right: 12px; } }
       @media only screen and (min-width: 992px) {
         .overview .listing div.item > div {
           margin-right: 12px; } }
@@ -4864,13 +4865,13 @@ label.hog-label {
           margin-right: 20px; } }
       @media only screen and (min-width: 300px) {
         .overview .listing div.item > div {
-          margin-left: 6px; } }
+          margin-left: 8px; } }
       @media only screen and (min-width: 480px) {
         .overview .listing div.item > div {
-          margin-left: 6px; } }
+          margin-left: 8px; } }
       @media only screen and (min-width: 768px) {
         .overview .listing div.item > div {
-          margin-left: 6px; } }
+          margin-left: 12px; } }
       @media only screen and (min-width: 992px) {
         .overview .listing div.item > div {
           margin-left: 12px; } }
@@ -4894,13 +4895,13 @@ label.hog-label {
   /* inherit size from gallery */ }
   @media only screen and (min-width: 300px) {
     .detail .container-title .title {
-      padding-left: 3px; } }
+      padding-left: 4px; } }
   @media only screen and (min-width: 480px) {
     .detail .container-title .title {
-      padding-left: 3px; } }
+      padding-left: 4px; } }
   @media only screen and (min-width: 768px) {
     .detail .container-title .title {
-      padding-left: 3px; } }
+      padding-left: 6px; } }
   @media only screen and (min-width: 992px) {
     .detail .container-title .title {
       padding-left: 6px; } }
@@ -4909,13 +4910,13 @@ label.hog-label {
       padding-left: 10px; } }
   @media only screen and (min-width: 300px) {
     .detail .container-title .title {
-      padding-right: 3px; } }
+      padding-right: 4px; } }
   @media only screen and (min-width: 480px) {
     .detail .container-title .title {
-      padding-right: 3px; } }
+      padding-right: 4px; } }
   @media only screen and (min-width: 768px) {
     .detail .container-title .title {
-      padding-right: 3px; } }
+      padding-right: 6px; } }
   @media only screen and (min-width: 992px) {
     .detail .container-title .title {
       padding-right: 6px; } }
@@ -4929,13 +4930,13 @@ label.hog-label {
     padding-bottom: 10px; }
     @media only screen and (min-width: 300px) {
       .detail .container-title .buttons-gallery {
-        padding-left: 3px; } }
+        padding-left: 4px; } }
     @media only screen and (min-width: 480px) {
       .detail .container-title .buttons-gallery {
-        padding-left: 3px; } }
+        padding-left: 4px; } }
     @media only screen and (min-width: 768px) {
       .detail .container-title .buttons-gallery {
-        padding-left: 3px; } }
+        padding-left: 6px; } }
     @media only screen and (min-width: 992px) {
       .detail .container-title .buttons-gallery {
         padding-left: 6px; } }
@@ -4944,13 +4945,13 @@ label.hog-label {
         padding-left: 10px; } }
     @media only screen and (min-width: 300px) {
       .detail .container-title .buttons-gallery {
-        padding-right: 6px; } }
+        padding-right: 8px; } }
     @media only screen and (min-width: 480px) {
       .detail .container-title .buttons-gallery {
-        padding-right: 6px; } }
+        padding-right: 8px; } }
     @media only screen and (min-width: 768px) {
       .detail .container-title .buttons-gallery {
-        padding-right: 6px; } }
+        padding-right: 12px; } }
     @media only screen and (min-width: 992px) {
       .detail .container-title .buttons-gallery {
         padding-right: 12px; } }
@@ -4964,13 +4965,13 @@ label.hog-label {
         right: 0; } }
   @media only screen and (min-width: 300px) {
     .detail .container-gallery {
-      padding-top: 3px; } }
+      padding-top: 4px; } }
   @media only screen and (min-width: 480px) {
     .detail .container-gallery {
-      padding-top: 3px; } }
+      padding-top: 4px; } }
   @media only screen and (min-width: 768px) {
     .detail .container-gallery {
-      padding-top: 3px; } }
+      padding-top: 6px; } }
   @media only screen and (min-width: 992px) {
     .detail .container-gallery {
       padding-top: 6px; } }
@@ -4979,28 +4980,13 @@ label.hog-label {
       padding-top: 10px; } }
   @media only screen and (min-width: 300px) {
     .detail .container-gallery {
-      padding-left: 3px; } }
+      padding-right: 8px; } }
   @media only screen and (min-width: 480px) {
     .detail .container-gallery {
-      padding-left: 3px; } }
+      padding-right: 8px; } }
   @media only screen and (min-width: 768px) {
     .detail .container-gallery {
-      padding-left: 3px; } }
-  @media only screen and (min-width: 992px) {
-    .detail .container-gallery {
-      padding-left: 6px; } }
-  @media only screen and (min-width: 1600px) {
-    .detail .container-gallery {
-      padding-left: 10px; } }
-  @media only screen and (min-width: 300px) {
-    .detail .container-gallery {
-      padding-right: 6px; } }
-  @media only screen and (min-width: 480px) {
-    .detail .container-gallery {
-      padding-right: 6px; } }
-  @media only screen and (min-width: 768px) {
-    .detail .container-gallery {
-      padding-right: 6px; } }
+      padding-right: 12px; } }
   @media only screen and (min-width: 992px) {
     .detail .container-gallery {
       padding-right: 12px; } }
@@ -5009,16 +4995,17 @@ label.hog-label {
       padding-right: 20px; } }
   .detail .container-gallery .title {
     font-size: 19px;
-    float: left; }
+    float: left;
+    height: 10px; }
     @media only screen and (min-width: 300px) {
       .detail .container-gallery .title {
-        padding-left: 3px; } }
+        padding-left: 4px; } }
     @media only screen and (min-width: 480px) {
       .detail .container-gallery .title {
-        padding-left: 3px; } }
+        padding-left: 4px; } }
     @media only screen and (min-width: 768px) {
       .detail .container-gallery .title {
-        padding-left: 3px; } }
+        padding-left: 6px; } }
     @media only screen and (min-width: 992px) {
       .detail .container-gallery .title {
         padding-left: 6px; } }
@@ -5039,13 +5026,13 @@ label.hog-label {
     /* gallery height has percentage of width */ }
     @media only screen and (min-width: 300px) {
       .detail .gallery {
-        margin-left: 6px; } }
+        margin-left: 8px; } }
     @media only screen and (min-width: 480px) {
       .detail .gallery {
-        margin-left: 6px; } }
+        margin-left: 8px; } }
     @media only screen and (min-width: 768px) {
       .detail .gallery {
-        margin-left: 6px; } }
+        margin-left: 12px; } }
     @media only screen and (min-width: 992px) {
       .detail .gallery {
         margin-left: 12px; } }
@@ -5054,13 +5041,13 @@ label.hog-label {
         margin-left: 20px; } }
     @media only screen and (min-width: 300px) {
       .detail .gallery {
-        margin-right: 6px; } }
+        margin-right: 8px; } }
     @media only screen and (min-width: 480px) {
       .detail .gallery {
-        margin-right: 6px; } }
+        margin-right: 8px; } }
     @media only screen and (min-width: 768px) {
       .detail .gallery {
-        margin-right: 6px; } }
+        margin-right: 12px; } }
     @media only screen and (min-width: 992px) {
       .detail .gallery {
         margin-right: 12px; } }
@@ -5087,13 +5074,21 @@ label.hog-label {
 
 .container-content .quote, .container-content .image, .container-content .contact-placeholder {
   border-top: 1px #fff solid;
-  margin-left: -16.66667%;
+  top: -1px;
   margin-right: 40px;
-  top: -1px; }
+  margin-left: 0; }
+  @media only screen and (min-width: 992px) {
+    .container-content .quote, .container-content .image, .container-content .contact-placeholder {
+      margin-right: 40px;
+      margin-left: -16.66667%; } }
   .container-content .quote.right, .container-content .image.right, .container-content .contact-placeholder.right {
     float: right;
     margin-left: 40px;
-    margin-right: -16.66667%; }
+    margin-right: 0; }
+    @media only screen and (min-width: 992px) {
+      .container-content .quote.right, .container-content .image.right, .container-content .contact-placeholder.right {
+        margin-left: 40px;
+        margin-right: -16.66667%; } }
   .container-content .quote:after, .container-content .image:after, .container-content .contact-placeholder:after {
     clear: both; }
 .container-content .contact-placeholder {
@@ -5130,6 +5125,12 @@ label.hog-label {
 .container-content .image {
   border-top: 0px #FFF solid;
   margin-top: -10px; }
+  .container-content .image.right {
+    margin-left: 0px; }
+    @media only screen and (min-width: 992px) {
+      .container-content .image.right {
+        margin-left: 40px;
+        margin-right: -16.66667%; } }
   .container-content .image img {
     width: 100%;
     height: auto;
@@ -5141,13 +5142,13 @@ label.hog-label {
 
 @media only screen and (min-width: 300px) {
   .container-related {
-    padding-top: 3px; } }
+    padding-top: 4px; } }
 @media only screen and (min-width: 480px) {
   .container-related {
-    padding-top: 3px; } }
+    padding-top: 4px; } }
 @media only screen and (min-width: 768px) {
   .container-related {
-    padding-top: 3px; } }
+    padding-top: 6px; } }
 @media only screen and (min-width: 992px) {
   .container-related {
     padding-top: 6px; } }
@@ -5156,28 +5157,13 @@ label.hog-label {
     padding-top: 10px; } }
 @media only screen and (min-width: 300px) {
   .container-related {
-    padding-left: 3px; } }
+    padding-right: 8px; } }
 @media only screen and (min-width: 480px) {
   .container-related {
-    padding-left: 3px; } }
+    padding-right: 8px; } }
 @media only screen and (min-width: 768px) {
   .container-related {
-    padding-left: 3px; } }
-@media only screen and (min-width: 992px) {
-  .container-related {
-    padding-left: 6px; } }
-@media only screen and (min-width: 1600px) {
-  .container-related {
-    padding-left: 10px; } }
-@media only screen and (min-width: 300px) {
-  .container-related {
-    padding-right: 6px; } }
-@media only screen and (min-width: 480px) {
-  .container-related {
-    padding-right: 6px; } }
-@media only screen and (min-width: 768px) {
-  .container-related {
-    padding-right: 6px; } }
+    padding-right: 12px; } }
 @media only screen and (min-width: 992px) {
   .container-related {
     padding-right: 12px; } }
@@ -5188,13 +5174,13 @@ label.hog-label {
   border-top: 2px solid #fff; }
   @media only screen and (min-width: 300px) {
     .container-related h4 {
-      padding-top: 3px; } }
+      padding-top: 4px; } }
   @media only screen and (min-width: 480px) {
     .container-related h4 {
-      padding-top: 3px; } }
+      padding-top: 4px; } }
   @media only screen and (min-width: 768px) {
     .container-related h4 {
-      padding-top: 3px; } }
+      padding-top: 6px; } }
   @media only screen and (min-width: 992px) {
     .container-related h4 {
       padding-top: 6px; } }
@@ -5203,13 +5189,13 @@ label.hog-label {
       padding-top: 10px; } }
   @media only screen and (min-width: 300px) {
     .container-related h4 {
-      margin-left: 3px; } }
+      margin-left: 4px; } }
   @media only screen and (min-width: 480px) {
     .container-related h4 {
-      margin-left: 3px; } }
+      margin-left: 4px; } }
   @media only screen and (min-width: 768px) {
     .container-related h4 {
-      margin-left: 3px; } }
+      margin-left: 6px; } }
   @media only screen and (min-width: 992px) {
     .container-related h4 {
       margin-left: 6px; } }
@@ -5218,13 +5204,13 @@ label.hog-label {
       margin-left: 10px; } }
   @media only screen and (min-width: 300px) {
     .container-related h4 {
-      margin-right: 3px; } }
+      margin-right: 4px; } }
   @media only screen and (min-width: 480px) {
     .container-related h4 {
-      margin-right: 3px; } }
+      margin-right: 4px; } }
   @media only screen and (min-width: 768px) {
     .container-related h4 {
-      margin-right: 3px; } }
+      margin-right: 6px; } }
   @media only screen and (min-width: 992px) {
     .container-related h4 {
       margin-right: 6px; } }
@@ -5233,13 +5219,13 @@ label.hog-label {
       margin-right: 10px; } }
   @media only screen and (min-width: 300px) {
     .container-related h4 {
-      margin-bottom: 3px; } }
+      margin-bottom: 4px; } }
   @media only screen and (min-width: 480px) {
     .container-related h4 {
-      margin-bottom: 3px; } }
+      margin-bottom: 4px; } }
   @media only screen and (min-width: 768px) {
     .container-related h4 {
-      margin-bottom: 3px; } }
+      margin-bottom: 6px; } }
   @media only screen and (min-width: 992px) {
     .container-related h4 {
       margin-bottom: 6px; } }
@@ -5248,13 +5234,13 @@ label.hog-label {
       margin-bottom: 10px; } }
 @media only screen and (min-width: 300px) {
   .container-related .item {
-    padding-left: 3px; } }
+    padding-left: 4px; } }
 @media only screen and (min-width: 480px) {
   .container-related .item {
-    padding-left: 3px; } }
+    padding-left: 4px; } }
 @media only screen and (min-width: 768px) {
   .container-related .item {
-    padding-left: 3px; } }
+    padding-left: 6px; } }
 @media only screen and (min-width: 992px) {
   .container-related .item {
     padding-left: 6px; } }
@@ -5263,13 +5249,13 @@ label.hog-label {
     padding-left: 10px; } }
 @media only screen and (min-width: 300px) {
   .container-related .item {
-    padding-right: 3px; } }
+    padding-right: 4px; } }
 @media only screen and (min-width: 480px) {
   .container-related .item {
-    padding-right: 3px; } }
+    padding-right: 4px; } }
 @media only screen and (min-width: 768px) {
   .container-related .item {
-    padding-right: 3px; } }
+    padding-right: 6px; } }
 @media only screen and (min-width: 992px) {
   .container-related .item {
     padding-right: 6px; } }
@@ -5364,13 +5350,13 @@ label.hog-label {
     transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78); }
     @media only screen and (min-width: 300px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-top: 6px; } }
+        padding-top: 8px; } }
     @media only screen and (min-width: 480px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-top: 6px; } }
+        padding-top: 8px; } }
     @media only screen and (min-width: 768px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-top: 6px; } }
+        padding-top: 12px; } }
     @media only screen and (min-width: 992px) {
       .hog-nav .hog-navigation-wrapper {
         padding-top: 12px; } }
@@ -5379,13 +5365,13 @@ label.hog-label {
         padding-top: 20px; } }
     @media only screen and (min-width: 300px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-right: 6px; } }
+        padding-right: 8px; } }
     @media only screen and (min-width: 480px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-right: 6px; } }
+        padding-right: 8px; } }
     @media only screen and (min-width: 768px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-right: 6px; } }
+        padding-right: 12px; } }
     @media only screen and (min-width: 992px) {
       .hog-nav .hog-navigation-wrapper {
         padding-right: 12px; } }
@@ -5394,13 +5380,13 @@ label.hog-label {
         padding-right: 20px; } }
     @media only screen and (min-width: 300px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-bottom: 6px; } }
+        padding-bottom: 8px; } }
     @media only screen and (min-width: 480px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-bottom: 6px; } }
+        padding-bottom: 8px; } }
     @media only screen and (min-width: 768px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-bottom: 6px; } }
+        padding-bottom: 12px; } }
     @media only screen and (min-width: 992px) {
       .hog-nav .hog-navigation-wrapper {
         padding-bottom: 12px; } }
@@ -5409,13 +5395,13 @@ label.hog-label {
         padding-bottom: 20px; } }
     @media only screen and (min-width: 300px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-left: 6px; } }
+        padding-left: 8px; } }
     @media only screen and (min-width: 480px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-left: 6px; } }
+        padding-left: 8px; } }
     @media only screen and (min-width: 768px) {
       .hog-nav .hog-navigation-wrapper {
-        padding-left: 6px; } }
+        padding-left: 12px; } }
     @media only screen and (min-width: 992px) {
       .hog-nav .hog-navigation-wrapper {
         padding-left: 12px; } }

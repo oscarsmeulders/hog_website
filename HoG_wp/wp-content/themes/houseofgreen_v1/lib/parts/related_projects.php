@@ -21,7 +21,7 @@ if ($tags) :
 			$img_size = 'ratio4-3';
 			$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 			$output .= '
-				<div class="col-xs-12 col-sm-3">
+				<div class="col-xs-6 col-sm-3">
 					<a href="'. get_the_permalink() .'">
 						<div class="item">
 							<div class="proportions ratio4_3">

@@ -86,7 +86,7 @@ get_header(); ?>
 				$output = '';
 				while ( $loop->have_posts() ) : $loop->the_post();
 					$image = get_field('featured_image');
-					$img_size = 'ratio4-3';
+					$img_size = 'ratio4-3-half';
 					$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 					$output .='
 						<div class="item isotope-item '. custom_taxonomies_overview_page() .'">

@@ -23,7 +23,7 @@ get_header(); ?>
 					$title = get_field('panel_1_titel');
 					$link = get_field('panel_1_link');
 					$image = get_field('panel_1_image');
-					$img_size = 'ratio1-2';
+					$img_size = 'ratio1-2-half';
 					$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 				?>
 				<div class="case">
@@ -91,7 +91,7 @@ get_header(); ?>
 					$title = get_field('panel_3_titel');
 					$link = get_field('panel_3_link');
 					$image = get_field('panel_3_image');
-					$img_size = 'ratio1-1';
+					$img_size = 'ratio1-1-small';
 					$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 				?>
 				<div class="case">
@@ -115,7 +115,7 @@ get_header(); ?>
 					$title = get_field('panel_4_titel');
 					$link = get_field('panel_4_link');
 					$image = get_field('panel_4_image');
-					$img_size = 'ratio1-1';
+					$img_size = 'ratio1-1-small';
 					$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 				?>
 				<div class="case">
@@ -139,7 +139,7 @@ get_header(); ?>
 					$title = get_field('panel_5_titel');
 					$link = get_field('panel_5_link');
 					$image = get_field('panel_5_image');
-					$img_size = 'ratio1-1';
+					$img_size = 'ratio1-1-small';
 					$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 				?>
 				<div class="case">
@@ -177,7 +177,7 @@ get_header(); ?>
 								$title = get_field('panel_6_titel');
 								$link = get_field('panel_6_link');
 								$image = get_field('panel_6_image');
-								$img_size = 'ratio1-1';
+								$img_size = 'ratio1-1-small';
 								$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 							?>
 							<div class="case">
@@ -202,7 +202,7 @@ get_header(); ?>
 								$title = get_field('panel_7_titel');
 								$link = get_field('panel_7_link');
 								$image = get_field('panel_7_image');
-								$img_size = 'ratio1-1';
+								$img_size = 'ratio1-1-small';
 								$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 							?>
 							<div class="case">
@@ -231,7 +231,7 @@ get_header(); ?>
 								$title = get_field('panel_8_titel');
 								$link = get_field('panel_8_link');
 								$image = get_field('panel_8_image');
-								$img_size = 'ratio1-1';
+								$img_size = 'ratio1-1-small';
 								$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 							?>
 							<div class="case">
@@ -255,7 +255,7 @@ get_header(); ?>
 								$title = get_field('panel_9_titel');
 								$link = get_field('panel_9_link');
 								$image = get_field('panel_9_image');
-								$img_size = 'ratio1-1';
+								$img_size = 'ratio1-1-small';
 								$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 							?>
 							<div class="case">

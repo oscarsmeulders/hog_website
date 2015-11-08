@@ -26,7 +26,7 @@
 						<?php
 							$contact_page = get_field( 'contact_page', 'option' );
 							if( $contact_page ) {
-								echo '<a href="'. $contact_page .'" target="_blank"><div class="button-contact"></div></a>';
+								echo '<a href="'. $contact_page .'" target="_self"><div class="button-contact"></div></a>';
 							}
 						?>
 						<?php

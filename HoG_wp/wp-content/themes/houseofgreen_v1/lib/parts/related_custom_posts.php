@@ -1,6 +1,6 @@
 <?php // related custom posts ?>
-<?php
 
+<?php
 if(get_field('related_pages')):
 
 	$output = '';
@@ -16,7 +16,7 @@ if(get_field('related_pages')):
 			$img_size = 	'ratio4-3';
 			$img_url =		wp_get_attachment_image_src( $image, $img_size );
 			$output .= '
-				<div class="col-xs-12 col-sm-3">
+				<div class="col-xs-6 col-sm-3">
 					<a href="'. $link .'">
 						<div class="item">
 							<div class="proportions ratio4_3">
@@ -32,17 +32,18 @@ if(get_field('related_pages')):
 		endwhile;
 	endif;
 	wp_reset_postdata();
-endif;
 ?>
 
-<div class="container-fluid container-related">
-	<div class="row">
-		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-			<h4><?php _e( 'title_gerelateerd_custom', 'hog_lang' ) ?></h4>
-			<div class="row">
-				<?php echo $output; ?>
+	<div class="container-fluid container-related">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+				<h4><?php _e( 'title_gerelateerd_custom', 'hog_lang' ) ?></h4>
+				<div class="row">
+					<?php echo $output; ?>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+
+<?php endif; ?>
 <?php // end related projects ?>

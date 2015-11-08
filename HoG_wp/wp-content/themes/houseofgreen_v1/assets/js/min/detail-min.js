@@ -36,6 +36,8 @@ jQuery(document).ready(function($){
 	$( "div.container-gallery .title" ).html( bijschriften[ 0 ] );
 
 
+
+
 });
 
 // reload de pagina zodra deze wordt geresized, want dan blijft de gallery qua hoogte goed!
