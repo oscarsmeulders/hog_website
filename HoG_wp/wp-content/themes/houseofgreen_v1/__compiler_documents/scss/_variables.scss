@@ -6,9 +6,10 @@ $bootstrap-sass-asset-helper: false !default;
 // house of Green eigen variable
 $color-roze:			#dc4f93;
 $color-blue:			#3da6c3;
+$color-green-dark:		#324300;
 $color-bg:				#f1f4e7;
 $color-bg-header:		#fff;
-$color-text:			#324300;
+$color-text:			$color-green-dark;
 $color-heading-alt:		#7ea446;
 $color-nav:				$color-heading-alt;
 $color-nav-sub:			$color-text;
@@ -33,6 +34,9 @@ $color-placeholder:			$color-bg-menu;
 $color-placeholder-input: 	$color-heading-alt;
 
 
+$width-bt-XS:			40px;
+$height-bt-XS:			$width-bt-XS;
+
 $width-bt-S:			40px;
 $height-bt-S:			$width-bt-S;
 
@@ -45,6 +49,7 @@ $height-bt-L:			$width-bt-L;
 $width-bt-XL:			50px;
 $height-bt-XL:			$width-bt-XL;
 
+$height-searchbar-XS: 40px;
 $height-searchbar-S: 50px;
 $height-searchbar-L: 50px;
 
@@ -71,6 +76,7 @@ $width-button-contact-XL: 100px;
 $height-button-contact-XL: $width-button-contact-XL;
 
 // hoogte van de navigatie header
+$height-nav-header-XS: 60px;
 $height-nav-header-S: 80px;
 $height-nav-header-M: 80px;
 $height-nav-header-L: 120px;

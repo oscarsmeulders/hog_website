@@ -16,16 +16,21 @@ get_header(); ?>
 	<div class="container-fluid container-filters">
 		<div class="row">
 			<div class="col-xs-12 col-sm-4 col-sm-offset-8 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 buttons-gallery">
-				<div class="button button-filters">Filters</div>
+				<div class="button button-filters closed">Filters</div>
 			</div>
-			<!-- filters -->
+			<?php  filters ?>
 			<div class="closed hidden filters-menu">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-6 col-lg-6 col-lg-offset-6 filters-list">
 						<div id="options">
+							<?php 
+								if (isset($_GET['filter'])) {
+									$filter = $_GET['filter'];
+								}
+							?>
 							<?php // set filters 1 ?>
 							<div class="option-set" data-group="soort">
-								<h4><?php _e( 'filter_project_kind_category', 'hog_lang' ) ?></h4>
+								<h5><?php _e( 'filter_project_kind_category', 'hog_lang' ) ?></h5>
 								<ul>
 									<?php
 										$args = array(
@@ -34,34 +39,39 @@ get_header(); ?>
 										$taxonomies = get_terms('project_kind_category', $args);
 										if  ($taxonomies) :
 											foreach ($taxonomies  as $taxonomy ) :
-												echo '<li><input type="checkbox" value=".'. $taxonomy->slug .'" id="'. $taxonomy->slug .'" class="hog-checkbox" /><label for="'. $taxonomy->slug .'" class="hog-label">'. $taxonomy->name .'</label></li>';
+												echo '<li><input type="checkbox" value=".'. $taxonomy->slug .'" id="'. $taxonomy->slug .'" class="hog-checkbox" '. check_filterVar_with_filter_slug($filter, $taxonomy->slug).'/><label for="'. $taxonomy->slug .'" class="hog-label">'. $taxonomy->name .'</label></li>';
 											endforeach;
 										endif;
+										wp_reset_query();
 									?>
 								</ul>
 							</div>
 							<?php // end set filters 1 ?>
-							<div class="option-set" data-group="oppervlakte">
-								<h4>Not working yet</h4>
+							<?php // set filters 2 ?>
+							<div class="option-set" data-group="soort">
+								<h5><?php _e( 'filter_project_size_category', 'hog_lang' ) ?></h5>
 								<ul>
-									<li>
-										<input type="checkbox" value=".oppervlakte1" id="oppervlakte1" class="hog-checkbox" /><label for="oppervlakte1" class="hog-label">Oppervlakte 1</label>
-									</li>
-									<li>
-										<input type="checkbox" value=".oppervlakte2" id="oppervlakte2" class="hog-checkbox" /><label for="oppervlakte2" class="hog-label">Oppervlakte 2</label>
-									</li>
-									<li>
-										<input type="checkbox" value=".oppervlakte3" id="oppervlakte3" class="hog-checkbox" /><label for="oppervlakte3" class="hog-label">Oppervlakte 3</label>
-									</li>
+									<?php
+										$args = array(
+											'hide_empty' => 1
+										);
+										$taxonomies = get_terms('project_size_category', $args);
+										if  ($taxonomies) :
+											foreach ($taxonomies  as $taxonomy ) :
+												echo '<li><input type="checkbox" value=".'. $taxonomy->slug .'" id="'. $taxonomy->slug .'" class="hog-checkbox" '. check_filterVar_with_filter_slug($filter, $taxonomy->slug) .'/><label for="'. $taxonomy->slug .'" class="hog-label">'. $taxonomy->name .'</label></li>';
+											endforeach;
+										endif;
+										wp_reset_query();
+									?>
 								</ul>
 							</div>
-
+							<?php // end set filters 2 ?>
 						</div>
 
 					</div>
 				</div>
 			</div>
-			<!-- end filters -->
+			<?php // end filters ?>
 		</div>
 	</div>
 	<div class="container-fluid container-title">
@@ -74,7 +84,7 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<!-- listing -->
+	<?php // listing ?>
 	<div class="listing">
 		<?php
 			$arg = array(
@@ -92,7 +102,7 @@ get_header(); ?>
 						<div class="item isotope-item '. custom_taxonomies_overview_page() .'">
 							<div>
 								<a href="'. get_the_permalink() .'">
-									<img class="ll" src="assets/img/src-empty.png" data-original="'. $img_url[0] .'" alt="" />
+									<img class="ll" src="'. get_stylesheet_directory_uri() .'/assets/img/src-empty.png" data-original="'. $img_url[0] .'" alt="" />
 									<div class="title">'. get_the_title() .'</div>
 								</a>
 							</div>
@@ -104,9 +114,9 @@ get_header(); ?>
 		?>
 
 	</div>
-	<!-- end listing -->
+	<?php // end listing ?>
 
-	<p id="filter-display">filters here</p>
+	<!-- <p id="filter-display">filters here</p> -->
 
 </div>
 <?php endwhile; // end of the loop. ?>

@@ -28,42 +28,61 @@ function get_responsive_title($title) {
 // https://codex.wordpress.org/Function_Reference/get_the_terms
 // echo custom_taxonomies_detail_page();
 
-function custom_taxonomies_detail_page(){
+function custom_taxonomies_detail_page() {
 
+	$kindsArray = array();
+	$projectCookie = get_field('projects_overview', 'option');
+	
 	$terms = get_the_terms( $post->ID, 'project_kind_category' );
-
 	if ( $terms && ! is_wp_error( $terms ) ) :
-		$kindsArray = array();
-
 		foreach ( $terms as $term ) {
-			$kindsArray[] = '<div class="meta">' . $term->name . '</div>';
-		}
-
-		$kinds = join( "", $kindsArray );
+			$kindsArray[] = '<a href="'. $projectCookie. '/?filter=' .$term->slug .'"><div class="meta">' . $term->name . '</div></a>';
+		}		
 	endif;
+	wp_reset_query();
 
+	$terms = get_the_terms( $post->ID, 'project_size_category' );
+	if ( $terms && ! is_wp_error( $terms ) ) :
+		foreach ( $terms as $term ) {
+			$kindsArray[] = '<a href="'. $projectCookie. '/?filter=' .$term->slug .'"><div class="meta">' . $term->name . '</div></a>';
+		}		
+	endif;
+	wp_reset_query();
+	
+	$kinds = join( "", $kindsArray );
 	return $kinds;
 
 }
 
 function custom_taxonomies_overview_page(){
-
+	$kindsArray = array();
+	
 	$terms = get_the_terms( $post->ID, 'project_kind_category' );
-
 	if ( $terms && ! is_wp_error( $terms ) ) :
-		$kindsArray = array();
-
 		foreach ( $terms as $term ) {
 			$kindsArray[] = $term->slug . ' ';
 		}
-
-		$kinds = join( "", $kindsArray );
 	endif;
-
+	//wp_reset_query();
+	
+	$terms = get_the_terms( $post->ID, 'project_size_category' );
+	if ( $terms && ! is_wp_error( $terms ) ) :
+		foreach ( $terms as $term ) {
+			$kindsArray[] = $term->slug . ' ';
+		}
+	endif;
+	//wp_reset_query();
+	
+	$kinds = join( "", $kindsArray );
 	return $kinds;
 
 }
 
 
+function check_filterVar_with_filter_slug($tmp, $slug) {
+	if ($tmp == $slug) {
+		return 'checked';	
+	}	
+}
 
 ?>

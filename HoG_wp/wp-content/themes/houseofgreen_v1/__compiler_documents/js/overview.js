@@ -274,13 +274,19 @@ function manageCheckbox( $checkbox ) {
 	}
 
 	$('.button-filters').on('click', function(event){
-		console.log('click on filters');
+		//console.log('click on filters');
 		event.preventDefault();
 		if ( $('.filters-menu').hasClass('closed') ) {
+			
+			$('.button-filters').removeClass('closed');
+			
 			$('.filters-menu').removeClass('hidden').delay(10).queue(function(next){
 				$('.filters-menu').removeClass('closed').dequeue();
 			});
 		} else {
+			
+			$('.button-filters').addClass('closed');
+			
 			$('.filters-menu').addClass('closed').delay(200).queue(function(next){
 				$('.filters-menu').addClass('hidden').dequeue();
 			});

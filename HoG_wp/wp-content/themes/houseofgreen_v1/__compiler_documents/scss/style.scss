@@ -179,8 +179,13 @@ body {
 	background-color: rgba($color-bg-header, 1);
 	width: 100%;
 
-	height: $height-nav-header-S;
-	@include MQ(L) { height: $height-nav-header-L; }
+	height: $height-nav-header-XS;
+	@include MQ(S) {
+		height: $height-nav-header-S;
+	}
+	@include MQ(L) {
+		height: $height-nav-header-L;
+	}
 
 	.logo {
 		@include m-r('double');
@@ -188,10 +193,13 @@ body {
 		background-position: center center;
 		background-size: auto 70%;
 		background-repeat: no-repeat;
-		height: $height-nav-header-S;
+		height: $height-nav-header-XS;
 		//@include trans(background-size);
 		&:hover {
 				background-size: auto 71%;
+		}
+		@include MQ(S) {
+			height: $height-nav-header-S;
 		}
 		@include MQ(L) {
 			background-size: auto 60%;
@@ -212,15 +220,22 @@ body {
 		//@include m-l("double");
 	}
 
-	height: $height-searchbar-S;
-	top: $height-nav-header-S - $height-searchbar-S - 2;
+	height: $height-searchbar-XS;
+	top: $height-nav-header-XS - $height-searchbar-XS - 2;
+	@include MQ(S) {
+		top: $height-nav-header-S - $height-searchbar-S - 2;
+		height: $height-searchbar-S;
+	}
 	@include MQ(L) {
 		top: $height-nav-header-L - $height-searchbar-L - 2;
 		height: $height-searchbar-L;
 	}
 
 	.search-is-open & {
-		top: $height-nav-header-S;
+		top: $height-nav-header-XS;
+		@include MQ(S) {
+			top: $height-nav-header-S;
+		}
 		@include MQ(L) {
 			top: $height-nav-header-L;
 		}
@@ -244,13 +259,19 @@ body {
 
 	//@include trans('all');
 
-	padding-top: $height-nav-header-S;
+	padding-top: $height-nav-header-XS;
+	@include MQ(L) {
+		padding-top: $height-nav-header-S;
+	}
 	@include MQ(L) {
 		padding-top: $height-nav-header-L;
 	}
 	.search-is-open & {
 
-		padding-top: $height-searchbar-S + $height-nav-header-S;
+		padding-top: $height-searchbar-XS + $height-nav-header-XS;
+		@include MQ(S) {
+			padding-top: $height-searchbar-XS + $height-nav-header-S;
+		}
 		@include MQ(L) {
 			padding-top: $height-searchbar-S + $height-nav-header-L;
 		}
@@ -396,9 +417,19 @@ input:focus {
    color: $color-placeholder-input;
 }
 
+label {
+	font-weight: normal;	
+}
+
 .input-search {
 	width: 100%;
-	height: 50px;
+	height: $height-searchbar-XS;
+	@include MQ(S) {
+		height: $height-searchbar-S;
+	}
+	@include MQ(L) {
+		height: $height-searchbar-L;
+	}
 	border: 0px solid #FFF;
 	background-color: $color-bg-menu;
 }
@@ -429,13 +460,13 @@ input[type=checkbox].hog-checkbox {
 }
 
 input[type=checkbox].hog-checkbox + label.hog-label {
-	padding-left:25px;
+	padding-left:35px;
 	height:20px;
 	display:inline-block;
 	line-height:20px;
 	background-repeat:no-repeat;
 	background-position: 0 0;
-	font-size:20px;
+	//font-size:20px;
 	vertical-align:middle;
 	cursor:pointer;
 }
@@ -681,7 +712,7 @@ label.hog-label {
 				//@include m-b('double');
 				@include m-l('normal');
 				background-color: $color-placeholder;
-				background-position: center 33%;
+				background-position: center 45%;
 				background-repeat: no-repeat;
 				background-size: auto;
 				background-image: url('../img/ajax-loader.gif');	//preloaders.net
@@ -753,6 +784,10 @@ label.hog-label {
 				margin-bottom: 1px;
 				background-color: $color-heading-alt;
 				color: #fff;
+				@include trans('background-color');
+				&:hover {
+					background-color: $color-green-dark;	
+				}
 			}
 		}
 	}
@@ -760,7 +795,6 @@ label.hog-label {
 		@include m-l('normal');
 		@include m-r('normal');
 		padding-bottom: 33%; /* gallery height has percentage of width */
-	  //height: 400px;
 	}
 	/* inherit size from gallery */
 	.gallery .flickity-viewport {
@@ -768,7 +802,10 @@ label.hog-label {
 	  width: 100%;
 	}
 	.gallery-cell {
-		background: $color-placeholder;
+		background-color: $color-placeholder;
+		background-image: url('../img/ajax-loader.gif');	//preloaders.net
+		background-repeat: no-repeat;
+		background-position: center center;
 		margin-right: 10px;
 		width: 67%;
 		height: 100%;
@@ -1114,6 +1151,21 @@ label.hog-label {
 							a:hover {
 								color: $color-link;
 							}
+						}
+					}
+				}
+			}
+			&:hover.menu-item-has-children  {
+				.no-touch & {
+					//border-top: 1px #FFF solid;
+					background-image: url('../img/bg_1px.png');
+					background-position: center top;
+					background-repeat: repeat-x;
+					width: 100%;
+					position: relative;
+					ul {
+						li {
+							display: block;
 						}
 					}
 				}

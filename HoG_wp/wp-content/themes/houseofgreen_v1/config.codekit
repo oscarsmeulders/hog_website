@@ -2252,6 +2252,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/img\/arrow_bottom.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1267,
+		"inputAbbreviatedPath": "\/assets\/img\/arrow_bottom.png",
+		"outputAbbreviatedPath": "\/assets\/img\/arrow_bottom.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/arrow_next.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2281,6 +2292,17 @@
 		"initialSize": 1237,
 		"inputAbbreviatedPath": "\/assets\/img\/arrow_top.png",
 		"outputAbbreviatedPath": "\/assets\/img\/arrow_top.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/bg_1px.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 940,
+		"inputAbbreviatedPath": "\/assets\/img\/bg_1px.png",
+		"outputAbbreviatedPath": "\/assets\/img\/bg_1px.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4662,7 +4684,7 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "localhost:8888",
 	"externalServerPreviewPathAddition": "",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,

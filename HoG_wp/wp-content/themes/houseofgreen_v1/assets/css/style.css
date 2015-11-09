@@ -3422,7 +3422,10 @@ input[type="button"].btn-block {
       background-size: 50px; } }
 
 .button-header {
-  margin-top: 20px; }
+  margin-top: 10px; }
+  @media only screen and (min-width: 480px) {
+    .button-header {
+      margin-top: 20px; } }
   @media only screen and (min-width: 768px) {
     .button-header {
       margin-top: 20px; } }
@@ -3455,7 +3458,7 @@ input[type="button"].btn-block {
 .button.topper {
   float: right;
   background-color: #fff; }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .button.topper {
       margin-right: 16px; } }
   @media only screen and (min-width: 480px) {
@@ -3475,7 +3478,7 @@ input[type="button"].btn-block {
 
 .button-language {
   margin-left: 2px; }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .button-language {
       margin-right: 16px; } }
   @media only screen and (min-width: 480px) {
@@ -3494,7 +3497,7 @@ input[type="button"].btn-block {
 .button-search-action {
   float: right;
   padding: 2px 8px 2px 10px;
-  margin-top: 10px;
+  margin-top: 5px;
   width: auto;
   height: 30px;
   line-height: 25px;
@@ -3503,7 +3506,7 @@ input[type="button"].btn-block {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .button-search-action {
       margin-right: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -3518,6 +3521,12 @@ input[type="button"].btn-block {
   @media only screen and (min-width: 1600px) {
     .button-search-action {
       margin-right: 10px; } }
+  @media only screen and (min-width: 480px) {
+    .button-search-action {
+      margin-top: 10px; } }
+  @media only screen and (min-width: 992px) {
+    .button-search-action {
+      margin-top: 10px; } }
   .button-search-action:hover {
     background-color: #7ea446;
     color: #fff; }
@@ -3556,6 +3565,15 @@ input[type="button"].btn-block {
     background-image: url("../img/arrow_next.png"); }
 
 .button-filters {
+  background-image: url("../img/arrow_top.svg"); }
+  .no-svg .button-filters {
+    background-image: url("../img/arrow_top.png"); }
+  .button-filters.closed {
+    background-image: url("../img/arrow_bottom.svg"); }
+    .no-svg .button-filters.closed {
+      background-image: url("../img/arrow_bottom.png"); }
+
+.button-filters {
   float: right;
   background-color: #dae7c8;
   text-align: left;
@@ -3563,7 +3581,7 @@ input[type="button"].btn-block {
   background-position: right center;
   background-repeat: no-repeat;
   width: 100%; }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .button-filters {
       margin-left: 16px; } }
   @media only screen and (min-width: 480px) {
@@ -3578,7 +3596,7 @@ input[type="button"].btn-block {
   @media only screen and (min-width: 1600px) {
     .button-filters {
       margin-left: 40px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .button-filters {
       margin-right: 16px; } }
   @media only screen and (min-width: 480px) {
@@ -3807,7 +3825,7 @@ body {
     background-color: #dae7c8;
     padding-top: 15px;
     padding-bottom: 15px; }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .footer .tekst {
         padding-left: 16px; } }
     @media only screen and (min-width: 480px) {
@@ -3850,8 +3868,8 @@ body {
   left: 0;
   background-color: white;
   width: 100%;
-  height: 80px; }
-  @media only screen and (min-width: 300px) {
+  height: 60px; }
+  @media only screen and (max-width: 479px) {
     #header {
       padding-left: 16px; } }
   @media only screen and (min-width: 480px) {
@@ -3866,6 +3884,9 @@ body {
   @media only screen and (min-width: 1600px) {
     #header {
       padding-left: 40px; } }
+  @media only screen and (min-width: 480px) {
+    #header {
+      height: 80px; } }
   @media only screen and (min-width: 992px) {
     #header {
       height: 120px; } }
@@ -3874,8 +3895,8 @@ body {
     background-position: center center;
     background-size: auto 70%;
     background-repeat: no-repeat;
-    height: 80px; }
-    @media only screen and (min-width: 300px) {
+    height: 60px; }
+    @media only screen and (max-width: 479px) {
       #header .logo {
         margin-right: 16px; } }
     @media only screen and (min-width: 480px) {
@@ -3892,6 +3913,9 @@ body {
         margin-right: 40px; } }
     #header .logo:hover {
       background-size: auto 71%; }
+    @media only screen and (min-width: 480px) {
+      #header .logo {
+        height: 80px; } }
     @media only screen and (min-width: 992px) {
       #header .logo {
         background-size: auto 60%;
@@ -3903,13 +3927,13 @@ body {
   z-index: 19;
   position: fixed;
   width: 100%;
-  height: 50px;
-  top: 28px;
+  height: 40px;
+  top: 18px;
   background-color: #dae7c8;
   -webkit-transition: top 0.2s ease-in-out;
   -o-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out; }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     #searchbar {
       padding-left: 16px; } }
   @media only screen and (min-width: 480px) {
@@ -3924,7 +3948,7 @@ body {
   @media only screen and (min-width: 1600px) {
     #searchbar {
       padding-left: 40px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     #searchbar {
       padding-right: 16px; } }
   @media only screen and (min-width: 480px) {
@@ -3939,19 +3963,26 @@ body {
   @media only screen and (min-width: 1600px) {
     #searchbar {
       padding-right: 40px; } }
+  @media only screen and (min-width: 480px) {
+    #searchbar {
+      top: 28px;
+      height: 50px; } }
   @media only screen and (min-width: 992px) {
     #searchbar {
       top: 68px;
       height: 50px; } }
   .search-is-open #searchbar {
-    top: 80px; }
+    top: 60px; }
+    @media only screen and (min-width: 480px) {
+      .search-is-open #searchbar {
+        top: 80px; } }
     @media only screen and (min-width: 992px) {
       .search-is-open #searchbar {
         top: 120px; } }
 
 .main {
   position: relative;
-  padding-top: 80px;
+  padding-top: 60px;
   z-index: 2;
   /* Force Hardware Acceleration in WebKit */
   -moz-transform: translateZ(0);
@@ -3965,7 +3996,7 @@ body {
   transition: transform 0.9s, padding-top 0.9s;
   -webkit-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
   transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99); }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .main {
       margin-top: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -3980,7 +4011,7 @@ body {
   @media only screen and (min-width: 1600px) {
     .main {
       margin-top: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .main {
       margin-right: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -3995,7 +4026,7 @@ body {
   @media only screen and (min-width: 1600px) {
     .main {
       margin-right: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .main {
       margin-bottom: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4010,7 +4041,7 @@ body {
   @media only screen and (min-width: 1600px) {
     .main {
       margin-bottom: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .main {
       margin-left: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4027,9 +4058,15 @@ body {
       margin-left: 20px; } }
   @media only screen and (min-width: 992px) {
     .main {
+      padding-top: 80px; } }
+  @media only screen and (min-width: 992px) {
+    .main {
       padding-top: 120px; } }
   .search-is-open .main {
-    padding-top: 130px; }
+    padding-top: 100px; }
+    @media only screen and (min-width: 480px) {
+      .search-is-open .main {
+        padding-top: 120px; } }
     @media only screen and (min-width: 992px) {
       .search-is-open .main {
         padding-top: 170px; } }
@@ -4093,7 +4130,7 @@ a, a:visited, a:link, a:hover, a:active {
   a:active .h1, a:active .h2, a:active .h3, a:active .h4, a:active .h5, a:active .h6 {
     text-decoration: none !important; }
 
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 479px) {
   .container-content {
     margin-top: 8px; } }
 @media only screen and (min-width: 480px) {
@@ -4108,7 +4145,7 @@ a, a:visited, a:link, a:hover, a:active {
 @media only screen and (min-width: 1600px) {
   .container-content {
     margin-top: 20px; } }
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 479px) {
   .container-content {
     margin-right: 8px; } }
 @media only screen and (min-width: 480px) {
@@ -4123,7 +4160,7 @@ a, a:visited, a:link, a:hover, a:active {
 @media only screen and (min-width: 1600px) {
   .container-content {
     margin-right: 20px; } }
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 479px) {
   .container-content {
     margin-bottom: 8px; } }
 @media only screen and (min-width: 480px) {
@@ -4138,7 +4175,7 @@ a, a:visited, a:link, a:hover, a:active {
 @media only screen and (min-width: 1600px) {
   .container-content {
     margin-bottom: 20px; } }
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 479px) {
   .container-content .content {
     padding-left: 4px; } }
 @media only screen and (min-width: 480px) {
@@ -4192,11 +4229,20 @@ input:focus {
 :-ms-input-placeholder {
   color: #7ea446; }
 
+label {
+  font-weight: normal; }
+
 .input-search {
   width: 100%;
-  height: 50px;
+  height: 40px;
   border: 0px solid #FFF;
   background-color: #dae7c8; }
+  @media only screen and (min-width: 480px) {
+    .input-search {
+      height: 50px; } }
+  @media only screen and (min-width: 992px) {
+    .input-search {
+      height: 50px; } }
 
 .input-name, .input-surname, .input-email {
   width: 100%;
@@ -4221,13 +4267,12 @@ input[type=checkbox].hog-checkbox {
   border: 0; }
 
 input[type=checkbox].hog-checkbox + label.hog-label {
-  padding-left: 25px;
+  padding-left: 35px;
   height: 20px;
   display: inline-block;
   line-height: 20px;
   background-repeat: no-repeat;
   background-position: 0 0;
-  font-size: 20px;
   vertical-align: middle;
   cursor: pointer; }
 
@@ -4246,7 +4291,7 @@ label.hog-label {
 .homepage .container-content {
   padding: 0;
   margin: 0; }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .container-content .content {
       margin-left: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -4261,7 +4306,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .container-content .content {
       margin-left: 10px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .container-content .content {
       margin-right: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -4300,7 +4345,7 @@ label.hog-label {
   			background-repeat: no-repeat;
   		}
   */ }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .case .content {
       margin-top: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4315,7 +4360,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .case .content {
       margin-top: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .case .content {
       margin-right: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4330,7 +4375,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .case .content {
       margin-right: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .case .content {
       margin-bottom: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4345,7 +4390,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .case .content {
       margin-bottom: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .case .content {
       margin-left: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4374,7 +4419,7 @@ label.hog-label {
     padding-left: 10px; }
   .homepage .case .content .text {
     color: #324300; }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .homepage .case .content .text {
         padding-top: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -4389,7 +4434,7 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .homepage .case .content .text {
         padding-top: 20px; } }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .homepage .case .content .text {
         padding-right: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -4404,7 +4449,7 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .homepage .case .content .text {
         padding-right: 20px; } }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .homepage .case .content .text {
         padding-bottom: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -4419,7 +4464,7 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .homepage .case .content .text {
         padding-bottom: 20px; } }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .homepage .case .content .text {
         padding-left: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -4466,7 +4511,7 @@ label.hog-label {
         visibility: visible; } }
 .homepage .newsletter {
   background-color: #dae7c8; }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .newsletter {
       padding-top: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4481,7 +4526,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       padding-top: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .newsletter {
       padding-right: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4496,7 +4541,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       padding-right: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .newsletter {
       padding-bottom: 16px; } }
   @media only screen and (min-width: 480px) {
@@ -4511,7 +4556,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       padding-bottom: 40px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .newsletter {
       padding-left: 16px; } }
   @media only screen and (min-width: 480px) {
@@ -4526,7 +4571,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       padding-left: 40px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .newsletter {
       margin-top: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4541,7 +4586,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       margin-top: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .newsletter {
       margin-right: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4556,7 +4601,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       margin-right: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .newsletter {
       margin-bottom: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4571,7 +4616,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .homepage .newsletter {
       margin-bottom: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .homepage .newsletter {
       margin-left: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4590,7 +4635,7 @@ label.hog-label {
 .overview .container-title {
   margin-bottom: 0px;
   padding-bottom: 0px; }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .overview .container-title .title {
       padding-left: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4611,7 +4656,7 @@ label.hog-label {
   z-index: 15;
   width: 100%;
   position: absolute; }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .overview .container-filters {
       margin-left: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4626,7 +4671,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .overview .container-filters {
       margin-left: 20px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .overview .container-filters {
       margin-right: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -4644,7 +4689,7 @@ label.hog-label {
   .overview .container-filters .buttons-gallery {
     position: relative;
     padding-bottom: 0px; }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .overview .container-filters .buttons-gallery {
         padding-left: 16px; } }
     @media only screen and (min-width: 480px) {
@@ -4673,7 +4718,7 @@ label.hog-label {
     visibility: hidden; }
   .overview .filters-menu .filters-list {
     display: block; }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .overview .filters-menu .filters-list {
         padding-right: 16px; } }
     @media only screen and (min-width: 480px) {
@@ -4701,7 +4746,7 @@ label.hog-label {
       height: auto;
       display: table;
       background-color: #dae7c8; }
-      @media only screen and (min-width: 300px) {
+      @media only screen and (max-width: 479px) {
         .overview .filters-menu .filters-list > div {
           padding-top: 8px; } }
       @media only screen and (min-width: 480px) {
@@ -4716,7 +4761,7 @@ label.hog-label {
       @media only screen and (min-width: 1600px) {
         .overview .filters-menu .filters-list > div {
           padding-top: 20px; } }
-      @media only screen and (min-width: 300px) {
+      @media only screen and (max-width: 479px) {
         .overview .filters-menu .filters-list > div {
           padding-left: 8px; } }
       @media only screen and (min-width: 480px) {
@@ -4731,7 +4776,7 @@ label.hog-label {
       @media only screen and (min-width: 1600px) {
         .overview .filters-menu .filters-list > div {
           padding-left: 20px; } }
-      @media only screen and (min-width: 300px) {
+      @media only screen and (max-width: 479px) {
         .overview .filters-menu .filters-list > div {
           padding-bottom: 8px; } }
       @media only screen and (min-width: 480px) {
@@ -4746,7 +4791,7 @@ label.hog-label {
       @media only screen and (min-width: 1600px) {
         .overview .filters-menu .filters-list > div {
           padding-bottom: 20px; } }
-      @media only screen and (min-width: 300px) {
+      @media only screen and (max-width: 479px) {
         .overview .filters-menu .filters-list > div {
           padding-right: 8px; } }
       @media only screen and (min-width: 480px) {
@@ -4764,7 +4809,7 @@ label.hog-label {
       .overview .filters-menu .filters-list > div > div {
         float: left;
         width: 50%; }
-        @media only screen and (min-width: 300px) {
+        @media only screen and (max-width: 479px) {
           .overview .filters-menu .filters-list > div > div {
             padding-left: 8px; } }
         @media only screen and (min-width: 480px) {
@@ -4781,7 +4826,7 @@ label.hog-label {
             padding-left: 20px; } }
         .overview .filters-menu .filters-list > div > div:nth-child(2) {
           float: right; }
-          @media only screen and (min-width: 300px) {
+          @media only screen and (max-width: 479px) {
             .overview .filters-menu .filters-list > div > div:nth-child(2) {
               padding-left: 16px; } }
           @media only screen and (min-width: 480px) {
@@ -4805,7 +4850,7 @@ label.hog-label {
     -webkit-transition: opacity 0.2s ease-in-out;
     -o-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out; }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .overview .listing div.item {
         margin-bottom: 16px; } }
     @media only screen and (min-width: 480px) {
@@ -4829,11 +4874,11 @@ label.hog-label {
     .overview .listing div.item > div {
       position: relative;
       background-color: #dae7c8;
-      background-position: center 33%;
+      background-position: center 45%;
       background-repeat: no-repeat;
       background-size: auto;
       background-image: url("../img/ajax-loader.gif"); }
-      @media only screen and (min-width: 300px) {
+      @media only screen and (max-width: 479px) {
         .overview .listing div.item > div {
           margin-top: 8px; } }
       @media only screen and (min-width: 480px) {
@@ -4848,7 +4893,7 @@ label.hog-label {
       @media only screen and (min-width: 1600px) {
         .overview .listing div.item > div {
           margin-top: 20px; } }
-      @media only screen and (min-width: 300px) {
+      @media only screen and (max-width: 479px) {
         .overview .listing div.item > div {
           margin-right: 8px; } }
       @media only screen and (min-width: 480px) {
@@ -4863,7 +4908,7 @@ label.hog-label {
       @media only screen and (min-width: 1600px) {
         .overview .listing div.item > div {
           margin-right: 20px; } }
-      @media only screen and (min-width: 300px) {
+      @media only screen and (max-width: 479px) {
         .overview .listing div.item > div {
           margin-left: 8px; } }
       @media only screen and (min-width: 480px) {
@@ -4893,7 +4938,7 @@ label.hog-label {
 
 .detail {
   /* inherit size from gallery */ }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .detail .container-title .title {
       padding-left: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -4908,7 +4953,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .detail .container-title .title {
       padding-left: 10px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .detail .container-title .title {
       padding-right: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -4928,7 +4973,7 @@ label.hog-label {
   .detail .container-title .buttons-gallery {
     position: relative;
     padding-bottom: 10px; }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .detail .container-title .buttons-gallery {
         padding-left: 4px; } }
     @media only screen and (min-width: 480px) {
@@ -4943,7 +4988,7 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .detail .container-title .buttons-gallery {
         padding-left: 10px; } }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .detail .container-title .buttons-gallery {
         padding-right: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -4963,7 +5008,7 @@ label.hog-label {
         position: absolute;
         bottom: 0;
         right: 0; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .detail .container-gallery {
       padding-top: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -4978,7 +5023,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .detail .container-gallery {
       padding-top: 10px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .detail .container-gallery {
       padding-right: 8px; } }
   @media only screen and (min-width: 480px) {
@@ -4997,7 +5042,7 @@ label.hog-label {
     font-size: 19px;
     float: left;
     height: 10px; }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .detail .container-gallery .title {
         padding-left: 4px; } }
     @media only screen and (min-width: 480px) {
@@ -5020,11 +5065,16 @@ label.hog-label {
     margin-top: 1px;
     margin-bottom: 1px;
     background-color: #7ea446;
-    color: #fff; }
+    color: #fff;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out; }
+    .detail .container-gallery .metas .meta:hover {
+      background-color: #324300; }
   .detail .gallery {
     padding-bottom: 33%;
     /* gallery height has percentage of width */ }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .detail .gallery {
         margin-left: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -5039,7 +5089,7 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .detail .gallery {
         margin-left: 20px; } }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .detail .gallery {
         margin-right: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -5058,7 +5108,10 @@ label.hog-label {
     position: absolute;
     width: 100%; }
   .detail .gallery-cell {
-    background: #dae7c8;
+    background-color: #dae7c8;
+    background-image: url("../img/ajax-loader.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
     margin-right: 10px;
     width: 67%;
     height: 100%; }
@@ -5140,7 +5193,7 @@ label.hog-label {
   width: 100%;
   height: auto; }
 
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 479px) {
   .container-related {
     padding-top: 4px; } }
 @media only screen and (min-width: 480px) {
@@ -5155,7 +5208,7 @@ label.hog-label {
 @media only screen and (min-width: 1600px) {
   .container-related {
     padding-top: 10px; } }
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 479px) {
   .container-related {
     padding-right: 8px; } }
 @media only screen and (min-width: 480px) {
@@ -5172,7 +5225,7 @@ label.hog-label {
     padding-right: 20px; } }
 .container-related h4 {
   border-top: 2px solid #fff; }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .container-related h4 {
       padding-top: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -5187,7 +5240,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .container-related h4 {
       padding-top: 10px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .container-related h4 {
       margin-left: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -5202,7 +5255,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .container-related h4 {
       margin-left: 10px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .container-related h4 {
       margin-right: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -5217,7 +5270,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .container-related h4 {
       margin-right: 10px; } }
-  @media only screen and (min-width: 300px) {
+  @media only screen and (max-width: 479px) {
     .container-related h4 {
       margin-bottom: 4px; } }
   @media only screen and (min-width: 480px) {
@@ -5232,7 +5285,7 @@ label.hog-label {
   @media only screen and (min-width: 1600px) {
     .container-related h4 {
       margin-bottom: 10px; } }
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 479px) {
   .container-related .item {
     padding-left: 4px; } }
 @media only screen and (min-width: 480px) {
@@ -5247,7 +5300,7 @@ label.hog-label {
 @media only screen and (min-width: 1600px) {
   .container-related .item {
     padding-left: 10px; } }
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 479px) {
   .container-related .item {
     padding-right: 4px; } }
 @media only screen and (min-width: 480px) {
@@ -5348,7 +5401,7 @@ label.hog-label {
     transition: transform 0.9s;
     -webkit-transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
     transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78); }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .hog-nav .hog-navigation-wrapper {
         padding-top: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -5363,7 +5416,7 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .hog-nav .hog-navigation-wrapper {
         padding-top: 20px; } }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .hog-nav .hog-navigation-wrapper {
         padding-right: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -5378,7 +5431,7 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .hog-nav .hog-navigation-wrapper {
         padding-right: 20px; } }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .hog-nav .hog-navigation-wrapper {
         padding-bottom: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -5393,7 +5446,7 @@ label.hog-label {
     @media only screen and (min-width: 1600px) {
       .hog-nav .hog-navigation-wrapper {
         padding-bottom: 20px; } }
-    @media only screen and (min-width: 300px) {
+    @media only screen and (max-width: 479px) {
       .hog-nav .hog-navigation-wrapper {
         padding-left: 8px; } }
     @media only screen and (min-width: 480px) {
@@ -5510,6 +5563,14 @@ label.hog-label {
             color: #324300; }
           .hog-nav ul.menu > li.current-menu-item ul li.current-menu-item a:hover, .hog-nav ul.menu > li.current-menu-parent ul li.current-menu-item a:hover {
             color: #e24999; }
+      .no-touch .hog-nav ul.menu > li:hover.menu-item-has-children {
+        background-image: url("../img/bg_1px.png");
+        background-position: center top;
+        background-repeat: repeat-x;
+        width: 100%;
+        position: relative; }
+        .no-touch .hog-nav ul.menu > li:hover.menu-item-has-children ul li {
+          display: block; }
 
 .no-js main {
   height: auto;

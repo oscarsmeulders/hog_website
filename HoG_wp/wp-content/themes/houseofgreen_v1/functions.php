@@ -186,6 +186,19 @@ function create_project_kind() {
 }
 add_action( 'init', 'create_project_kind' );
 
+function create_project_size() {
+	register_taxonomy(
+		'project_size_category',
+		'project_size_category',
+		array(
+			'label' => __( 'wp_menu_label_project_size_category', 'hog_lang' ),
+			'rewrite' => array( 'slug' => 'project-size-category' ),
+			'hierarchical' => true
+		)
+	);
+}
+add_action( 'init', 'create_project_size' );
+
 function create_post_type_project() {
 	register_post_type( 'project_item',
 		array(
@@ -196,7 +209,7 @@ function create_post_type_project() {
 			),
 			'public' => true,
 			'has_archive' => false,
-			'taxonomies' => array('project_kind_category'),
+			'taxonomies' => array('project_kind_category', 'project_size_category'),
 			'rewrite' => array('slug'=> __( 'wp_menu_project_slug','hog_lang' ), 'with_front'=>false),
 			'menu_icon' => 'dashicons-format-aside'
 		)

@@ -11,6 +11,7 @@ get_header(); ?>
 		$title = 				get_the_title();
 		$site_name = 			get_bloginfo('name');
 		$description = 			substr(strip_tags($post->post_content), 0, 50);
+		$description_long =		substr(strip_tags($post->post_content), 0, 350);
 		$link = 				get_the_permalink();
 
 		$image = get_field('featured_image');
@@ -59,9 +60,7 @@ get_header(); ?>
 					<?php
 						$projectCookie = get_field('projects_overview', 'option');
 						if( $projectCookie ) :
-							$post = $projectCookie;	// override $post
-							setup_postdata( $post );
-							echo '<a href="'. get_the_permalink() .'"><h2>'. __( 'title_projecten', 'hog_lang' ) .'</h2></a>';
+							echo '<a href="'. $projectCookie .'"><h2>'. __( 'title_projecten', 'hog_lang' ) .'</h2></a>';
 						endif;
 						wp_reset_postdata();
 					?>
@@ -69,12 +68,12 @@ get_header(); ?>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 buttons-gallery">
 					<!-- http://petragregorova.com/articles/social-share-buttons-with-custom-icons/ -->
-					<a href="#"><div class="button button-next-gallery"></div></a>
-					<a href="#"><div class="button button-previous-gallery"></div></a>
-					<a href="#"><div class="button email diap"></div></a>
-					<a href="#"><div class="button instagram diap"></div></a>
-					<a href="https://www.facebook.com/dialog/feed?app_id=1513250345654273&display=popup&caption=<?php echo $title; ?>&description=<?php echo $description; ?>&picture=<?php echo $img_url[0]; ?>&link=<?php echo $link; ?>&redirect_uri=<?php echo $link; ?>"><div class="button facebook diap"></div></a>
-					<a href="#"><div class="button pintrest diap"></div></a>
+					<a href="#next"><div class="button button-next-gallery"></div></a>
+					<a href="#previous"><div class="button button-previous-gallery"></div></a>
+					<a href="mailto:?&subject=<?php echo $site_name; ?>%20-%20<?php echo $title; ?>&body=<?php echo $title; ?>%0D%0A<?php echo $description_long; ?>"><div class="button email diap"></div></a>
+					<!-- <a href="#"><div class="button instagram diap"></div></a> -->
+					<a href="https://www.facebook.com/dialog/feed?app_id=1513250345654273&display=popup&caption=<?php echo $title; ?>&description=<?php echo $description; ?>&picture=<?php echo $img_url[0]; ?>&link=<?php echo $link; ?>&redirect_uri=<?php echo $link; ?>" target="social"><div class="button facebook diap"></div></a>
+					<a href="https://pinterest.com/pin/create/button/?url=<?php echo $link; ?>&media=<?php echo $img_url[0]; ?>&description=<?php echo $site_name; ?>%20-%20<?php echo $title; ?>%20-%20<?php echo $description; ?>" target="social"><div class="button pintrest diap"></div></a>
 				</div>
 			</div>
 		</div>
