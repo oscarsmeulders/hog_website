@@ -67,10 +67,9 @@ get_header(); ?>
 					<h1><?php echo the_title(); ?></h1>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 buttons-gallery">
-					<!-- http://petragregorova.com/articles/social-share-buttons-with-custom-icons/ -->
 					<a href="#next"><div class="button button-next-gallery"></div></a>
 					<a href="#previous"><div class="button button-previous-gallery"></div></a>
-					<a href="mailto:?&subject=<?php echo $site_name; ?>%20-%20<?php echo $title; ?>&body=<?php echo $title; ?>%0D%0A<?php echo $description_long; ?>"><div class="button email diap"></div></a>
+					<a href="mailto:?&subject=<?php echo $site_name; ?>%20-%20<?php echo $title; ?>&body=<?php echo $site_name; ?>%20-%20<?php echo $title; ?>%0D%0A<?php echo $description_long; ?>%0D%0A%0D%0A<?php echo $link; ?>"><div class="button email diap"></div></a>
 					<!-- <a href="#"><div class="button instagram diap"></div></a> -->
 					<a href="https://www.facebook.com/dialog/feed?app_id=1513250345654273&display=popup&caption=<?php echo $title; ?>&description=<?php echo $description; ?>&picture=<?php echo $img_url[0]; ?>&link=<?php echo $link; ?>&redirect_uri=<?php echo $link; ?>" target="social"><div class="button facebook diap"></div></a>
 					<a href="https://pinterest.com/pin/create/button/?url=<?php echo $link; ?>&media=<?php echo $img_url[0]; ?>&description=<?php echo $site_name; ?>%20-%20<?php echo $title; ?>%20-%20<?php echo $description; ?>" target="social"><div class="button pintrest diap"></div></a>
@@ -93,20 +92,15 @@ get_header(); ?>
 				while( have_rows('gallery_photo') ): the_row();
 					$description = 		get_sub_field('description');
 					$img = 				get_sub_field('gallery_image');
+					
 					$size = 			get_sub_field('ratio');
+					$size_small = 		get_sub_field('ratio').'-half';
+					
 					$img_url =		 	wp_get_attachment_image_src( $img, $size );
+					$img_url_small = 	wp_get_attachment_image_src( $img, $size_small );
 
-					$size_small = 			get_sub_field('ratio').'-half';
-					$img_url_small =		 	wp_get_attachment_image_src( $img, $size_small );
-
-					$output_img = 		'
-						<img data-src="<960:'. $img_url_small[0] .', >960:'. $img_url[0] .'" />
-					';
-
-					$output .=	'
-						<div class="gallery-cell '. $size .'" data-text="'. $description .' ">
-							'. $output_img .'
-						</div>';
+					$output_img =		'<img data-src="<960:'. $img_url_small[0] .', >960:'. $img_url[0] .'" />';
+					$output .= 			'<div class="gallery-cell '. $size .'" data-text="'. $description .' ">'. $output_img .'</div>';
 
 				endwhile;
 			endif;

@@ -930,8 +930,13 @@ label.hog-label {
 		border-top: 2px solid #fff;
 	}
 	.item {
-		@include p-l('half');
-		@include p-r('half');
+		@include m-l('half');
+		@include m-r('half');
+		background-position: center 40%;
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-image: url('../img/ajax-loader.gif');	//preloaders.net
+		background-color: $color-placeholder;
 	}
 	.content {
 		width: 100%;
@@ -942,8 +947,8 @@ label.hog-label {
 		right: 0;
 		padding: 0px;
 		//overflow: hidden;
-		background-color: $color-placeholder;
 		color: $color-overlaytitles-text;
+
 		&.background-image {
 			background-repeat: no-repeat;
 			background-size: cover;
