@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-6 col-lg-6 col-lg-offset-6 filters-list">
 			<div id="options">
-				<?php 
+				<?php
 					if (isset($_GET['filter'])) {
 						$filter = $_GET['filter'];
 					}
@@ -18,7 +18,7 @@
 						<?php
 							$args = array(
 								'hide_empty' => 1,
-								'orderby' => 'slug',	
+								'orderby' => 'slug',
 								'posts_per_page' => 999,
 								'order' => 'ASC',
 								'post_status' => 'publish',
@@ -35,13 +35,13 @@
 				</div>
 				<?php // end set filters 1 ?>
 				<?php // set filters 2 ?>
-				<div class="option-set" data-group="soort">
+				<div class="option-set" data-group="size">
 					<h5><?php _e( 'filter_project_size_category', 'hog_lang' ) ?></h5>
 					<ul>
 						<?php
 							$args = array(
 								'hide_empty' => 1,
-								'orderby' => 'slug',	
+								'orderby' => 'slug',
 								'posts_per_page' => 999,
 								'order' => 'ASC',
 								'post_status' => 'publish',

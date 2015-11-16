@@ -60,7 +60,7 @@ get_header(); ?>
 	</div>
 	<?php // end listing ?>
 
-	<!-- <p id="filter-display">filters here</p> -->
+	<p id="filter-display">filters here</p>
 
 </div>
 <?php endwhile; // end of the loop. ?>

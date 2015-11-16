@@ -1,0 +1,90 @@
+{
+    "key": "group_563b7f1d82acb",
+    "title": "Related pages",
+    "fields": [
+        {
+            "key": "field_563b7f3c50933",
+            "label": "Related pages",
+            "name": "related_pages",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 4,
+            "layout": "row",
+            "button_label": "Add",
+            "sub_fields": [
+                {
+                    "key": "field_563b7f5650934",
+                    "label": "Page",
+                    "name": "related_page",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page",
+                        "project_item",
+                        "branch_item"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-error-404"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-branches.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-branches.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-projects.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Related items on a page",
+    "modified": 1447583066
+}

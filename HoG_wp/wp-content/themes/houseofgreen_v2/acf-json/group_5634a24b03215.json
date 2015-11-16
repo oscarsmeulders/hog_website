@@ -1,0 +1,42 @@
+{
+    "key": "group_5634a24b03215",
+    "title": "Footer",
+    "fields": [
+        {
+            "key": "field_5634a263bfd5b",
+            "label": "NAW Gegevens",
+            "name": "footer_adres",
+            "type": "wysiwyg",
+            "instructions": "Deze info komt onder de naam van 'House of Green' in de footer te staan.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<p><a target=\"_blank\" href=\"https:\/\/www.google.nl\/maps\/place\/Noordeinde+102,+2514+GM+Den+Haag\/\"><span class=\"no-break\">Noordeinde 102,<\/span> <span class=\"no-break\">2514 GM Den Haag (NL)<\/span><\/a>\u00a0\u00a0\u00a0<span class=\"no-break\"><a href=\"tel:+310707370747\">+31 (0) 70-73 70 747<\/a><\/span>\u00a0\u00a0\u00a0<span class=\"no-break\"><a href=\"mailto:info@houseofgreen.nl\">info@houseofgreen.nl<\/a><\/span><\/p>",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-footer"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Theme settings",
+    "modified": 1447324572
+}
