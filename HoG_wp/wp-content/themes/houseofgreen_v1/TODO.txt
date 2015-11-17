@@ -1,0 +1,17 @@
+-Homepage
+	newsletter
+		- button maken
+		- linken aan Mailchimp
+		- padding onderaan aanpassen
+		
+
+-Footer
+	- vormentaal beelden maken + random maken
+	- top button alleen toen als pagina langer is en dus scrollbar laat zien.
+
+-Header
+	menu button
+		Goed positioneren, en text veranderen
+	Logo
+		andere mouseOver
+	

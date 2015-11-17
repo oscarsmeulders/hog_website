@@ -32,7 +32,7 @@ get_header(); ?>
 				$img_size = 'ratio4-3';
 				$img_url = 	wp_get_attachment_image_src( $image, $img_size );
 				$output .='
-					<div class="item isotope-item '. custom_taxonomies_overview_page() .'">
+					<div class="item isotope-item ">
 						<div>
 							<a href="'. get_the_permalink() .'">
 								<img class="ll" src="assets/img/src-empty.png" data-original="'. $img_url[0] .'" alt="" />
