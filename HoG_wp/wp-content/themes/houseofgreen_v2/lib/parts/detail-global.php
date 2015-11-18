@@ -2,6 +2,7 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 	<?php
+		$ID =	 				get_the_ID();
 		$title = 				get_the_title();
 		$site_name = 			get_bloginfo('name');
 		$description = 			substr(strip_tags($post->post_content), 0, 50);

@@ -110,6 +110,17 @@ function custom_taxonomies_detail_page() {
 	$kindsArray = array();
 	$projectCookie = get_field('projects_overview', 'option');
 
+	if(get_field('branches_pages')):
+		if(have_rows('branches_pages')):
+			while( have_rows('branches_pages') ): the_row();
+				$related = get_sub_field('branch_page');
+				setup_postdata( $related );
+				$kindsArray[] = '<a href="'. get_the_permalink($related) .'"><div class="meta">' . get_the_title($related) . '</div></a>';
+			endwhile;
+		endif;
+	endif;
+	wp_reset_query();
+
 	$terms = get_the_terms( $post->ID, 'project_kind_category' );
 	if ( $terms && ! is_wp_error( $terms ) ) :
 		foreach ( $terms as $term ) {

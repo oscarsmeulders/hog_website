@@ -2267,6 +2267,28 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/acf-json\/group_564b552ab382c.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/group_564b552ab382c.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/group_564b552ab382c-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/acf-json\/group_564b58f6a8c5a.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/group_564b58f6a8c5a.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/group_564b58f6a8c5a-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/acf-json\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,

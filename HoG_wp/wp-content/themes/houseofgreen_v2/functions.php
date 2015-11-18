@@ -371,7 +371,7 @@ add_action( 'init', 'create_post_type_gallery' );
 function custom_posts_to_search($query) {
 
 	if ( $query->is_search ) {
-		$query->set( 'post_type', array( 'post', 'page', 'project_item' ) );
+		$query->set( 'post_type', array( 'post', 'page', 'project_item', 'branch_item' ) );
     }
 
     return $query;

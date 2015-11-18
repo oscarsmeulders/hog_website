@@ -1,0 +1,45 @@
+{
+    "key": "group_564b552ab382c",
+    "title": "Project number",
+    "fields": [
+        {
+            "key": "field_564b5534d5151",
+            "label": "Project number",
+            "name": "project_number",
+            "type": "text",
+            "instructions": "For you own administration",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project_item"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1447777652
+}
