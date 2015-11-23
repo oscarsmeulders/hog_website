@@ -3,7 +3,7 @@
 	<div class="container-fluid container-title">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 vormentaal">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/footer/footer_vormentaal_<?php echo rand(1, 2); ?>.jpg" alt="" width="795" height="100" />
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/footer/footer_vormentaal_<?php echo rand(1, 4); ?>.jpg" alt="" height="100" />
 			</div>
 		</div>
 		<div class="row tekst">
@@ -17,7 +17,7 @@
 				?>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-4">
-				<a href="#"><div class="button topper"></div></a>
+				<a href="#"><div class="button topper transparant"></div></a>
 				<div style="float:right;">
 					<p>&nbsp;</p>
 					<?php

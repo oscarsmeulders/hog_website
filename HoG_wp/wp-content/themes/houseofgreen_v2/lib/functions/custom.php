@@ -32,7 +32,7 @@ function add_contact_to_output_projects () {
 				<div>
 					<img src="'. get_stylesheet_directory_uri() .'/assets/img/trans.png">
 					<div>
-						<div class="contact-item">
+						<div class="contact-overview">
 							<a href="'. $contact_page .'" target="_self"><div class="button-contact"></div></a>
 						</div>
 					</div>

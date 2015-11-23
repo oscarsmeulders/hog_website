@@ -1,5 +1,13 @@
+
 jQuery(document).ready(function($){
 
+
+
+	// Check if body height is higher than window height :)
+	if ( window.innerWidth > document.documentElement.clientWidth ) {
+        $('.footer .topper').removeClass('transparant');
+        //console.log('longer');
+    }
 
 	$('.footer .topper').on( 'click', function() {
 

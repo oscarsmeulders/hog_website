@@ -22,6 +22,7 @@ function my_custom_dashboard_widgets() {
 	wp_add_dashboard_widget('sos_shortcodes_help_widget_shortcodes', 'Shortcodes', 'custom_dashboard_help_shortcodes');
 	wp_add_dashboard_widget('sos_shortcodes_help_widget_beelden', 'Beeld specificaties', 'custom_dashboard_help_beelden');
 	wp_add_dashboard_widget('sos_shortcodes_help_widget_beelden_2', 'Beeld in de diversen templates', 'custom_dashboard_help_beelden_2');
+	wp_add_dashboard_widget('sos_shortcodes_help_widget_colors', 'Kleuren', 'custom_dashboard_help_colors');
 }
 
 
@@ -35,6 +36,42 @@ function custom_dashboard_sos() {
 		</p>';
 }
 
+
+function custom_dashboard_help_colors() {
+	echo '<p>
+		Kleuren zoals ze gebruikt zijn in de website.
+
+		<table style="width:100%">
+		<tbody>
+
+			<tr>
+				<td valign="top">Achtergrond</td>
+				<td valign="top">#f1f4e7</td>
+			</tr>
+			<tr>
+				<td valign="top">Achtergrond navigation</td>
+				<td valign="top">#dae7c8</td>
+			</tr>
+			<tr>
+				<td valign="top">Heading licht groen</td>
+				<td valign="top">#7ea446</td>
+			</tr>
+			<tr>
+				<td valign="top">Tekst donker groen</td>
+				<td valign="top">#324300</td>
+			</tr>
+			<tr>
+				<td valign="top">Roze</td>
+				<td valign="top">#dc4f93</td>
+			</tr>
+			<tr>
+				<td valign="top">Blauw</td>
+				<td valign="top">#3da6c3</td>
+			</tr>
+
+		</tbody>
+		</table>';
+}
 
 function custom_dashboard_help_shortcodes() {
 	echo '<p>
@@ -380,6 +417,16 @@ add_action( 'pre_get_posts', 'custom_posts_to_search' );
 
 
 /*-----------------------------------------------------------------------------------*/
+/*	Add langauge to the body
+/*	https://wordpress.org/support/topic/plugin-polylang-set-body-class-depending-on-language
+/*-----------------------------------------------------------------------------------*/
+add_filter('body_class', 'my_custom_body_class', 10, 2);
+function my_custom_body_class($classes) {
+	$classes[] = get_bloginfo('language');
+	return $classes;
+}
+
+/*-----------------------------------------------------------------------------------*/
 /*	Redirecting User to the Homepage After Logout
 /*-----------------------------------------------------------------------------------*/
 add_action( 'wp_logout', 'wp_logout_example' );
@@ -472,12 +519,7 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));
 
-
-
 }
-
-
-
 
 /*-----------------------------------------------------------------------------------*/
 /* Enqueue Styles and Scripts
@@ -495,6 +537,9 @@ function gs_scripts()  {
 
 	wp_enqueue_script( 'hog_modernizr', get_template_directory_uri() . '/assets/js/plugins/modernizr.js', array(), hog_version, false );
 	wp_enqueue_script( 'hog_ie10', get_template_directory_uri() . '/assets/js/plugins/pointer_events_polyfill.js', array(), hog_version, false );
+
+	wp_enqueue_script( 'hog_snap', get_template_directory_uri() . '/assets/js/plugins/snap.svg-min.js', array(), array(), hog_version, true );
+
 	wp_enqueue_script( 'hog_clicks', get_template_directory_uri() . '/assets/js/plugins/ie10-viewport-bug-workaround-min.js', array(), hog_version, false );
 	wp_enqueue_script( 'hog_nav', get_template_directory_uri() . '/assets/js/min/navigation-min.js', array(), array(), hog_version, true );
 	wp_enqueue_script( 'hog_foot', get_template_directory_uri() . '/assets/js/min/footer-min.js', array(), array(), hog_version, true );

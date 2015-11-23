@@ -135,6 +135,14 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 				<div class="content">
+					<?php if ( is_user_logged_in() ): ?>
+						<?php
+							$admin_id = get_field('project_number');
+							if ($admin_id):
+						?>
+							<span style=""><?php echo $admin_id; ?></span>
+						<?php endif; ?>
+					<?php endif; ?>
 					<?php the_content(); ?>
 				</div>
 			</div>
@@ -149,7 +157,6 @@
 			get_template_part( '/lib/parts/related_custom_posts', '' );
 		endif;
 	?>
-
 </div>
 
 <?php //end main ?>

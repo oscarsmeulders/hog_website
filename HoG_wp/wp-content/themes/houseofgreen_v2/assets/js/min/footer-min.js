@@ -1,1 +1,1 @@
-jQuery(document).ready(function($){$(".footer .topper").on("click",function(){$("html, body").animate({scrollTop:0},1e3),event.preventDefault()})}),$(window).resize(function(){});
+jQuery(document).ready(function($){window.innerWidth>document.documentElement.clientWidth&&$(".footer .topper").removeClass("transparant"),$(".footer .topper").on("click",function(){$("html, body").animate({scrollTop:0},1e3),event.preventDefault()})}),$(window).resize(function(){});

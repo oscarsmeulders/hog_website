@@ -1,1 +1,330 @@
-jQuery(document).ready(function($){function e(e,t){e.filter(function(){var e=this.getBoundingClientRect();return e.top>=0&&e.top<=window.innerHeight}).trigger(t)}function t(e){var t=0,i=[],o=[];for(var n in e){o.push(e[n].join(" "));var a=e[n];if(a.length){if(0===t)i=a.slice(0);else{for(var s=[],l=i.slice(0),r=0,d=a.length;d>r;r++)for(var u=0,h=l.length;h>u;u++)s.push(l[u]+a[r]);i=s}t++}}var c=i.join(", ");return c}function i(e){var t=e[0],i=e.parents(".option-set").attr("data-group"),o=r[i];o||(o=r[i]=[]);var n=$.inArray(t.value,o);t.checked?-1===n&&r[i].push(t.value):r[i].splice(n,1)}function o(e){for(var t,i,o=e.length;o;t=parseInt(Math.random()*o),i=e[--o],e[o]=e[t],e[t]=i);return e}function n(e){$(".item").each(function(){$(this).addClass("active")}),$(e).removeClass("active")}var a=$(window),s=$("img.ll"),l=$(".listing");a.on("scroll",function(){e(s,"lazylazy")}),s.lazyload({effect:"fadeIn",failure_limit:Math.max(s.length-1,0),event:"lazylazy"});var r={},d=$("#filter-display");$("input[type=checkbox]").each(function(){i($(this))});var u=t(r);console.log(u),l.isotope({filter:u}),d.text(u),$(".filters-menu").on("change",function(e){var o=$(e.target);i(o);var n=t(r);l.isotope({filter:n}),d.text(n)}),$(".filters").on("click","button",function(){var e=$(this).attr("data-filter");changeClasses($(this)),window.location.hash=e,isotopeFilter(e),$("html, body").animate({scrollTop:0},"fast")}),changeClasses=function(e){"filter-showall"==$(e).attr("id")?$(e).hasClass("hidden")?$(e).removeClass("hidden"):$(e).addClass("hidden").delay(200).queue(function(t){$(e).addClass("displayNone").dequeue()}):$("#filter-showall").removeClass("hidden displayNone"),$(".filters button").removeClass("active"),$(e).addClass("active")};var h=function(){var e=l.width(),t=1,i=0;return t=e>1600?4:e>1200?3:e>992?3:e>768?3:e>480?2:1,i=Math.floor(e/t),l.find(".item").each(function(){var e=$(this),t=e.attr("class").match(/item-w(\d)/),o=e.attr("class").match(/item-h(\d)/),n=t?i*t[1]:i,a=o?i*o[1]*.66666666:.66666666*i;e.css({width:n,height:a})}),i};isotope=function(){l.isotope({itemSelector:".item",masonry:{columnWidth:h()}})},isotopeFilter=function(e){console.log("isotope filter : "+e),l.isotope({filter:e})},hash=window.location.hash.substr(1),isotope(),hash&&(console.log("hash : "+hash),isotopeFilter(hash),$(".filters").find("button").each(function(){$(this).attr("data-filter")==hash&&changeClasses($(this))})),a.on("debouncedresize",isotope),l.isotope("on","layoutComplete",function(){e(s,"lazylazy")});var c=[];l.find(".item").each(function(){c.push($(this))});for(var f=0;f<c.length;f++){var v=250*f;c[f].delay(v).queue(function(e){$(this).addClass("loaded").dequeue()})}$(".overview").length&&($(".no-touch").find(".item").on("mouseover",function(){n($(this))}),$(".no-touch").find(".item").on("mouseout",function(){$(".item").each(function(){$(this).removeClass("active")})})),$(".button-filters").on("click",function(e){e.preventDefault(),$(".filters-menu").hasClass("closed")?($(".button-filters").removeClass("closed"),$(".filters-menu").removeClass("hidden").delay(10).queue(function(e){$(".filters-menu").removeClass("closed").dequeue()})):($(".button-filters").addClass("closed"),$(".filters-menu").addClass("closed").delay(200).queue(function(e){$(".filters-menu").addClass("hidden").dequeue()}))}),lastWidth=$(window).width()}),$(window).resize(function(){$(window).width()!=lastWidth&&(location.reload(),lastWidth=$(window).width())});
+// http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascriptvar urlParams;
+(window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+
+jQuery(document).ready(function($){
+	$tempFilter = '.' + urlParams["filter"];
+	//alert( $tempFilter);
+
+	////////////////////////////////////////////////////////////////////////////////////
+	///// isotope stuff
+
+	var $win = $(window),
+		$imgs = $('img.ll'),
+		$con = $('.listing');
+
+	function loadVisible($els, trigger) {
+		$els.filter(function () {
+			var rect = this.getBoundingClientRect();
+			return rect.top >= 0 && rect.top <= window.innerHeight;
+		}).trigger(trigger);
+	}
+
+	$win.on('scroll', function () {
+		loadVisible($imgs, 'lazylazy');
+	});
+
+	$imgs.lazyload({
+		effect: "fadeIn",
+		failure_limit: Math.max($imgs.length - 1, 0),
+		event: 'lazylazy'
+	});
+	//
+
+
+
+
+	// http://codepen.io/desandro/pen/btFfG
+	// http://codepen.io/desandro/pen/wjHEo // beter
+	var filters = {};
+	var $filterDisplay = $('#filter-display');
+
+	$('input[type=checkbox]').each(function () {
+		if (this.checked) {
+			manageCheckbox( $(this) );
+			//console.log ('target :' + $(this));
+		}
+	});
+	var comboFilter = getComboFilter( filters );
+	//var comboFilterSingle = getFilter( );
+	//var comboFilterCombined = comboFilterSingle.join(comboFilter);
+	//console.log( comboFilter );
+
+	$con.isotope({ filter: comboFilter });
+	$filterDisplay.text( comboFilter );
+
+
+	// do stuff when checkbox change
+	$('.filters-menu').on( 'change', function( jQEvent ) {
+		var $checkbox = $( jQEvent.target );
+		//console.log ('target :' + $checkbox);
+		manageCheckbox( $checkbox );
+		var comboFilter = getComboFilter( filters );
+
+		$con.isotope({ filter: comboFilter });
+		$filterDisplay.text( comboFilter );
+	});
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+	function getComboFilter( filters ) {
+	  var i = 0;
+	  var comboFilters = [];
+	  var message = [];
+
+	  for ( var prop in filters ) {
+	    message.push( filters[ prop ].join(' ') );
+	    var filterGroup = filters[ prop ];
+	    // skip to next filter group if it doesn't have any values
+	    if ( !filterGroup.length ) {
+	      continue;
+	    }
+	    if ( i === 0 ) {
+	      // copy to new array
+	      comboFilters = filterGroup.slice(0);
+	    } else {
+	      var filterSelectors = [];
+	      // copy to fresh array
+	      var groupCombo = comboFilters.slice(0); // [ A, B ]
+	      // merge filter Groups
+	      for (var k=0, len3 = filterGroup.length; k < len3; k++) {
+	        for (var j=0, len2 = groupCombo.length; j < len2; j++) {
+	          filterSelectors.push( groupCombo[j] + filterGroup[k] ); // [ 1, 2 ]
+	        }
+
+	      }
+	      // apply filter selectors to combo filters for next group
+	      comboFilters = filterSelectors;
+	      //console.log ("start : " + comboFilters);
+	    }
+	    i++;
+	  }
+
+	  var comboFilter = comboFilters.join(', ');
+	 //console.log ('return : ' + comboFilter);
+	  return comboFilter;
+	}
+
+function manageCheckbox( $checkbox ) {
+  var checkbox = $checkbox[0];
+
+  var group = $checkbox.parents('.option-set').attr('data-group');
+
+  // create array for filter group, if not there yet
+  filterGroup = filters[ group ];
+
+  if ( !filterGroup ) {
+  	filterGroup = filters[ group ] = [];
+  }
+
+
+  // index of
+  var index = $.inArray( checkbox.value, filterGroup );
+
+  if ( checkbox.checked ) {
+  	//console.log ('checkbox.checked : ' + checkbox.value);
+    if ( index === -1 ) {
+      // add filter to group
+      filters[ group ].push( checkbox.value );
+    }
+  } else {
+    // remove filter from group
+    filters[ group ].splice( index, 1 );
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+	////////////////////////////////////////////////////////////////////////////////////
+	// filter items on button click
+	$('.filters').on( 'click', 'button', function() {
+
+		var filterValue = $(this).attr('data-filter');
+		changeClasses( $(this) );
+
+		window.location.hash = filterValue;
+
+		isotopeFilter(filterValue);
+
+		$('html, body').animate({ scrollTop: 0 }, 'fast');
+	});
+	//
+	////////////////////////////////////////////////////////////////////////////////////
+	// Change classes of filter buttons
+	//
+	changeClasses = function (who) {
+		if ( $( who ).attr('id') == 'filter-showall') {
+			if ( $(who).hasClass('hidden')) {
+				$(who).removeClass('hidden');
+			} else {
+				$(who).addClass('hidden').delay(200).queue(function(next){
+					$(who).addClass('displayNone').dequeue();
+					});
+			}
+		} else {
+			$('#filter-showall').removeClass('hidden displayNone');
+		}
+		$('.filters button').removeClass('active');
+		$(who).addClass('active');
+	}
+	////////////////////////////////////////////////////////////////////////////////////
+	var colWidth = function () {
+		var w = $con.width(),
+			columnNum = 1,
+			columnWidth = 0;
+		if (w > 1600) {
+			columnNum  = 4;
+		} else if (w > 1200) {
+			columnNum  = 3;
+		} else if (w > 992) {
+			columnNum  = 3;
+		} else if (w > 768) {
+			columnNum  = 3;
+		} else if (w > 480) {
+			columnNum  = 2;
+		} else {
+			columnNum  = 1;
+		}
+		columnWidth = Math.floor(w/columnNum);
+		$con.find('.item').each(function() {
+			// console.log('item found');
+			var $item = $(this),
+				multiplier_w = $item.attr('class').match(/item-w(\d)/),
+				multiplier_h = $item.attr('class').match(/item-h(\d)/),
+				width = multiplier_w ? columnWidth*multiplier_w[1] : columnWidth,
+				height = multiplier_h ? columnWidth*multiplier_h[1]*0.66666666 : columnWidth*0.66666666;
+			$item.css({
+				width: width,
+				height: height
+			});
+		});
+		return columnWidth;
+	};
+
+
+	isotope = function () {
+		$con.isotope({
+			itemSelector: '.item',
+			masonry: {
+				columnWidth: colWidth()
+			}
+		});
+	};
+	isotopeFilter = function(hash) {
+		console.log('isotope filter : ' + hash);
+		$con.isotope({ filter: hash });
+	}
+
+
+	hash = window.location.hash.substr(1);
+	isotope();
+	if (hash) {
+		console.log ('hash : ' + hash);
+		isotopeFilter(hash);
+
+		$('.filters').find('button').each(function() {
+			if ($(this).attr('data-filter') == hash) {
+				changeClasses( $(this) );
+			}
+		});
+
+
+	}
+
+	$win.on('debouncedresize', isotope);
+
+
+	$con.isotope('on', 'layoutComplete', function () {
+		loadVisible($imgs, 'lazylazy');
+	});
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// fade in random all items
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	function Shuffle(o) {
+		for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+		return o;
+	};
+
+	var portfolioFades = [];
+	$con.find('.item').each(function() { portfolioFades.push($(this)) });
+
+	//Shuffle(portfolioFades);
+
+	for (var i=0;i < portfolioFades.length;i++) {
+		var $dly = i*250;
+		portfolioFades[i].delay($dly).queue(function(next){
+			$(this).addClass('loaded').dequeue();
+		});
+	}
+
+
+	// overview page hover over item, fade the rest away
+	if ( $('.overview').length ) {
+		$('.no-touch').find('.item').on( 'mouseover', function() {
+			allToAlpha( $(this) );
+		});
+		$('.no-touch').find('.item').on( 'mouseout', function() {
+			$('.item').each(function() {
+				$(this).removeClass('active');
+			});
+		});
+	}
+
+	function allToAlpha( who ) {
+		$('.item').each(function() {
+			$(this).addClass('active');
+		});
+		$(who).removeClass('active');
+	}
+
+	$('.button-filters').on('click', function(event){
+		//console.log('click on filters');
+		event.preventDefault();
+		if ( $('.filters-menu').hasClass('closed') ) {
+
+			$('.button-filters').removeClass('closed');
+
+			$('.filters-menu').removeClass('hidden').delay(10).queue(function(next){
+				$('.filters-menu').removeClass('closed').dequeue();
+			});
+		} else {
+
+			$('.button-filters').addClass('closed');
+
+			$('.filters-menu').addClass('closed').delay(200).queue(function(next){
+				$('.filters-menu').addClass('hidden').dequeue();
+			});
+		}
+
+	});
+
+	lastWidth = $(window).width();
+});
+
+// reload de pagina zodra deze wordt geresized, want dan blijft de gallery qua hoogte goed!
+$(window).resize(function(){
+	if($(window).width()!=lastWidth){
+		location.reload();
+		lastWidth = $(window).width();
+	}
+});
+

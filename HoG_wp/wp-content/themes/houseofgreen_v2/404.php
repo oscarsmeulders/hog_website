@@ -35,20 +35,21 @@ get_header(); ?>
 
 	<?php // content ?>
 	<div class="container-fluid container-content">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-sm-offset-0 col-md-6 col-md-offset-2 col-lg-6 vcenter">
-				<div class="content content-error">
-					<?php echo $errorContent; ?>
+		<div class="row row-eq-height">
+				<div class="col-xs-12 col-sm-12 col-sm-offset-0 col-md-6 col-md-offset-2 col-lg-6">
+						<div class="content content-error">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<?php echo $errorContent; ?>
+						</div>
 				</div>
-			</div>
-			<div class="hidden-xs hidden-sm col-md-2 col-lg-2 col-lg-offset-0 vcenter">
-				<div class="contact-item">
-						<?php
-							$contact_page = get_field( 'contact_page', 'option' );
-							if( $contact_page ) {
-								echo '<a href="'. $contact_page .'" target="_self"><div class="button-contact"></div></a>';
-							}
-						?>
+				<div class="hidden-xs hidden-sm col-md-2 col-lg-2 col-lg-offset-0">
+						<div class="contact-item">
+							<?php
+								$contact_page = get_field( 'contact_page', 'option' );
+								if( $contact_page ) {
+									echo '<a href="'. $contact_page .'" target="_self"><div class="button-contact"></div></a>';
+								}
+							?>
+						</div>
 				</div>
 			</div>
 		</div>

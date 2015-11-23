@@ -1,17 +1,26 @@
+--------------------------------------------------
 -Homepage
 	newsletter
 		- button maken
 		- linken aan Mailchimp
 		- padding onderaan aanpassen
-		
-
+		- newsletter order bepalen via global settings
+--------------------------------------------------
 -Footer
 	- vormentaal beelden maken + random maken
 	- top button alleen toen als pagina langer is en dus scrollbar laat zien.
-
+--------------------------------------------------
 -Header
 	menu button
-		Goed positioneren, en text veranderen
+		Goed positioneren,
 	Logo
 		andere mouseOver
-	
+		-logo goed animeren + juist timing
+--------------------------------------------------
+- Navigation
+	hovers correct maken, dwz lijn in background not border
+	hovers:: 1 hover de rest onzichtbaar van de subs
+	- html maken van de adres gegevens
+	- naw gegevens toevoegen aan de dashboard
+--------------------------------------------------
+- dashboard

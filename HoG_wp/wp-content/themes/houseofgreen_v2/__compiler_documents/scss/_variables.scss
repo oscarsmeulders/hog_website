@@ -14,7 +14,7 @@ $color-heading-alt:		#7ea446;
 $color-nav:				$color-heading-alt;
 $color-nav-sub:			$color-text;
 
-$color-link:			#e24999;
+$color-link:			$color-roze;
 $color-bg-footer:		#dae7c8;
 $color-bg-menu:			#dae7c8;
 $color-overlaytitles-bg:			$color-text;
@@ -73,13 +73,13 @@ $height-button-contact-XS: $width-button-contact-XS;
 $width-button-contact-S: 100px;
 $height-button-contact-S: $width-button-contact-S;
 
-$width-button-contact-M: 110px;
+$width-button-contact-M: 100px;
 $height-button-contact-M: $width-button-contact-M;
 
-$width-button-contact-L: 120px;
+$width-button-contact-L: 110px;
 $height-button-contact-L: $width-button-contact-L;
 
-$width-button-contact-XL: 150px;
+$width-button-contact-XL: 140px;
 $height-button-contact-XL: $width-button-contact-XL;
 
 // hoogte van de navigatie header

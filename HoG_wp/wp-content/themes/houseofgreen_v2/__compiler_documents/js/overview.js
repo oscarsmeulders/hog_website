@@ -1,6 +1,19 @@
+// http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascriptvar urlParams;
+(window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+
 jQuery(document).ready(function($){
-
-
+	$tempFilter = '.' + urlParams["filter"];
+	//alert( $tempFilter);
 
 	////////////////////////////////////////////////////////////////////////////////////
 	///// isotope stuff
@@ -36,12 +49,15 @@ jQuery(document).ready(function($){
 	var $filterDisplay = $('#filter-display');
 
 	$('input[type=checkbox]').each(function () {
-		manageCheckbox( $(this) );
+		if (this.checked) {
+			manageCheckbox( $(this) );
+			//console.log ('target :' + $(this));
+		}
 	});
 	var comboFilter = getComboFilter( filters );
 	//var comboFilterSingle = getFilter( );
 	//var comboFilterCombined = comboFilterSingle.join(comboFilter);
-	console.log( comboFilter );
+	//console.log( comboFilter );
 
 	$con.isotope({ filter: comboFilter });
 	$filterDisplay.text( comboFilter );
@@ -50,7 +66,7 @@ jQuery(document).ready(function($){
 	// do stuff when checkbox change
 	$('.filters-menu').on( 'change', function( jQEvent ) {
 		var $checkbox = $( jQEvent.target );
-		//console.log ($checkbox);
+		//console.log ('target :' + $checkbox);
 		manageCheckbox( $checkbox );
 		var comboFilter = getComboFilter( filters );
 
@@ -60,56 +76,61 @@ jQuery(document).ready(function($){
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 	function getComboFilter( filters ) {
-  var i = 0;
-  var comboFilters = [];
-  var message = [];
+	  var i = 0;
+	  var comboFilters = [];
+	  var message = [];
 
-  for ( var prop in filters ) {
-    message.push( filters[ prop ].join(' ') );
-    var filterGroup = filters[ prop ];
-    // skip to next filter group if it doesn't have any values
-    if ( !filterGroup.length ) {
-      continue;
-    }
-    if ( i === 0 ) {
-      // copy to new array
-      comboFilters = filterGroup.slice(0);
-    } else {
-      var filterSelectors = [];
-      // copy to fresh array
-      var groupCombo = comboFilters.slice(0); // [ A, B ]
-      // merge filter Groups
-      for (var k=0, len3 = filterGroup.length; k < len3; k++) {
-        for (var j=0, len2 = groupCombo.length; j < len2; j++) {
-          filterSelectors.push( groupCombo[j] + filterGroup[k] ); // [ 1, 2 ]
-        }
+	  for ( var prop in filters ) {
+	    message.push( filters[ prop ].join(' ') );
+	    var filterGroup = filters[ prop ];
+	    // skip to next filter group if it doesn't have any values
+	    if ( !filterGroup.length ) {
+	      continue;
+	    }
+	    if ( i === 0 ) {
+	      // copy to new array
+	      comboFilters = filterGroup.slice(0);
+	    } else {
+	      var filterSelectors = [];
+	      // copy to fresh array
+	      var groupCombo = comboFilters.slice(0); // [ A, B ]
+	      // merge filter Groups
+	      for (var k=0, len3 = filterGroup.length; k < len3; k++) {
+	        for (var j=0, len2 = groupCombo.length; j < len2; j++) {
+	          filterSelectors.push( groupCombo[j] + filterGroup[k] ); // [ 1, 2 ]
+	        }
 
-      }
-      // apply filter selectors to combo filters for next group
-      comboFilters = filterSelectors;
-    }
-    i++;
-  }
+	      }
+	      // apply filter selectors to combo filters for next group
+	      comboFilters = filterSelectors;
+	      //console.log ("start : " + comboFilters);
+	    }
+	    i++;
+	  }
 
-  var comboFilter = comboFilters.join(', ');
-  return comboFilter;
-}
+	  var comboFilter = comboFilters.join(', ');
+	 //console.log ('return : ' + comboFilter);
+	  return comboFilter;
+	}
 
 function manageCheckbox( $checkbox ) {
   var checkbox = $checkbox[0];
 
   var group = $checkbox.parents('.option-set').attr('data-group');
+
   // create array for filter group, if not there yet
-  var filterGroup = filters[ group ];
+  filterGroup = filters[ group ];
+
   if ( !filterGroup ) {
-    filterGroup = filters[ group ] = [];
+  	filterGroup = filters[ group ] = [];
   }
+
 
   // index of
   var index = $.inArray( checkbox.value, filterGroup );
 
   if ( checkbox.checked ) {
-
+  	//console.log ('checkbox.checked : ' + checkbox.value);
     if ( index === -1 ) {
       // add filter to group
       filters[ group ].push( checkbox.value );

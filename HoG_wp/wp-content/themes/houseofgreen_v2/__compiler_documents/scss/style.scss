@@ -82,6 +82,14 @@
 
 @import "scrollbar";
 
+
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+}
+
 html, body {
 	text-rendering: optimizeLegibility;
 	text-rendering: geometricPrecision;
@@ -91,6 +99,8 @@ html, body {
 	-moz-font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
 	-webkit-font-smoothing: subpixel-antialiased;
+
+	//height:100%;
 }
 html {
 	position: relative;
@@ -118,7 +128,11 @@ body {
 	width: 100%;
 	/* Set the fixed height of the footer here */
 	.topper {
-		cursor: pointer;	}
+		cursor: pointer;
+		@include trans('opacity');
+		&.transparant {
+			@include opacity(0);
+		}	}
 	.vormentaal {
 		right:0px;
 		left:auto;
@@ -171,7 +185,6 @@ body {
 	position: fixed;
 	top:0;
 	left:0;
-
 	@extend %shadow;
 
 	@include p-l('double');	//padding-top
@@ -186,7 +199,21 @@ body {
 	@include MQ(L) {
 		height: $height-nav-header-L;
 	}
+	.logo {
+		overflow: visible;
+		//height: $height-nav-header-L;
+		@include m-r('double');
+		#svg-logo {
+			margin: 20px auto;
+			vertical-align: middle;
+			display:block;
+			overflow: visible;
+			height: $height-nav-header-L - 40px;
 
+			z-index:999999;
+		}
+	}
+/*
 	.logo {
 		@include m-r('double');
 		background-image: url('../img/logo.png');
@@ -209,6 +236,7 @@ body {
 			}
 		}
 	}
+*/
 }
 #searchbar {
 	z-index: 19;
@@ -611,10 +639,9 @@ label.hog-label {
 		}
 	}
 	.newsletter {
-
 		@include p-t('normal');	//margin-top
-		@include p-r('normal');	//margin-top
-		@include p-b('double');	//margin-top
+		@include p-r('half');	//margin-top
+		@include p-b('half');	//margin-top
 		@include p-l('double');	//margin-top
 
 		@include m-t('normal');	//margin-top
@@ -752,20 +779,28 @@ label.hog-label {
 				> div {
 					>div {
 						top: 50%;
-						left: 0;
+						left: 50%;
 						right: 0;
 						bottom: 0;
 						position: absolute;
 						>div {
-							margin-top: -($width-button-contact-S / 2);
-							@include MQ(L) {
+							margin-top: -($width-button-contact-XS / 2);
+							margin-left: -($width-button-contact-XS / 2);
+							@include MQ(S) {
+								margin-top: -($width-button-contact-S / 2);
+								margin-left: -($width-button-contact-S / 2);
+							}
+							@include MQ(M) {
 								margin-top: -($width-button-contact-M / 2);
+								margin-left: -($width-button-contact-M / 2);
 							}
 							@include MQ(L) {
 								margin-top: -($width-button-contact-L / 2);
+								margin-left: -($width-button-contact-L / 2);
 							}
 							@include MQ(XL) {
 								margin-top: -($width-button-contact-XL / 2);
+								margin-left: -($width-button-contact-XL / 2);
 							}
 						}
 					}
@@ -1035,7 +1070,7 @@ label.hog-label {
 //https://github.com/kmewhort/pointer_events_polyfill
 .menu-button {
 	z-index: 999;
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	width: 100%;
 
@@ -1050,10 +1085,24 @@ label.hog-label {
 		float:left;
 		width: 25%;
 		height: $height-nav-header-L;
-		@include transition(width $animation-duration - 0.2s, top .3s);
+
+		@include m-l('half');
+		@include m-r('normal');
+		@include transition(width $animation-duration - 0.2s, top .3s, margin .3s);
 		//@include trans('width');
 		.navigation-is-open & {
-			width: 50%;
+			width: $width-nav-S;
+			margin-left: 0px;
+			margin-right: 0px;
+			@include MQ(M) {
+				width: $width-nav-M;
+			}
+			@include MQ(L) {
+				width: $width-nav-L;
+			}
+			@include MQ(XL) {
+				width: $width-nav-XL;
+			}
 		}
 
 	}

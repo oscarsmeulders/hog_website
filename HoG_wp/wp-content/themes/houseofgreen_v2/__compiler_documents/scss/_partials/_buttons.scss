@@ -50,10 +50,35 @@
 	}
 
 }
-.button-contact {
+.button-menu {
+	background-image: url('../img/menu.svg');
+	.no-svg & {
+		background-image: url('../img/menu.png');
+	}
+	.navigation-is-open & {
+		background-image: url('../img/menu-closed.svg');
+		.no-svg & {
+			background-image: url('../img/menu-closed.png');
+		}
+	}
+}
+
+.button-newsletter, .button-contact {
 	background-image: url('../img/contact.svg');
 	.no-svg & {
 		background-image: url('../img/contact.png');
+	}
+}
+.button-newsletter {
+	background-image: url('../img/newsletter.svg');
+	.no-svg & {
+		background-image: url('../img/newsletter.png');
+	}
+	.nl-NL & {
+		background-image: url('../img/newsletter_nl.svg');
+		.no-svg & {
+			background-image: url('../img/newsletter_nl.png');
+		}
 	}
 }
 
@@ -66,6 +91,8 @@
 %button {
 	cursor: pointer;
 	text-align: center;
+	font-size: 15px;
+	font-weight: 600;
 	padding: 0 10px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -105,13 +132,21 @@
 
 .button-menu {
 	@extend %button;
+	background-position: right 10px center;
+	background-size: 17px 13px;
 	width: auto;
+	padding-right: 35px;
 	float: left;
 	color: $color-text;
 	@include trans('all');
+	//@include transition(margin-left $animation-duration - 0.2s, top .3s);
 	&:hover {
 		background-color: $color-bg-menu;
 		//color: #fff;
+	}
+	.navigation-is-open & {
+		color: #fff;
+		background-color: $color-green-dark;
 	}
 }
 .button-search, .button-language, .button.topper {
@@ -229,7 +264,7 @@
 
 }
 
-.button-contact {
+.button-contact, .button-newsletter {
 
 	width: $width-button-contact-S;
 	height: $height-button-contact-S;
@@ -266,31 +301,50 @@
 		height: $height-button-contact-S;
 		@include border-radius($height-button-contact-S);
 	}
-
+}
+.button-newsletter {
+	background-color: $color-green-dark;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // Contact object to use in a column
+// http://howtocenterincss.com/#contentType=div&content.width=100px&content.height=100px&horizontal=center&vertical=middle&browser.IE=9
 ////////////////////////////////////////////////////////////////////////
-.vcenter {
-	display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
-.contact-item {
-	position: relative;
-	width: $width-button-contact-S;
+.newsletter-container, .contact-item {
+	position:absolute;
+	left:50%;
+	top:50%;
+
+	margin-left: -($width-button-contact-XS / 2);
+	margin-top: -($width-button-contact-XS / 2);
+	width: $width-button-contact-XS;
+	height: $width-button-contact-XS;
+
+	@include MQ(S) {
+		margin-left: -($width-button-contact-S / 2);
+		margin-top: -($width-button-contact-S / 2);
+		width: $width-button-contact-S;
+		height: $width-button-contact-S;
+	}
 	@include MQ(M) {
+		margin-left: -($width-button-contact-M / 2);
+		margin-top: -($width-button-contact-M / 2);
 		width: $width-button-contact-M;
+		height: $width-button-contact-M;
 	}
 	@include MQ(L) {
+		margin-left: -($width-button-contact-L / 2);
+		margin-top: -($width-button-contact-L / 2);
 		width: $width-button-contact-L;
+		height: $width-button-contact-L;
 	}
 	@include MQ(XL) {
+		margin-left: -($width-button-contact-XL / 2);
+		margin-top: -($width-button-contact-XL / 2);
 		width: $width-button-contact-XL;
+		height: $width-button-contact-XL;
 	}
-    margin: 0 auto;
-    text-align: center;
+
 }
 
 

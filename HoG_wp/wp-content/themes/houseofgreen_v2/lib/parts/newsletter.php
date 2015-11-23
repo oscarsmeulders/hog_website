@@ -5,8 +5,8 @@
 				<h4><?php _e( 'newsletter_title', 'hog_lang' ); ?></h4>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-7 col-sm-7 col-md-9">
+		<div class="row row-eq-height">
+			<div class="col-xs-7 col-sm-7 col-md-8">
 				<!-- legenda -->
 				<div class="row">
 					<div class="col-md-4 hidden-xs hidden-sm input-legenda">
@@ -38,7 +38,16 @@
 				</div>
 				<!-- /legenda -->
 			</div>
-			<div class="col-xs-5 col-sm-5 col-md-3">button</div>
+			<div class="col-xs-5 col-sm-5 col-md-4">
+				<div class="contact-item">
+					<?php
+						$contact_page = get_field( 'contact_page', 'option' );
+						if( $contact_page ) {
+							echo '<a href="'. $contact_page .'" target="_self"><div class="button-newsletter"></div></a>';
+						}
+					?>
+				</div>
+			</div>
 		</div>
 	</form>
 </div>

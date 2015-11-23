@@ -13,7 +13,7 @@ get_header(); ?>
 <?php //main ?>
 <?php while ( have_posts() ) : the_post(); ?>
 <div class="main">
-	<!-- showcase -->
+	<?php // showcase ?>
 	<div id="showcase" class="container-fluid">
 		 <div class="row">
 			<div class="col-xs-12 col-sm-3 col-md-3">
@@ -158,7 +158,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<!-- end showcase -->
+	<?php // end showcase ?>
 
 	<div class="container-fluid container-content">
 		<div class="row">

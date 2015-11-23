@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: hog_trans\n"
-"POT-Creation-Date: 2015-11-12 16:07+0100\n"
-"PO-Revision-Date: 2015-11-12 16:07+0100\n"
+"POT-Creation-Date: 2015-11-23 16:03+0100\n"
+"PO-Revision-Date: 2015-11-23 16:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -24,57 +24,65 @@ msgstr ""
 msgid "title_error"
 msgstr "Fout gevonden  - stop"
 
-#: functions.php:181
+#: functions.php:318
 msgid "wp_menu_label_project_kind_category"
 msgstr "Kind category"
 
-#: functions.php:194
+#: functions.php:331
 msgid "wp_menu_label_project_size_category"
 msgstr "Size category"
 
-#: functions.php:207
+#: functions.php:344
 msgid "wp_menu_label_branch_kind_category"
 msgstr "Kind category"
 
-#: functions.php:219 functions.php:220
+#: functions.php:356 functions.php:357
 msgid "wp_menu_project"
 msgstr "Project"
 
-#: functions.php:221
+#: functions.php:358
 msgid "wp_menu_project_new"
 msgstr "New project"
 
-#: functions.php:226
+#: functions.php:363
 msgid "wp_menu_project_slug"
 msgstr "project"
 
-#: functions.php:237 functions.php:238
+#: functions.php:374 functions.php:375
 msgid "wp_menu_branch"
 msgstr "Merken"
 
-#: functions.php:239
+#: functions.php:376
 msgid "wp_menu_branch_new"
 msgstr "New merk"
 
-#: functions.php:244
+#: functions.php:381
 msgid "wp_menu_branch_slug"
 msgstr "branch"
 
-#: functions.php:255 functions.php:256
+#: functions.php:392 functions.php:393
 msgid "wp_menu_gallery"
 msgstr "Gallery"
 
-#: functions.php:257
+#: functions.php:394
 msgid "wp_menu_gallery_new"
 msgstr "New gallery"
 
-#: functions.php:261
+#: functions.php:398
 msgid "wp_menu_gallery_slug"
 msgstr "gallery"
 
-#: functions.php:298
+#: functions.php:445
 msgid "Primary Menu"
 msgstr "Hoofdmenu"
+
+#: header.php:16 lib/parts/header.php:51
+msgid "menu_bt_header_open"
+msgstr "Menu"
+
+#: header.php:17
+msgid "menu_bt_header_closed"
+msgstr "Close"
 
 #: index copy.php:32
 msgid "Comment"
@@ -108,19 +116,19 @@ msgstr "Algemeen Voorwaarden"
 msgid "footer_disclaimer"
 msgstr "Disclaimer"
 
-#: lib/parts/header.php:10
+#: lib/parts/header.php:18
 msgid "header_menu"
 msgstr "MENU"
 
-#: lib/parts/header.php:16
+#: lib/parts/header.php:24
 msgid "header_language"
 msgstr "NL"
 
-#: lib/parts/header.php:29
+#: lib/parts/header.php:37
 msgid "header_search_placeholder"
 msgstr "Please provide a search term"
 
-#: lib/parts/header.php:34
+#: lib/parts/header.php:42
 msgid "header_search"
 msgstr "Search"
 
@@ -168,11 +176,11 @@ msgstr "Related projects"
 msgid "title_search"
 msgstr "Search results"
 
-#: single-branch_item.php:11
+#: single-branch_item.php:12
 msgid "title_merken"
 msgstr "Onze merken"
 
-#: single-project_item.php:11
+#: single-project_item.php:12
 msgid "title_projecten"
 msgstr "Projects"
 

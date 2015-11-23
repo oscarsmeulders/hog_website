@@ -12,6 +12,12 @@
 
 
 	<script type="text/javascript">
+
+		var menuBT_open = '<?php _e( 'menu_bt_header_open', 'hog_lang' ) ; ?>';
+		var menuBT_closed = '<?php _e( 'menu_bt_header_closed', 'hog_lang' ) ; ?>';
+
+		var siteUrl = '<?php echo get_site_url(); ?>';
+		var siteUrl = '<?php echo get_site_url(); ?>';
 		var templateUrl = '<?php echo get_template_directory_uri(); ?>';
 		var ajaxUrl = '<?php echo get_site_url(); ?>/wp-admin/admin-ajax.php';
 	</script>
